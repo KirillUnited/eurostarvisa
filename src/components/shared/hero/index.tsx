@@ -4,12 +4,6 @@ import { Button } from '@/components/ui/button'
 import { MoveRight } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { site } from '@/content'
-import ParticlesApp from '@/components/shared/particles';
-
-const siteTitle = site.home?.hero?.title;
-const siteDescription = site.home?.hero?.description;
-const siteImage = site.home?.hero?.image;
 
 export type HeroLinkProps = {
     CTA?: boolean,
@@ -20,21 +14,18 @@ export interface HeroProps {
     title?: string,
     description?: string,
     image?: string,
-    links?: Array<HeroLinkProps>,
-    particlesEffect?: boolean
+    links?: Array<HeroLinkProps>
 }
 
 const Hero = (
     {
-        title = siteTitle,
-        description = siteDescription,
-        image = siteImage,
-        links = [],
-        particlesEffect
-    }: HeroProps) => {
+        title='Hero title',
+        description='Hero description',
+        image,
+        links = []
+    }: HeroProps): React.ReactElement => {
     return (
         <section id='hero' className={`section ${styles.section}`}>
-            {particlesEffect && <ParticlesApp />}
             <div className={`container ${styles.container}`}>
                 <div className={`${styles.content}`}>
                     <h1 className="heading-1 lg:tracking-[-0.03em]">{title}</h1>
@@ -67,14 +58,16 @@ const Hero = (
                         </div>
                     }
                 </div>
-                <Image
-                    src={image}
-                    width={638}
-                    height={360}
-                    alt={title}
-                    className={`${styles.image}`}
-                    priority
-                />
+                {image &&
+                    <Image
+                        src={image}
+                        width={638}
+                        height={360}
+                        alt={title || ''}
+                        className={`${styles.image}`}
+                        priority
+                    />
+                }
             </div>
         </section>
     )
