@@ -1,0 +1,13 @@
+.card {
+    @apply gap-6 lg:gap-16 xl:gap-32 items-center;
+    flex-direction: var(--direction)
+}
+.card-image {
+    @apply w-full aspect-[515/336] object-cover object-top basis-[41%] mx-auto;
+}
+.card-image-contain {
+    @apply object-contain;
+}
+.card-content {
+    @apply flex flex-col gap-4 flex-1;
+}
