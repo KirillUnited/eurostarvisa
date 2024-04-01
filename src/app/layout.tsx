@@ -15,11 +15,11 @@ export const viewport: Viewport = {
 }
 export const metadata: Metadata = {
   title: {
-    default: 'Digital Agency | Разработка современных решений для бизнеса',
-    template: `%s | Digital Agency | Разработка современных решений для бизнеса`,
+    default: 'Визовый центр в Минске | StarVisa',
+    template: `%s | StarVisa`,
   },
-  description: 'Совмещая современный стиль, передовые технологии и инновационные подходы в интернет-маркетинге, мы разрабатываем эффективные средства для продвижения вашего бизнеса в онлайн-пространстве.',
-  keywords: ['Digital', 'Agency', 'web-Разработка', 'интернет-маркетинге']
+  description: 'Визовый центр в Москве! Подготовка и оформление документов на визу от 2000 рублей! Помощь при получение визы в Европу, Америку, Англию, Канаду, Азию',
+  keywords: ['визовый центр в москве', 'подготовка визы в Минске', 'подача на визу в евпропу', 'интернет-маркетинге']
 }
 
 export default function RootLayout({
@@ -29,7 +29,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${montserrat.variable} wrapper bg-background-secondary`}>
+      <body className={`${montserrat.variable} wrapper`}>
         <main className='flex flex-col flex-1'>{children}</main>
       </body>
     </html>
