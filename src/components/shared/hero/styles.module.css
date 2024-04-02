@@ -1,8 +1,8 @@
 .inner {
-    @apply relative flex gap-5 flex-wrap items-center;
+    @apply relative flex flex-col md:flex-row gap-5 flex-wrap items-center;
 }
 .content {
-    @apply mx-auto max-w-[270px] md:max-w-full lg:basis-[45%] z-10 flex flex-col gap-4 md:gap-6;
+    @apply self-center max-w-[80%] md:max-w-full lg:basis-[45%] z-10 flex flex-col gap-4 md:gap-6;
 }
 .title {
     @apply heading-1 lg:tracking-[-0.03em];

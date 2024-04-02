@@ -110,7 +110,7 @@
         line-height: 130%;
     }
     .paragraph {
-        @apply text-sm md:text-base font-normal;
+        @apply text-sm md:text-base font-normal text-balance;
         line-height: 175%;
     }
     .link {
