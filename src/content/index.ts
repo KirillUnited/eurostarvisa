@@ -53,6 +53,44 @@ export const site = {
                     image: '/images/approval-3.png'
                 }
             ]
+        },
+        featured_products: {
+            title: 'Популярные направления',
+            description: null,
+            list: [
+                {
+                    thumbnail: '/images/visa-england.png',
+                    title: 'Англия',
+                    description: 'От 5 рабочих дней',
+                    price: 'от 16 500 ₽',
+                    name: '',
+                    link: '/'
+                },
+                {
+                    thumbnail: '/images/visa-germany.png',
+                    title: 'Германия',
+                    description: 'От 5 рабочих дней',
+                    price: 'от 16 500 ₽',
+                    name: '',
+                    link: '/'
+                },
+                {
+                    thumbnail: '/images/visa-usa.png',
+                    title: 'Америка',
+                    description: 'От 5 рабочих дней',
+                    price: 'от 16 500 ₽',
+                    name: '',
+                    link: '/'
+                },
+                {
+                    thumbnail: '/images/visa-france.png',
+                    title: 'Франция',
+                    description: 'От 5 рабочих дней',
+                    price: 'от 16 500 ₽',
+                    name: '',
+                    link: '/'
+                }
+            ]
         }
     },
     about: {

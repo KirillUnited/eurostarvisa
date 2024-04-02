@@ -64,6 +64,7 @@ const Hero = (
                             alt={title || ''}
                             className={`${styles.image}`}
                             priority
+                            quality={50}
                         />
                     }
                 </div>
