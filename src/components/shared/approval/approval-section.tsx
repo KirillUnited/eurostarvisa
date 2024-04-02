@@ -8,9 +8,9 @@ function ApprovalSection({children}: React.HTMLAttributes<HTMLElement>) {
                 <div className="section-inner">
                     <div className="flex flex-col gap-8 lg:gap-16 max-w-[80%] md:max-w-full mx-auto">
                         <div className="flex flex-col gap-4">
-                            <h3 className="heading-3">
+                            <h2 className="heading-3">
                                 {site.home.approval.title}
-                            </h3>
+                            </h2>
                             <p className="paragraph">
                                 {site.home.approval.description}
                             </p>
