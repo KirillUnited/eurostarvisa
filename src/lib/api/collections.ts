@@ -2,7 +2,7 @@ import matter from 'gray-matter'
 import path from 'path'
 import fs from 'fs/promises'
 import { cache } from 'react'
-import { HeroButtonProps } from '@/components/shared/hero'
+import { HeroLinkProps } from '@/components/shared/hero/hero.props'
 
 export type CollectionProps = {
     service?: string[]
@@ -11,7 +11,7 @@ export type CollectionProps = {
     description?: string,
     date?: string,
     thumbnail?: string,
-    hero_links?: Array<HeroButtonProps>
+    hero_links?: Array<HeroLinkProps>
     link?: string,
     info?: object,
     keywords?: string[]
