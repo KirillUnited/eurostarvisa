@@ -6,6 +6,7 @@ import { cn } from '@/lib/utils'
 import { HeroProps } from './hero.props'
 import { HeroTitle } from './hero-title'
 import { HeroDescription } from './hero-description'
+import HeroLink from './hero-link'
 
 const Hero = (
     {
@@ -13,7 +14,8 @@ const Hero = (
         subtitle = 'Hero subtitle',
         description = 'Hero description',
         image = '/images/hero.png',
-        links = []
+        links = [],
+        CTASection
     }: HeroProps) => {
     return (
         <section id='hero'>
@@ -21,9 +23,20 @@ const Hero = (
                 <div className={`section-inner ${styles.inner}`}>
                     <div className={`${styles.content}`}>
                         <HeroDescription
-                            className='font-bold text-xl md:text-3xl lg:text-4xl md:max-w-[45%] lg:max-w-full'
+                            className='font-bold text-xl md:text-3xl lg:text-4xl md:max-w-[55%] lg:max-w-full'
                             dangerouslySetInnerHTML={{ __html: subtitle }}
                         />
+                        {links.length > 0 &&
+                            <div className="flex flex-wrap gap-5 md:gap-8 md:max-w-[40%] lg:max-w-full">
+                                {
+                                    links.map((item) => {
+                                        return (
+                                            <HeroLink {...item} />
+                                        )
+                                    })
+                                }
+                            </div>
+                        }
                         <HeroTitle className='text-xl md:text-3xl lg:text-4xl'>
                             {title}
                         </HeroTitle>
@@ -31,7 +44,7 @@ const Hero = (
                             dangerouslySetInnerHTML={{ __html: description }}
                         />
                         {
-                            links?.length > 0 &&
+                            CTASection &&
                             <div className={`${styles.footer}`}>
                                 <Button
                                     className={cn(

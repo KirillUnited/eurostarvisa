@@ -2,7 +2,7 @@
     @apply relative flex gap-5 flex-wrap items-center;
 }
 .content {
-    @apply lg:basis-[45%] z-10 flex flex-col gap-6;
+    @apply mx-auto max-w-[270px] md:max-w-full lg:basis-[45%] z-10 flex flex-col gap-4 md:gap-6;
 }
 .title {
     @apply heading-1 lg:tracking-[-0.03em];
@@ -11,5 +11,5 @@
     @apply flex flex-wrap items-center flex-col lg:flex-row gap-x-10 gap-y-4 mt-0 lg:mt-6;
 }
 .image {
-    @apply -order-1 md:absolute top-0 right-0 md:w-[65%] max-h-full object-contain object-right;
+    @apply -order-1 md:absolute md:top-10 lg:top-0 right-0 md:w-[65%] max-h-full object-contain object-right;
 }

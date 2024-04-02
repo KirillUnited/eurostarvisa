@@ -1,13 +1,14 @@
-export type HeroButtonProps = {
-    CTA?: boolean,
-    label?: string,
-    link?: string,
-    variant?: "link" | "default" | "destructive" | "outline" | "secondary" | "ghost"
+export type HeroLinkProps = {
+    label: string,
+    image?: string,
+    name?: string,
+    link?: string
 }
 export interface HeroProps {
     title?: string,
     subtitle?: string,
     description?: string,
     image?: string,
-    links?: Array<HeroButtonProps>
+    links?: Array<HeroLinkProps>
+    CTASection?: boolean
 }

@@ -5,7 +5,33 @@ export const site = {
             title: 'VCS. Центр визовых услуг',
             subtitle: 'Нужна виза?<br/>Мы Вам поможем.',
             description: '<p><span class="text-primary">Visa Concierge Service</span> - компания объединившая самых квалифицированных специалистов. За нашими плечами тысячи одобренных виз разной сложности, и столько же довольных клиентов!</p><br/><p><span class="text-primary">Visa Concierge Service</span> - компания объединившая самых квалифицированных специалистов. За нашими плечами тысячи одобренных виз разной сложности, и столько же довольных клиентов!</p>',
-            image: '/images/hero.png'
+            image: '/images/hero.png',
+            links: [
+                {
+                    image: '/images/canada_flag.png',
+                    label: 'КАНАДА',
+                    name: 'canada_flag',
+                    link: ''
+                },
+                {
+                    image: '/images/usa_flag.png',
+                    label: 'США',
+                    name: 'usa_flag',
+                    link: ''
+                },
+                {
+                    image: '/images/euro_flag.png',
+                    label: 'ЕВРОПА',
+                    name: 'euro_flag',
+                    link: ''
+                },
+                {
+                    image: '/images/england_flag.png',
+                    label: 'АНГЛИЯ',
+                    name: 'england_flag',
+                    link: ''
+                }
+            ]
         },
     },
     about: {
