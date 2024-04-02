@@ -20,7 +20,7 @@ function HeroLink({ link, label, image }: HeroLinkProps) {
                     alt={label || 'StarVisa'}
                 />
             }
-            <p className='text-xs'>{label}</p>
+            <p className='text-xs text-center'>{label}</p>
         </Link>
     )
 }

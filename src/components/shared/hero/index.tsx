@@ -31,7 +31,7 @@ const Hero = (
                                 {
                                     links.map((item) => {
                                         return (
-                                            <HeroLink {...item} />
+                                            <HeroLink key={item.name} {...item} />
                                         )
                                     })
                                 }

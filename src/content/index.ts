@@ -33,6 +33,27 @@ export const site = {
                 }
             ]
         },
+        approval: {
+            title: 'Процент одобрений',
+            description: 'Никаких мифических 99,98% "одобрений", а только реальная статистика! На каждую 1 000 сделок приходится:',
+            list: [
+                {
+                    label: 'одобрений',
+                    value: '93%',
+                    image: '/images/approval-1.png'
+                },
+                {
+                    label: 'отказов',
+                    value: '7%',
+                    image: '/images/approval-2.png'
+                },
+                {
+                    label: 'одобрений после отказа',
+                    value: '75%',
+                    image: '/images/approval-3.png'
+                }
+            ]
+        }
     },
     about: {
         hero: {

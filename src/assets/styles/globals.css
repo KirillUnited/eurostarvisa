@@ -90,11 +90,13 @@
         line-height: 130%;
     }
     .heading-2 {
-        @apply text-3xl md:text-4xl font-bold;
+        @apply font-bold;
+        font-size: clamp(40px, 4vw, 40px);
         line-height: 130%;
     }
     .heading-3 {
-        @apply text-2xl md:text-4xl font-bold;
+        @apply font-bold;
+        font-size: clamp(24px, 4vw, 40px);
         line-height: 130%;
     }
     .heading-4 {
