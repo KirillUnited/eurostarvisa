@@ -1,80 +1,73 @@
 import React from 'react'
 import styles from './styles.module.css'
-import { Button } from '@/components/ui/button'
-import { MoveRight } from 'lucide-react'
+import { Button, buttonVariants } from '@/components/ui/button'
 import Image from 'next/image'
-import Link from 'next/link'
-import { site } from '@/content'
-import ParticlesApp from '@/components/shared/particles';
-
-const siteTitle = site.home?.hero?.title;
-const siteDescription = site.home?.hero?.description;
-const siteImage = site.home?.hero?.image;
-
-export type HeroLinkProps = {
-    CTA?: boolean,
-    label?: string,
-    link?: string
-}
-export interface HeroProps {
-    title?: string,
-    description?: string,
-    image?: string,
-    links?: Array<HeroLinkProps>,
-    particlesEffect?: boolean
-}
+import { cn } from '@/lib/utils'
+import { HeroProps } from './hero.props'
+import { HeroTitle } from './hero-title'
+import { HeroDescription } from './hero-description'
+import HeroLink from './hero-link'
 
 const Hero = (
     {
-        title = siteTitle,
-        description = siteDescription,
-        image = siteImage,
+        title = 'Hero title',
+        subtitle = 'Hero subtitle',
+        description = 'Hero description',
+        image = '/images/hero.png',
         links = [],
-        particlesEffect
+        CTASection
     }: HeroProps) => {
     return (
-        <section id='hero' className={`section ${styles.section}`}>
-            {particlesEffect && <ParticlesApp />}
-            <div className={`container ${styles.container}`}>
-                <div className={`${styles.content}`}>
-                    <h1 className="heading-1 lg:tracking-[-0.03em]">{title}</h1>
-                    <p className="paragraph text-foregroundSecondary/70">
-                        {description}
-                    </p>
-                    {
-                        links?.length > 0 &&
-                        <div className={`${styles.footer}`}>
-                            {
-                                links.map(({ CTA, label, link }) => {
-                                    if (CTA) {
+        <section id='hero'>
+            <div className={`container`}>
+                <div className={`section-inner ${styles.inner}`}>
+                    <div className={`${styles.content}`}>
+                        <HeroDescription
+                            className='font-bold text-xl md:text-3xl lg:text-4xl md:max-w-[55%] lg:max-w-full'
+                            dangerouslySetInnerHTML={{ __html: subtitle }}
+                        />
+                        {links.length > 0 &&
+                            <div className="flex flex-wrap gap-5 md:gap-8 md:max-w-[40%] lg:max-w-full">
+                                {
+                                    links.map((item) => {
                                         return (
-                                            <Button key={label} asChild className='w-full sm:w-fit'>
-                                                <Link href={`${link}`}>{label}</Link>
-                                            </Button>
+                                            <HeroLink key={item.name} {...item} />
                                         )
-
-                                    }
-                                    return (
-                                        <Link key={label}
-                                            href={`${link}`}
-                                            className='link text-foregroundSecondary hover:text-foregroundSecondary/70'
-                                        >
-                                            {label} <MoveRight />
-                                        </Link>
-                                    )
-                                })
-                            }
-                        </div>
+                                    })
+                                }
+                            </div>
+                        }
+                        <HeroTitle className='text-xl md:text-3xl lg:text-4xl'>
+                            {title}
+                        </HeroTitle>
+                        <HeroDescription
+                            dangerouslySetInnerHTML={{ __html: description }}
+                        />
+                        {
+                            CTASection &&
+                            <div className={`${styles.footer}`}>
+                                <Button
+                                    className={cn(
+                                        'w-full sm:w-fit'
+                                    )}
+                                >
+                                    получить бесплатную консультацию
+                                </Button>
+                            </div>
+                        }
+                    </div>
+                    {image &&
+                        <Image
+                            src={image}
+                            width={638}
+                            height={360}
+                            alt={title || ''}
+                            className={`${styles.image}`}
+                            priority
+                            quality={50}
+                        />
                     }
                 </div>
-                <Image
-                    src={image}
-                    width={638}
-                    height={360}
-                    alt={title}
-                    className={`${styles.image}`}
-                    priority
-                />
             </div>
         </section>
     )

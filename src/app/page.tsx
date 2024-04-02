@@ -1,38 +1,23 @@
-import Marketing from '@/components/shared/marketing'
+import { ApprovalSection } from '@/components/shared/approval'
 import Hero from '@/components/shared/hero'
-import FeaturedProjectList from '@/components/shared/project/featured-project-list'
-import StepList from '@/components/shared/step/step-list'
-import Faq from '@/components/shared/faq'
-import { OrderSection } from '@/components/shared/order'
-import { ScrollLink } from '@/components/shared/link'
-import { MoveUpIcon } from 'lucide-react'
-import styles from '@/components/shared/link/styles.module.css'
-
-const hero_links = [
-  {
-    CTA: true,
-    label: 'Портфолио',
-    link: '/portfolio'
-  },
-  {
-    CTA: false,
-    label: 'Подробнее',
-    link: '/services'
-  }
-]
+import { FeaturedProductSection } from '@/components/shared/product'
+import FeaturedProductList from '@/components/shared/product/featured-product-list'
+import { site } from '@/content'
 
 export default function Home() {
   return (
     <>
       <Hero
-        links={hero_links}
-        particlesEffect={true}
+        title={site.home.hero.title}
+        subtitle={site.home.hero.subtitle}
+        description={site.home.hero.description}
+        image={site.home.hero.image}
+        links={site.home.hero.links}
       />
-      <StepList />
-      <FeaturedProjectList />
-      <Marketing />
-      <OrderSection className='bg-background-secondary' />
-      <Faq />
+      <ApprovalSection />
+      <FeaturedProductSection>
+        <FeaturedProductList />
+      </FeaturedProductSection>
     </>
   )
 }
