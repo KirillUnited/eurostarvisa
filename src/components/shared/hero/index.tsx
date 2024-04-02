@@ -1,55 +1,11 @@
 import React from 'react'
 import styles from './styles.module.css'
 import { Button, buttonVariants } from '@/components/ui/button'
-import { MoveRight } from 'lucide-react'
 import Image from 'next/image'
-import Link from 'next/link'
 import { cn } from '@/lib/utils'
-
-export type HeroButtonProps = {
-    CTA?: boolean,
-    label?: string,
-    link?: string,
-    variant?: "link" | "default" | "destructive" | "outline" | "secondary" | "ghost"
-}
-export interface HeroProps {
-    title?: string,
-    subtitle?: string,
-    description?: string,
-    image?: string,
-    links?: Array<HeroButtonProps>
-}
-
-const HeroTitle = ({
-    className,
-    children,
-    ...props
-}: React.HTMLAttributes<HTMLHeadingElement>) => (
-    <h1
-        className={cn(
-            "heading-1 lg:tracking-[-0.03em]",
-            className
-        )}
-        {...props}
-    >
-        {children}
-    </h1>
-);
-const HeroDescription = ({
-    className,
-    children,
-    ...props
-}: React.HTMLAttributes<HTMLDivElement>) => (
-    <div
-        className={cn(
-            "paragraph",
-            className
-        )}
-        {...props}
-    >
-        {children}
-    </div>
-)
+import { HeroProps } from './hero.props'
+import { HeroTitle } from './hero-title'
+import { HeroDescription } from './hero-description'
 
 const Hero = (
     {
