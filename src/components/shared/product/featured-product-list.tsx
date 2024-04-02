@@ -23,7 +23,6 @@ function FeaturedProductList() {
                                 height={154}
                                 alt={`${title}` || ''}
                                 className='object-contain object-center aspect-[234/154] mx-auto'
-                                priority
                             />
                             <CardHeader>
                                 <CardTitle className='text-sm lg:text-base truncate'>{title}</CardTitle>
