@@ -1,4 +1,5 @@
 import { ApprovalSection } from '@/components/shared/approval'
+import ApprovalList from '@/components/shared/approval/approval-list'
 import Hero from '@/components/shared/hero'
 import { FeaturedProductSection } from '@/components/shared/product'
 import FeaturedProductList from '@/components/shared/product/featured-product-list'
@@ -14,7 +15,9 @@ export default function Home() {
         image={site.home.hero.image}
         links={site.home.hero.links}
       />
-      <ApprovalSection />
+      <ApprovalSection>
+        <ApprovalList/>
+      </ApprovalSection>
       <FeaturedProductSection>
         <FeaturedProductList />
       </FeaturedProductSection>
