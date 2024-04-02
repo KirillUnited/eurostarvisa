@@ -28,9 +28,9 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="ru">
       <body className={`${montserrat.variable} wrapper`}>
-        <main className='flex flex-col flex-1'>{children}</main>
+        <main className='flex-1'>{children}</main>
       </body>
     </html>
   )

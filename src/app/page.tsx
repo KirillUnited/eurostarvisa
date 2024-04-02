@@ -1,4 +1,5 @@
 import Hero from '@/components/shared/hero'
+import { site } from '@/content'
 
 const HERO_LINKS = [
   {
@@ -9,7 +10,7 @@ const HERO_LINKS = [
   {
     CTA: false,
     label: 'Подробнее',
-    link: '/s'
+    link: '/s',
   }
 ]
 
@@ -17,7 +18,10 @@ export default function Home() {
   return (
     <>
       <Hero
-        links={HERO_LINKS}
+        title={site.home.hero.title}
+        subtitle={site.home.hero.subtitle}
+        description={site.home.hero.description}
+        image={site.home.hero.image}
       />
     </>
   )
