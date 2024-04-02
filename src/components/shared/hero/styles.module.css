@@ -4,9 +4,6 @@
 .content {
     @apply self-center max-w-[80%] md:max-w-full lg:basis-[45%] z-10 flex flex-col gap-4 md:gap-6;
 }
-.title {
-    @apply heading-1 lg:tracking-[-0.03em];
-}
 .footer {
     @apply flex flex-wrap items-center flex-col lg:flex-row gap-x-10 gap-y-4 mt-0 lg:mt-6;
 }
