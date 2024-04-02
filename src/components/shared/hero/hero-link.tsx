@@ -9,7 +9,7 @@ function HeroLink({ link, label, image }: HeroLinkProps) {
         <Link
             href={`${link}`}
             className={cn(
-                'flex flex-col items-center gap-2 max-w-12 md:max-w-full'
+                'flex flex-col items-center gap-2 max-w-12 md:max-w-full group scale-100'
             )}
         >
             {image &&
@@ -18,6 +18,7 @@ function HeroLink({ link, label, image }: HeroLinkProps) {
                     height={60}
                     src={`${image}`}
                     alt={label || 'StarVisa'}
+                    className='transition-all group-hover:scale-125'
                 />
             }
             <p className='text-xs text-center'>{label}</p>

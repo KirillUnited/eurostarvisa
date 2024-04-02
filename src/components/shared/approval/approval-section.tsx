@@ -19,7 +19,7 @@ function ApprovalSection() {
                             {
                                 site.home.approval.list.map(({ label, value, image }) => {
                                     return (
-                                        <ApprovalCard>
+                                        <ApprovalCard key={value}>
                                             <ApprovalCardImageWrap>
                                                 <Image
                                                     src={`${image}`}
