@@ -17,7 +17,7 @@ function ApprovalList() {
                                     alt={label || "StarVisa"}
                                     width={120}
                                     height={120}
-                                    className="absolute top-0 left-0 w-full h-full object-contain object-center"
+                                    className="w-full h-full object-contain object-center"
                                 />
                                 <span className="relative">
                                     {value}
@@ -56,6 +56,9 @@ const CardImageWrap = styled.div`
     height: clamp(120px, 12vw, 138px);
     font-size: clamp(24px, 4vw, 40px);
     font-weight: 700;
+    &>* {
+        grid-area: 1/1;
+    }
 `;
 
 export default ApprovalList
