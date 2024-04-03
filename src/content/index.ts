@@ -230,17 +230,16 @@ export const site = {
 
 export const navbar = [
     {
-        label: 'Портфолио',
-        route: '/portfolio',
-        // menu: 'portfolio'
+        label: 'Главная',
+        route: '/',
     },
     {
-        label: 'Услуги',
+        label: 'Визы',
         route: '/services',
         menu: 'services'
     },
     {
-        label: 'Технологии',
+        label: 'Туры',
         route: '/features'
     },
     {
@@ -248,8 +247,8 @@ export const navbar = [
         route: '/about'
     },
     {
-        label: 'Вопросы',
-        route: '/#faq'
+        label: 'Блог',
+        route: '/posts'
     },
 ];
 
@@ -264,40 +263,7 @@ export const contacts = [
         name: 'phone',
         title: 'Позвоните нам',
         href: 'tel:0927627728525',
-        label: '0927 6277 28525'
-    },
-];
-
-export const steps = [
-    {
-        step: '01',
-        title: 'Планирование',
-        description: 'Ваши цели в бизнесе и планы по его цифровой трансформации.'
-    },
-    {
-        step: '02',
-        title: 'Дизайн',
-        description: 'Создание адаптивного дизайна направленного на вашу целевую аудиторию'
-    },
-    {
-        step: '03',
-        title: 'Разработка',
-        description: 'Создание и оптимизация вашего сайта для эффективного развития в онлайн-среде.'
-    },
-    {
-        step: '04',
-        title: 'Тестирование',
-        description: 'Тщательное тестирование вашего сайта для обеспечения его эффективной работы в онлайн-среде.'
-    },
-    {
-        step: '05',
-        title: 'SEO-оптимизация',
-        description: 'Оптимизация сайта с учетом потребностей вашей целевой аудитории для максимальной эффективности в поисковых системах.'
-    },
-    {
-        step: '06',
-        title: 'Реклама',
-        description: 'Создание таргетированных и контекстных рекламных кампаний нацеленных на интересы вашей целевой аудитории.'
+        label: '+927 6277 28525'
     },
 ];
 
@@ -334,24 +300,6 @@ export const projects = [
     }
 ];
 
-export const marketing = {
-    title: 'Реализуем проекты с надежными технологиями и эффективным маркетингом.',
-    data: [
-        {
-            title: 'Контекстная реклама',
-            description: 'Контекстная реклама — это эффективный инструмент привлечения внимания к вашему бизнесу. Текстовые, графические и видеообъявления появляются перед пользователями, когда они ищут информацию или интересуются определенной темой в сети. Обеспечьте максимальную видимость вашего предложения с нашей контекстной рекламой.',
-            image: '/images/marketing-1.png',
-            link: '/'
-        },
-        {
-            title: 'Таргетированная реклама',
-            description: 'Таргетированная реклама – это эффективный метод продвижения в интернете. Мы предлагаем возможность выводить вашу рекламу перед определенной целевой аудиторией, установив параметры на социальных сетях, сайтах или в приложениях. Максимизируйте воздействие на вашу целевую аудиторию – обратитесь к нам для настройки успешной таргетированной рекламной кампании',
-            image: '/images/marketing-2.png',
-            link: '/'
-        },
-    ]
-};
-
 export const faq = {
     title: 'Часто задаваемые вопросы',
     description: '',
@@ -387,7 +335,7 @@ export const services = [
     {
         price: '$50+',
         subtitle: '',
-        title: 'аудит сайта',
+        title: 'Англия',
         description: 'Beatae reiciendis necessitatibus dolor saepe.',
         features: ['All limited links', 'Own analytics platform', 'Chat support', 'Optimize hashtags', 'Unlimited users'],
         link: '/'
@@ -395,7 +343,7 @@ export const services = [
     {
         price: '$200+',
         subtitle: 'Multi Design',
-        title: 'дизайн сайта',
+        title: 'Германия',
         description: 'Adipisci ipsa temporibus ea.',
         variant: 'primary',
         features: ['All limited links', 'Own analytics platform', 'Chat support', 'Optimize hashtags', 'Unlimited users'],
@@ -404,7 +352,7 @@ export const services = [
     {
         price: '$350',
         subtitle: 'Multi Page',
-        title: 'разработка сайта',
+        title: 'Америка',
         description: 'Hic quo et quae beatae dicta doloremque quisquam ut.',
         features: ['All limited links', 'Own analytics platform', 'Chat support', 'Optimize hashtags', 'Unlimited users'],
         link: '/'
@@ -412,49 +360,9 @@ export const services = [
     {
         price: '$200',
         subtitle: 'Per page',
-        title: 'разработка лендинга',
+        title: 'Франция',
         description: 'Unde ut aliquam odio ut omnis.',
         features: [],
         link: '/'
     },
-    {
-        price: '$200',
-        subtitle: '',
-        title: 'контакстная реклама',
-        description: 'Atque repellat aut et.',
-        link: '/services/kontekstnaya-reklama'
-    },
-    {
-        price: '$200',
-        subtitle: '',
-        title: 'таргетированая реклама',
-        description: 'Quod totam voluptatum.',
-        link: '/services/targetirovannaya-reklama'
-    },
-    {
-        price: '$150',
-        subtitle: '',
-        title: 'SEO продвижение',
-        description: 'Rem nesciunt architecto itaque natus culpa doloremque neque et voluptatibus.',
-        link: '/'
-    },
-    {
-        price: '$200',
-        subtitle: '',
-        title: 'SMM (ведение профилей в соцсетях)',
-        description: 'Laboriosam ex ut.',
-        link: '/'
-    },
 ]
-
-export const brands = {
-    title: 'Finsweet Users',
-    count: '100.000+',
-    list: [
-        '/images/brand-1.png',
-        '/images/brand-2.png',
-        '/images/brand-3.png',
-        '/images/brand-4.png',
-        '/images/brand-5.png',
-    ]
-}
