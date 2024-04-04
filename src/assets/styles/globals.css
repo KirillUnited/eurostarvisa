@@ -82,10 +82,13 @@
     .section {
         @apply bg-background;
     }
+    .section-inner {
+        @apply py-4 md:py-12;
+    }
     .section-heading {
         @apply flex flex-col pt-6 pb-5 space-y-5;
     }
-    .section-inner {
+    .section-body {
         @apply py-4 md:py-12;
     }
     .heading {

@@ -300,33 +300,33 @@ export const projects = [
     }
 ];
 
-export const faq = {
-    title: 'Часто задаваемые вопросы',
+export const FAQ = {
+    title: 'Вы спрашиваете - мы отвечаем',
     description: '',
     link: {
-        label: 'Свяжитесь с нами для получения дополнительной информации',
-        href: '/'
+        label: null,
+        href: null
     },
-    content: [
+    list: [
         {
-            title: 'Сколько времени это займет?',
-            description: 'Dignissimos libero placeat nesciunt quaerat quia harum. Itaque reprehenderit pariatur suscipit fuga. Amet nihil repellendus iste. Corrupti est eveniet.'
+            thumbnail: '/images/visa-france.png',
+            title: 'Мне выдали визу во Францию на три года. Как долго я могу находиться в Европе?',
+            description: 'Шенгенская виза - это не срок, сколько вы можете находиться безвыездно на территории Европы. Визы сроком действия более 6 месяцев, как правило, позволяют находиться на территории шенгенской зоны не более 90 дней в полугодие. Если вы сомневаетесь, просмотрите вашу визу. В разделе "Duration of stay" указано количество дней, сколько вы можете пребывать в ропе в течение полугода.'
         },
         {
-            title: 'Как вы называете классы?',
-            description: 'Nam et corporis ipsam. Aut eveniet sit ipsa error voluptatem. Tempora repudiandae rerum.'
+            thumbnail: '/images/visa-england.png',
+            title: 'Мне выдали визу в Англия на три года. Как долго я могу находиться в Европе?',
+            description: 'Шенгенская виза - это не срок, сколько вы можете находиться безвыездно на территории Европы. Визы сроком действия более 6 месяцев, как правило, позволяют находиться на территории шенгенской зоны не более 90 дней в полугодие. Если вы сомневаетесь, просмотрите вашу визу. В разделе "Duration of stay" указано количество дней, сколько вы можете пребывать в ропе в течение полугода.'
         },
         {
-            title: 'Как вы общаетесь?',
-            description: 'Quod qui adipisci sint libero harum cupiditate provident. Qui est fugit amet. Quo nisi qui quasi pariatur et odio. Magnam facilis magnam voluptas laborum aut iure maxime. A harum corrupti dolorem enim est qui. Omnis sint ipsam.'
+            thumbnail: '/images/visa-usa.png',
+            title: 'Мне выдали визу в Америка на три года. Как долго я могу находиться в Европе?',
+            description: 'Шенгенская виза - это не срок, сколько вы можете находиться безвыездно на территории Европы. Визы сроком действия более 6 месяцев, как правило, позволяют находиться на территории шенгенской зоны не более 90 дней в полугодие. Если вы сомневаетесь, просмотрите вашу визу. В разделе "Duration of stay" указано количество дней, сколько вы можете пребывать в ропе в течение полугода.'
         },
         {
-            title: 'У меня есть проект побольше. Сможешь с ним справиться?',
-            description: 'Aliquid sed eligendi incidunt ea quo vel officiis velit dolores. Dolor et enim maiores. Doloribus ipsum at et inventore occaecati recusandae perspiciatis quae. Dolore voluptas quia soluta ea delectus non eaque ut. Et laudantium asperiores pariatur perspiciatis officiis sed voluptatem consequatur.'
-        },
-        {
-            title: 'Как вы называете свои классы?',
-            description: 'Voluptatem repellendus explicabo impedit voluptas cumque et soluta quis ad. Quibusdam unde debitis itaque. Officia illo accusamus molestiae non cupiditate voluptas nisi est.'
+            thumbnail: '/images/visa-germany.png',
+            title: 'Мне выдали визу в Германия на три года. Как долго я могу находиться в Европе?',
+            description: 'Шенгенская виза - это не срок, сколько вы можете находиться безвыездно на территории Европы. Визы сроком действия более 6 месяцев, как правило, позволяют находиться на территории шенгенской зоны не более 90 дней в полугодие. Если вы сомневаетесь, просмотрите вашу визу. В разделе "Duration of stay" указано количество дней, сколько вы можете пребывать в ропе в течение полугода.'
         },
     ]
 };

@@ -1,5 +1,7 @@
 import { ApprovalSection } from '@/components/shared/approval'
 import ApprovalList from '@/components/shared/approval/approval-list'
+import { FAQSection } from '@/components/shared/faq'
+import FAQCarousel from '@/components/shared/faq/faq-carousel'
 import Hero from '@/components/shared/hero'
 import { FeaturedProductSection } from '@/components/shared/product'
 import FeaturedProductList from '@/components/shared/product/featured-product-list'
@@ -25,6 +27,9 @@ export default function Home() {
       <StepSection>
         <StepList />
       </StepSection>
+      <FAQSection>
+        <FAQCarousel />
+      </FAQSection>
     </>
   )
 }
