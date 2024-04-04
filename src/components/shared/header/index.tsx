@@ -15,12 +15,16 @@ import { contacts, site } from '@/content'
 const Header = () => {
     const contact = contacts[1];
     return (
-        <header className={cn('sticky z-50 top-0 left-0', styles.header)}>
+        <header className={cn('sticky z-50 top-0 left-0 w-full', styles.header)}>
             <div className="container max-w-screen-2xl">
-                <HeaderInner className="flex lg:grid items-center justify-between gap-4">
+                <HeaderInner className="flex items-center justify-between gap-4">
                     <Logo />
-                    <div className='lg:flex hidden justify-center'><Navbar variant='primary' enableSubmenu /></div>
-                    <div className="lg:flex hidden items-center gap-8 justify-end">
+                    <div className='flex justify-center'>
+                        <div className='lg:flex hidden'>
+                            <Navbar variant='primary' enableSubmenu />
+                        </div>
+                    </div>
+                    <div className="flex items-center gap-4 lg:gap-8 justify-end">
                         <PhoneCall phone={contact.href} label={contact.label} />
                         {/* <Dialog>
                             <DialogTrigger asChild>
@@ -28,10 +32,7 @@ const Header = () => {
                             </DialogTrigger>
                             <CTAModal />
                         </Dialog> */}
-                    </div>
-                    <div className='flex gap-6 items-center lg:hidden'>
-                        <PhoneCall phone={contact.href} />
-                        <MenuIcon className='text-link' width={38} height={29} />
+                        <MenuIcon className='text-link lg:hidden' width={38} height={29} />
                     </div>
                 </HeaderInner>
             </div>
@@ -40,10 +41,10 @@ const Header = () => {
 }
 
 const HeaderInner = styled.div`
-    --side-col-width: 230px;
-    
+    /* --side-col-width: 230px;
+    display: grid;
     min-height: 50px;
-    grid-template-columns: var(--side-col-width) 1fr var(--side-col-width);
+    grid-template-columns: var(--side-col-width) 1fr var(--side-col-width); */
 `
 
 export default Header
