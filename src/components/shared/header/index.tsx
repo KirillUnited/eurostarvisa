@@ -17,7 +17,7 @@ const Header = () => {
     return (
         <header className={cn('sticky z-50 top-0 left-0', styles.header)}>
             <div className="container max-w-screen-2xl">
-                <HeaderInner className="flex lg:grid items-center justify-between gap-4 min-h-[80px]">
+                <HeaderInner className="flex lg:grid items-center justify-between gap-4">
                     <Logo />
                     <div className='lg:flex hidden justify-center'><Navbar variant='primary' enableSubmenu /></div>
                     <div className="lg:flex hidden items-center gap-8 justify-end">
@@ -31,7 +31,7 @@ const Header = () => {
                     </div>
                     <div className='flex gap-6 items-center lg:hidden'>
                         <PhoneCall phone={contact.href} />
-                        <MenuIcon className='text-red-700' width={38} height={29}/>
+                        <MenuIcon className='text-link' width={38} height={29} />
                     </div>
                 </HeaderInner>
             </div>
@@ -41,6 +41,8 @@ const Header = () => {
 
 const HeaderInner = styled.div`
     --side-col-width: 230px;
+    
+    min-height: 50px;
     grid-template-columns: var(--side-col-width) 1fr var(--side-col-width);
 `
 

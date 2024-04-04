@@ -1,20 +1,25 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-import LogoIcon from '@/assets/images/logo.svg'
+import styled from 'styled-components'
 
 const Logo = () => {
     return (
-        <Link href={`/`} className='logo'>
-            {/* <Image
-                src={`/images/Logo.svg`}
+        <LogoLink href={`/`} className='my-1'>
+            <Image
+                src={`/images/logo.svg`}
                 width={122}
                 height={24}
-                alt='DigitalAgency Logo'
-            /> */}
-            <LogoIcon className='logo-icon' />
-        </Link>
+                alt='StarVisa Logo'
+                className='w-full h-full object-contain'
+            />
+        </LogoLink>
     )
 }
+
+const LogoLink = styled(Link)`
+    width: clamp(150px, 20vw, 200px);
+    height: clamp(40px, 5vw, 50px);
+`
 
 export default Logo
