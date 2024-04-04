@@ -19,6 +19,7 @@ const Logo = () => {
 }
 
 const LogoLink = styled(Link)`
+    display: inline-flex;
     width: clamp(150px, 20vw, 200px);
     height: clamp(40px, 5vw, 50px);
 `
