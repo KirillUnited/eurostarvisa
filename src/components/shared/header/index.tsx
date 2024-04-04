@@ -11,6 +11,7 @@ import { Dialog, DialogTrigger } from '@/components/ui/dialog'
 import styled from 'styled-components'
 import { MenuIcon } from 'lucide-react'
 import { contacts, site } from '@/content'
+import HeaderMobileMenu from './header-mobile-menu'
 
 const Header = () => {
     const contact = contacts[1];
@@ -32,7 +33,7 @@ const Header = () => {
                             </DialogTrigger>
                             <CTAModal />
                         </Dialog> */}
-                        <MenuIcon className='text-link lg:hidden' width={38} height={29} />
+                        <HeaderMobileMenu className='lg:hidden'/>
                     </div>
                 </HeaderInner>
             </div>
