@@ -16,8 +16,8 @@ module.exports = {
       padding: "1rem",
       screens: {
         "sm": "580px",
-        "md": "940px",
-        "lg": "1280px",
+        "md": "1024px",
+        "lg": "1200px",
       },
     },
     extend: {
@@ -34,11 +34,6 @@ module.exports = {
           accent: "hsla(225, 57%, 97%, 1)"
         },
         foreground: "hsl(var(--foreground))",
-        foregroundSecondary: "hsla(0, 0%, 100%, 1)",
-        link: {
-          DEFAULT: "hsla(248, 96%, 48%, 1)",
-          secondary: "hsla(238, 50%, 22%, 1)",
-        },
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
@@ -66,6 +61,11 @@ module.exports = {
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
+        },
+        foregroundSecondary: "hsla(0, 0%, 100%, 1)",
+        link: {
+          DEFAULT: "hsla(var(--link))",
+          secondary: "hsla(238, 50%, 22%, 1)",
         },
       },
       borderRadius: {

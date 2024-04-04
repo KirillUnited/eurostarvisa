@@ -49,11 +49,13 @@ const Card = styled.div`
     text-align: center;
 `;
 const CardImageWrap = styled.div`
+    --size: clamp(120px, 12vw, 138px);
+
     position: relative;
     display: grid;
     place-items: center;
-    width: clamp(120px, 12vw, 138px);
-    height: clamp(120px, 12vw, 138px);
+    width: var(--size);
+    height: var(--size);
     font-size: clamp(24px, 4vw, 40px);
     font-weight: 700;
     &>* {

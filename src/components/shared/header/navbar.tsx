@@ -28,17 +28,6 @@ const menuLinkStyle = cva(
         }
     }
 );
-const menuItemStyle = cva(
-    "",
-    {
-        variants: {
-            variant: {
-                primary: "",
-                secondary: ""
-            }
-        }
-    }
-)
 
 type NavbarType = {
     variant?: 'primary' | 'secondary',
@@ -58,7 +47,6 @@ const Navbar = ({ variant, enableSubmenu }: NavbarType) => {
                         return (
                             <NavigationMenuItem
                                 key={link.label}
-                                className={cn(menuItemStyle())}
                             >
                                 <NavigationMenuTrigger className={cn(
                                     "p-0 bg-transparent data-[state=open]:bg-muted h-auto focus:bg-transparent focus:text-foreground",
@@ -99,7 +87,7 @@ const Navbar = ({ variant, enableSubmenu }: NavbarType) => {
                         )
                     }
                     return (
-                        <NavigationMenuItem key={link.label} className={cn(menuItemStyle())}>
+                        <NavigationMenuItem key={link.label}>
                             <NavigationMenuLink asChild>
                                 <Link href={link.route}
                                     className={cn(
@@ -115,7 +103,6 @@ const Navbar = ({ variant, enableSubmenu }: NavbarType) => {
                         </NavigationMenuItem>
                     )
                 })}
-                {/* <NavigationMenuIndicator /> */}
             </NavigationMenuList>
             <NavigationMenuViewport />
         </NavigationMenu>
