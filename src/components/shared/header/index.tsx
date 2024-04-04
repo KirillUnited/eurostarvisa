@@ -16,7 +16,7 @@ const Header = () => {
     const contact = contacts[1];
     return (
         <header className={cn('sticky z-50 top-0 left-0', styles.header)}>
-            <div className="container">
+            <div className="container max-w-screen-2xl">
                 <HeaderInner className="flex lg:grid items-center justify-between gap-4 min-h-[80px]">
                     <Logo />
                     <div className='lg:flex hidden justify-center'><Navbar variant='primary' enableSubmenu /></div>
@@ -31,7 +31,7 @@ const Header = () => {
                     </div>
                     <div className='flex gap-6 items-center lg:hidden'>
                         <PhoneCall phone={contact.href} />
-                        <MenuIcon className='text-primary' />
+                        <MenuIcon className='text-red-700' width={38} height={29}/>
                     </div>
                 </HeaderInner>
             </div>
