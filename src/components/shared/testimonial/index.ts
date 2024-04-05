@@ -1,5 +1,5 @@
 import TestimonialSection from "./testimonial-section";
-import TestimonialCarousel from "./Testimonial-carousel";
+import TestimonialCarousel from "./_testimonial-carousel";
 
 export {
     TestimonialSection,
