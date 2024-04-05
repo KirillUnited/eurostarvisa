@@ -3,7 +3,7 @@ import React from "react";
 
 function ApprovalSection({ children }: React.HTMLAttributes<HTMLElement>) {
     return (
-        <div className="section">
+        <section className="section">
             <div className="container">
                 <div className="section-inner">
                     <div className="max-w-[80%] md:max-w-full mx-auto">
@@ -21,7 +21,7 @@ function ApprovalSection({ children }: React.HTMLAttributes<HTMLElement>) {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     );
 }
 

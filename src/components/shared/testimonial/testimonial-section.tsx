@@ -3,7 +3,7 @@ import React from 'react'
 
 function TestimonialSection({ children }: React.HTMLAttributes<HTMLElement>) {
     return (
-        <section className='section bg-accent'>
+        <section className='section'>
             <div className="container">
                 <div className='section-inner'>
                     <div className="section-heading">
