@@ -13,6 +13,8 @@ const Logo = () => {
                 height={24}
                 alt='StarVisa Logo'
                 className='w-full h-full object-contain'
+                quality={50}
+                priority
             />
         </LogoLink>
     )

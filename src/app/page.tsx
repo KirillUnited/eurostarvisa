@@ -6,6 +6,7 @@ import Hero from '@/components/shared/hero'
 import { FeaturedProductSection } from '@/components/shared/product'
 import FeaturedProductList from '@/components/shared/product/featured-product-list'
 import { StepList, StepSection } from '@/components/shared/step'
+import { TestimonialCarousel, TestimonialSection } from '@/components/shared/testimonial'
 import { site } from '@/content'
 
 export default function Home() {
@@ -30,6 +31,9 @@ export default function Home() {
       <FAQSection>
         <FAQCarousel />
       </FAQSection>
+      <TestimonialSection>
+        <TestimonialCarousel />
+      </TestimonialSection>
     </>
   )
 }
