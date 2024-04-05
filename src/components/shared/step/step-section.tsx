@@ -10,7 +10,7 @@ function StepSection({ children }: React.HTMLAttributes<HTMLElement>) {
                         <h2 className='heading-2'>{site.home.steps.title}</h2>
                         <p dangerouslySetInnerHTML={{ __html: site.home.steps.description }} />
                     </div>
-                    <div className="section-inner">
+                    <div className="section-body">
                         {children}
                     </div>
                 </div>

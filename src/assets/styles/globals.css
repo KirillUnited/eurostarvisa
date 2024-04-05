@@ -86,7 +86,7 @@
         @apply py-4 md:py-12;
     }
     .section-heading {
-        @apply flex flex-col pt-6 pb-5 space-y-5;
+        @apply flex flex-col pt-3 md:pt-6 pb-2 md:pb-5 space-y-5;
     }
     .section-body {
         @apply py-4 md:py-12;

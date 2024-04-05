@@ -1,13 +1,13 @@
 import { site } from "@/content";
 import React from "react";
 
-function ApprovalSection({children}: React.HTMLAttributes<HTMLElement>) {
+function ApprovalSection({ children }: React.HTMLAttributes<HTMLElement>) {
     return (
-        <div className="section">
+        <section className="section">
             <div className="container">
                 <div className="section-inner">
-                    <div className="flex flex-col gap-8 lg:gap-16 max-w-[80%] md:max-w-full mx-auto">
-                        <div className="flex flex-col gap-4">
+                    <div className="max-w-[80%] md:max-w-full mx-auto">
+                        <div className="section-heading">
                             <h2 className="heading-3">
                                 {site.home.approval.title}
                             </h2>
@@ -15,11 +15,13 @@ function ApprovalSection({children}: React.HTMLAttributes<HTMLElement>) {
                                 {site.home.approval.description}
                             </p>
                         </div>
-                        {children}
+                        <div className="section-body">
+                            {children}
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     );
 }
 
