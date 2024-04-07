@@ -16,7 +16,7 @@ function InfoList() {
                             key={title}
                         >
                             <Card
-                                className='grid grid-cols-[168px,_1fr] shadow-md hover:shadow-2xl transition-all duration-300 h-full'
+                                className='sm:grid grid-cols-[168px,_1fr] shadow-md hover:shadow-2xl transition-all duration-300 h-full'
                             >
                                 <CardHeader>
                                     <Image
