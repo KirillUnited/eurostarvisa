@@ -293,6 +293,24 @@ export const site = {
                         title: 'финансовые справки'
                     },
                 ],
+            },            
+            additional: {
+                title: 'Дополнительные документы',
+                description: '',
+                list: [
+                    {
+                        thumbnail: '/images/passport_3.png',
+                        title: 'общегражданский паспорт'
+                    },
+                    {
+                        thumbnail: '/images/passport_travel_3.png',
+                        title: 'заграничные паспорта за последние 10 лет'
+                    },
+                    {
+                        thumbnail: '/images/database_3.png',
+                        title: 'финансовые справки'
+                    },
+                ],
             }
         },
     }

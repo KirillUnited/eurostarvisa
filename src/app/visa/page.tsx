@@ -43,8 +43,17 @@ export default function VisaPage() {
           dangerouslySetInnerHTML={{ __html: site.visa.hero.description }}
         />
       </Hero>
-      <DocsMainSection>
-        <DocsMainList />
+      <DocsMainSection
+        title={site.visa.docs.main.title}
+        description={site.visa.docs.main.description}
+      >
+        <DocsMainList list={site.visa.docs.main.list} />
+      </DocsMainSection>
+      <DocsMainSection
+        title={site.visa.docs.additional.title}
+        description={site.visa.docs.additional.description}
+      >
+        <DocsMainList list={site.visa.docs.additional.list} />
       </DocsMainSection>
     </>
   )

@@ -3,14 +3,18 @@ import React from 'react'
 import styled from 'styled-components';
 import { Card, CardHeader, CardTitle } from '@/components/ui/card';
 import Image from 'next/image'
-import { site } from '@/content'
 import { cn } from '@/lib/utils';
-
-function DocsMainList() {
+interface ItemProps {
+    thumbnail?: string, title?: string
+}
+interface Props {
+    list: ItemProps[]
+}
+function DocsMainList({ list }: Props) {
     return (
         <List className='grid'>
             {
-                site.visa.docs.main.list.map(({ thumbnail, title }) => {
+                list?.map(({ thumbnail, title }: ItemProps) => {
                     return (
                         <Card
                             key={title}
