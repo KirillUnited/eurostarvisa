@@ -11,9 +11,10 @@ function InfoSection({ children }: React.HTMLAttributes<HTMLElement>) {
                         <h2 className='heading-2'>{site.home.info.title}</h2>
                         {site.home.info.description && <p dangerouslySetInnerHTML={{ __html: site.home.info.description }} />}
                     </div>
-                    <div className="section-body grid grid-cols-[auto,_1fr] gap-4">
+                    <div className="section-body grid md:grid-cols-[auto,_1fr] gap-4">
                         {children}
                         <Image
+                        className='hidden lg:flex'
                             width={478}
                             height={540}
                             src={site.home.info.image}
