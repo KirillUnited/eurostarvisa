@@ -1,7 +1,7 @@
 import Hero, { HeroDescription, HeroTitle } from '@/components/shared/hero'
-import { HeroContent } from '@/components/shared/hero/hero-section'
 import { site } from '@/content'
-import styled from 'styled-components'
+import { DocsMainSection } from './sections'
+import DocsMainList from './sections/docs-main-list'
 
 type Props = {
   params: { slug: string }
@@ -39,9 +39,13 @@ export default function VisaPage() {
           {site.visa.hero.subtitle}
         </p>
         <HeroDescription
+          className='text-foreground/60'
           dangerouslySetInnerHTML={{ __html: site.visa.hero.description }}
         />
       </Hero>
+      <DocsMainSection>
+        <DocsMainList />
+      </DocsMainSection>
     </>
   )
 }
