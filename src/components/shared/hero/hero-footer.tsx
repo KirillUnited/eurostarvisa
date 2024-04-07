@@ -1,24 +1,60 @@
+'use client'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import React from 'react'
-import styles from './styles.module.css'
 import styled from 'styled-components'
+import {
+    Dialog,
+    DialogContent,
+    DialogDescription,
+    DialogHeader,
+    DialogTitle,
+    DialogTrigger,
+} from "@/components/ui/dialog"
+
 
 function HeroFooter() {
     return (
-        <Content className={cn(
-            'flex flex-wrap items-center flex-col lg:flex-row lg:mt-6'
-        )}>
+        <>
+            <Content className={cn(
+                'flex flex-wrap items-center flex-col lg:flex-row lg:mt-6'
+            )}>
+                <Dialog>
+                    <DialogTrigger asChild>
+                        <ContentButton
+                            className={cn(
+                                'w-full sm:w-fit transition-transform'
+                            )}
+                        >
+                            получить бесплатную консультацию
+                        </ContentButton>
+                    </DialogTrigger>
+                    <DialogContent className='sm:rounded-none'>
+                        <DialogHeader>
+                            <DialogTitle>Оставьте заявку для консультации со специалистом.</DialogTitle>
+                            <DialogDescription>
+                                Позвоните нам или оставьте заявку на обратный звонок для консультации со специалистом.
+                            </DialogDescription>
+                        </DialogHeader>
+                        <Button>
+                            оставить заявку
+                        </Button>
+                    </DialogContent>
+                </Dialog>
+            </Content>
+
             <ContentButton
+                variant={'outline'}
                 className={cn(
                     'w-full sm:w-fit transition-transform'
                 )}
             >
-                получить бесплатную консультацию
+                заполнить анкету
             </ContentButton>
-        </Content>
+        </>
     )
 }
+
 const Content = styled.div`
     gap: 1rem 2.5rem;
 `;
