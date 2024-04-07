@@ -2,6 +2,7 @@ import Hero, { HeroDescription, HeroTitle } from '@/components/shared/hero'
 import { site } from '@/content'
 import { DocsMainSection } from './sections'
 import DocsMainList from './sections/docs-main-list'
+import DocsInfo from './sections/docs-info'
 
 type Props = {
   params: { slug: string }
@@ -49,6 +50,7 @@ export default function VisaPage() {
       >
         <DocsMainList list={site.visa.docs.main.list} />
       </DocsMainSection>
+      <DocsInfo info={site.visa.docs.info} />
       <DocsMainSection
         title={site.visa.docs.additional.title}
         description={site.visa.docs.additional.description}
