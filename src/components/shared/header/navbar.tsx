@@ -22,7 +22,7 @@ const menuLinkStyle = cva(
     {
         variants: {
             variant: {
-                primary: "text-foreground min-h-[80px] px-4 transition-colors hover:bg-muted rounded-none",
+                primary: "text-foreground lg:min-h-[80px] px-4 py-2 transition-colors hover:bg-muted rounded-none",
                 secondary: "text-foreground"
             }
         }
