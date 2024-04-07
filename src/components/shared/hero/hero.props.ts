@@ -4,7 +4,7 @@ export type HeroLinkProps = {
     name?: string,
     link?: string
 }
-export interface HeroProps {
+export interface HeroProps extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> {
     title?: string,
     subtitle?: string,
     description?: string,

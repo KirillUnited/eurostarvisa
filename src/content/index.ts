@@ -1,7 +1,10 @@
 export const site = {
     home: {
+        seo: {
+            title: 'VCS. Центр визовых услуг',
+            description: 'Нужна виза?<br/>Мы Вам поможем.',
+        },
         hero: {
-            pageTitle: 'Home',
             title: 'VCS. Центр визовых услуг',
             subtitle: 'Нужна виза?<br/>Мы Вам поможем.',
             description: '<p><span class="text-primary">Visa Concierge Service</span> - компания объединившая самых квалифицированных специалистов. За нашими плечами тысячи одобренных виз разной сложности, и столько же довольных клиентов!</p><br/><p><span class="text-primary">Visa Concierge Service</span> - компания объединившая самых квалифицированных специалистов. За нашими плечами тысячи одобренных виз разной сложности, и столько же довольных клиентов!</p>',
@@ -261,6 +264,18 @@ export const site = {
             },
         ]
     },
+    visa: {
+        seo: {
+            title: 'Виза в Канаду',
+            description: 'Получение визы в Канаду, по мнению многих, процесс не быстрый и достаточно сложный. Но специалисты нашей компании готовы доказать Вам обратное.',
+        },
+        hero: {
+            title: 'Виза в Канаду',
+            subtitle: 'Просто. Быстро. Доступно.',
+            description: 'Получение визы в Канаду, по мнению многих, процесс не быстрый и достаточно сложный. Но специалисты нашей компании готовы доказать Вам обратное.',
+            image: '/images/visa-hero.png',
+        },
+    }
 };
 
 export const navbar = [
@@ -373,7 +388,7 @@ export const services = [
         title: 'Англия',
         description: 'Beatae reiciendis necessitatibus dolor saepe.',
         features: ['All limited links', 'Own analytics platform', 'Chat support', 'Optimize hashtags', 'Unlimited users'],
-        link: '/'
+        link: '/visa'
     },
     {
         price: '$200+',
@@ -382,7 +397,7 @@ export const services = [
         description: 'Adipisci ipsa temporibus ea.',
         variant: 'primary',
         features: ['All limited links', 'Own analytics platform', 'Chat support', 'Optimize hashtags', 'Unlimited users'],
-        link: '/'
+        link: '/visa'
     },
     {
         price: '$350',
@@ -390,7 +405,7 @@ export const services = [
         title: 'Америка',
         description: 'Hic quo et quae beatae dicta doloremque quisquam ut.',
         features: ['All limited links', 'Own analytics platform', 'Chat support', 'Optimize hashtags', 'Unlimited users'],
-        link: '/'
+        link: '/visa'
     },
     {
         price: '$200',
@@ -398,7 +413,7 @@ export const services = [
         title: 'Франция',
         description: 'Unde ut aliquam odio ut omnis.',
         features: [],
-        link: '/'
+        link: '/visa'
     },
 ]
 

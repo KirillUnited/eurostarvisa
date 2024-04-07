@@ -95,7 +95,8 @@
         @apply flex flex-col text-center mx-auto;
     }
     .heading-1 {
-        @apply text-4xl md:text-[54px] font-bold;
+        @apply text-4xl md:text-7xl font-bold;
+        font-size: clamp(28px, 8vw, 76px);
         line-height: 130%;
     }
     .heading-2 {
