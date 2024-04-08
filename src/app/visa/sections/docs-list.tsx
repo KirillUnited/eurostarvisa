@@ -10,7 +10,7 @@ interface ItemProps {
 interface Props {
     list: ItemProps[]
 }
-function DocsMainList({ list }: Props) {
+function DocsList({ list }: Props) {
     return (
         <List className='grid'>
             {
@@ -47,4 +47,4 @@ const List = styled.div`
     gap: clamp(20px, 4vw, 40px);
 `;
 
-export default DocsMainList
+export default DocsList

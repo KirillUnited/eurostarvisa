@@ -3,7 +3,7 @@ interface Props extends React.HTMLAttributes<HTMLElement> {
     title: string,
     description: string | TrustedHTML
 }
-export default function DocsMainSection({ title, description, children }: Props) {
+export default function DocsSection({ title, description, children }: Props) {
     return (
         <section className='section'>
             <div className="container">

@@ -1,5 +1,5 @@
-import DocsMainSection from "./docs-main";
+import DocsSection from "./docs";
 
 export {
-    DocsMainSection
+    DocsSection
 }

@@ -1,7 +1,7 @@
 import Hero, { HeroDescription, HeroTitle } from '@/components/shared/hero'
 import { site } from '@/content'
-import { DocsMainSection } from './sections'
-import DocsMainList from './sections/docs-main-list'
+import { DocsSection } from './sections'
+import DocsList from './sections/docs-list'
 import DocsInfo from './sections/docs-info'
 
 type Props = {
@@ -44,19 +44,19 @@ export default function VisaPage() {
           dangerouslySetInnerHTML={{ __html: site.visa.hero.description }}
         />
       </Hero>
-      <DocsMainSection
+      <DocsSection
         title={site.visa.docs.main.title}
         description={site.visa.docs.main.description}
       >
-        <DocsMainList list={site.visa.docs.main.list} />
-      </DocsMainSection>
+        <DocsList list={site.visa.docs.main.list} />
+      </DocsSection>
       <DocsInfo info={site.visa.docs.info} />
-      <DocsMainSection
+      <DocsSection
         title={site.visa.docs.additional.title}
         description={site.visa.docs.additional.description}
       >
-        <DocsMainList list={site.visa.docs.additional.list} />
-      </DocsMainSection>
+        <DocsList list={site.visa.docs.additional.list} />
+      </DocsSection>
     </>
   )
 }
