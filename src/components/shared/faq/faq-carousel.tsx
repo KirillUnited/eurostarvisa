@@ -38,11 +38,11 @@ export default function FAQCarousel() {
                                     <div className="flex flex-col gap-5">
                                         <div className="text-base md:text-xl">
                                             <p className='font-bold'>Вопрос:</p>
-                                            {title}
+                                            <p>{title}</p>
                                         </div>
                                         <div className="text-xs md:text-base">
                                             <p className='font-bold'>Ответ:</p>
-                                            {description}
+                                            <p>{description}</p>
                                         </div>
                                     </div>
                                 </FAQListItem>

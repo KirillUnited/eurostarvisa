@@ -24,7 +24,7 @@ export default function TestimonialCarousel() {
                     ""
                 )}>
                 {
-                    testimonials.list?.map(({ thumbnail, title, description, rating }) => {
+                    testimonials.list?.map(({ thumbnail, title, description, rating, link }) => {
                         return (
                             <CarouselItem
                                 key={title}
@@ -41,9 +41,12 @@ export default function TestimonialCarousel() {
                                         className='object-contain aspect-square mx-auto'
                                     />
                                     <div className="flex flex-col gap-5">
-                                        <p>{title}</p>
+                                        <p>
+                                            {title}
+                                            <a href={link} target="_blank" className="text-link">Яндекс</a>
+                                        </p>
                                         <p>{rating}</p>
-                                        {description}
+                                        <p className='paragraph'>{description}</p>
                                     </div>
                                 </div>
                             </CarouselItem>
