@@ -52,7 +52,7 @@ const Navbar = ({ variant, enableSubmenu }: NavbarType) => {
                                     "p-0 bg-transparent data-[state=open]:bg-muted h-auto focus:bg-transparent focus:text-foreground",
                                     menuLinkStyle({ variant }),
                                     {
-                                        "font-bold": variant == 'primary' && isActive,
+                                        "font-bold text-link": variant == 'primary' && isActive,
                                     },
                                 )}>
                                     {link.label}
@@ -93,7 +93,7 @@ const Navbar = ({ variant, enableSubmenu }: NavbarType) => {
                                     className={cn(
                                         menuLinkStyle({ variant }),
                                         {
-                                            "font-bold": variant == 'primary' && isActive,
+                                            "font-bold text-link": variant == 'primary' && isActive,
                                         },
                                     )}
                                 >
