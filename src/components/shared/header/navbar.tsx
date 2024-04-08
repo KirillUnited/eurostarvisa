@@ -22,7 +22,7 @@ const menuLinkStyle = cva(
     {
         variants: {
             variant: {
-                primary: "text-foreground lg:min-h-[80px] px-4 py-2 transition-colors hover:bg-muted rounded-none",
+                primary: "text-foreground focus:text-link lg:min-h-[80px] px-4 py-2 transition-colors hover:bg-muted rounded-none",
                 secondary: "text-foreground"
             }
         }
@@ -41,7 +41,7 @@ const Navbar = ({ variant, enableSubmenu }: NavbarType) => {
         <NavigationMenu>
             <NavigationMenuList className='flex flex-wrap flex-col lg:flex-row items-center justify-center'>
                 {navbar.map((link) => {
-                    const isActive = pathname === link.route;
+                    const isActive = (pathname === link.route) || pathname.startsWith(link.route, 1);
 
                     if (link.menu && enableSubmenu) {
                         return (
@@ -49,7 +49,7 @@ const Navbar = ({ variant, enableSubmenu }: NavbarType) => {
                                 key={link.label}
                             >
                                 <NavigationMenuTrigger className={cn(
-                                    "p-0 bg-transparent data-[state=open]:bg-muted h-auto focus:bg-transparent focus:text-foreground",
+                                    "p-0 bg-transparent data-[state=open]:bg-muted h-auto focus:bg-transparent",
                                     menuLinkStyle({ variant }),
                                     {
                                         "font-bold text-link": variant == 'primary' && isActive,

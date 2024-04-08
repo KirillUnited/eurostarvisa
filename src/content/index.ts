@@ -324,7 +324,7 @@ export const navbar = [
     },
     {
         label: 'Визы',
-        route: '/services',
+        route: '/visa',
         menu: 'services'
     },
     {
