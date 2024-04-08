@@ -275,6 +275,11 @@ export const site = {
             description: 'Получение визы в Канаду, по мнению многих, процесс не быстрый и достаточно сложный. Но специалисты нашей компании готовы доказать Вам обратное.',
             image: '/images/visa-hero.png',
         },
+        info_important: {
+            title: 'Важно знать:',
+            description: 'У Канадской визы нет регламента сроков рассмотрения документов. Консульский отдел может одобрить визу за 3 рабочих дня или за 30. Также и срок действия визы в Канаду не предугадать. В большинстве своем разрешение на въезд действует до окончания срока действия паспорта. Но бывают и однократные визы, действующие не дольше заявленной поездки.',
+            image: '/images/info-important-bg.png'
+        },
         docs: {
             main: {
                 title: 'Обязательные документы',
@@ -450,34 +455,9 @@ export const services = [
     {
         price: '$50+',
         subtitle: '',
-        title: 'Англия',
+        title: 'Канада',
         description: 'Beatae reiciendis necessitatibus dolor saepe.',
         features: ['All limited links', 'Own analytics platform', 'Chat support', 'Optimize hashtags', 'Unlimited users'],
-        link: '/visa'
-    },
-    {
-        price: '$200+',
-        subtitle: 'Multi Design',
-        title: 'Германия',
-        description: 'Adipisci ipsa temporibus ea.',
-        variant: 'primary',
-        features: ['All limited links', 'Own analytics platform', 'Chat support', 'Optimize hashtags', 'Unlimited users'],
-        link: '/visa'
-    },
-    {
-        price: '$350',
-        subtitle: 'Multi Page',
-        title: 'Америка',
-        description: 'Hic quo et quae beatae dicta doloremque quisquam ut.',
-        features: ['All limited links', 'Own analytics platform', 'Chat support', 'Optimize hashtags', 'Unlimited users'],
-        link: '/visa'
-    },
-    {
-        price: '$200',
-        subtitle: 'Per page',
-        title: 'Франция',
-        description: 'Unde ut aliquam odio ut omnis.',
-        features: [],
         link: '/visa'
     },
 ]
