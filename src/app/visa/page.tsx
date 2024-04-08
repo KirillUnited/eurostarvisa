@@ -1,6 +1,6 @@
 import Hero, { HeroDescription, HeroTitle } from '@/components/shared/hero'
 import { site } from '@/content'
-import { DocsSection } from './sections'
+import { DocsSection, ServicesSection } from './sections'
 import DocsList from './sections/docs-list'
 import DocsInfo from './sections/docs-info'
 
@@ -57,6 +57,7 @@ export default function VisaPage() {
       >
         <DocsList list={site.visa.docs.additional.list} />
       </DocsSection>
+      <ServicesSection {...site.visa.services} />
     </>
   )
 }

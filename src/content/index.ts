@@ -293,7 +293,7 @@ export const site = {
                         title: 'финансовые справки'
                     },
                 ],
-            },            
+            },
             additional: {
                 title: 'Дополнительные документы',
                 description: '',
@@ -314,6 +314,32 @@ export const site = {
             },
             info: 'Заявку на канадскую визу рассматривают без заграничного паспорта.'
         },
+        services: {
+            title: 'В наши услуги по оформлению визы в Канаду входят',
+            description: '',
+            list: [
+                {
+                    title: 'Анкеты',
+                    description: 'Заполнение всех анкет, программа пребывания',
+                    thumbnail: '/images/visa-service-1.svg'
+                },
+                {
+                    title: 'Подготовка документов',
+                    description: 'Перевод и загрузка всех документов на портал Посольства Канады',
+                    thumbnail: '/images/visa-service-2.svg'
+                },
+                {
+                    title: 'Сборы',
+                    description: 'Оплата всех сборов (Консульский сбор, Биометрия, Вклейка визы в паспорт)',
+                    thumbnail: '/images/visa-service-3.svg'
+                },
+                {
+                    title: 'Подача',
+                    description: 'Подача и получение паспорта из Консульства',
+                    thumbnail: '/images/visa-service-4.svg'
+                },
+            ]
+        }
     }
 };
 
