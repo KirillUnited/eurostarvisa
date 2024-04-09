@@ -27,7 +27,7 @@ const formSchema = z.object({
 })
 
 interface OrderFormProps extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
-    variant?: string
+    variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link" | null | undefined
 }
 
 export default function OrderForm({ className, variant }: OrderFormProps) {
