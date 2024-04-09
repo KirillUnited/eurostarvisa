@@ -3,6 +3,7 @@ import { site } from '@/content'
 import { DocsSection, InfoImportant, ServiceSection, InfoList } from '@/components/shared/service'
 import DocsList from '@/components/shared/service/service-docs-list'
 import DocsInfo from '@/components/shared/service/service-docs-info'
+import { OrderSection } from '@/components/shared/form'
 
 type Props = {
 	params: { slug: string }
@@ -65,6 +66,7 @@ export default function VisaPage() {
 				<DocsList list={site.visa.docs.additional.list} />
 			</DocsSection>
 			<ServiceSection {...site.visa.services} />
+			<OrderSection />
 			<section className='section'>
 				<div className="container">
 					<div className='section-inner'>
