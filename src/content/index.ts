@@ -374,10 +374,6 @@ export const navbar = [
         menu: 'services'
     },
     {
-        label: 'Туры',
-        route: '/features'
-    },
-    {
         label: 'О нас',
         route: '/about'
     },
@@ -476,8 +472,6 @@ export const services = [
         link: '/visa'
     },
 ]
-
-
 
 export const testimonials = {
     title: 'Отзывы клиентов о нашей работе',
