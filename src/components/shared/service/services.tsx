@@ -21,7 +21,7 @@ interface ListProps {
     list?: ListItemProps[]
 }
 
-export function ServicesSection({ title, description, list, children }: SectionProps) {
+export function ServiceSection({ title, description, list, children }: SectionProps) {
     return (
         <section className='section'>
             <div className="container">
