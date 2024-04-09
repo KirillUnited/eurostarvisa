@@ -22,7 +22,7 @@ function HeroFooter() {
                 <DialogTrigger asChild>
                     <ContentButton
                         className={cn(
-                            'w-full sm:w-fit transition-transform'
+                            'flex-1 shrink-0 w-full lg:w-fit transition-transform'
                         )}
                     >
                         получить бесплатную консультацию
@@ -44,7 +44,7 @@ function HeroFooter() {
             <ContentButton
                 variant={'outline'}
                 className={cn(
-                    'w-full sm:w-fit transition-transform'
+                    'transition-transform w-full lg:w-fit'
                 )}
             >
                 заполнить анкету
@@ -54,7 +54,7 @@ function HeroFooter() {
 }
 
 const Content = styled.div`
-    gap: 1rem 2.5rem;
+    gap: 1rem;
 `;
 const ContentButton = styled(Button)`
     height: auto;
