@@ -27,10 +27,10 @@ const formSchema = z.object({
 })
 
 interface OrderFormProps extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
-
+    variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link" | null | undefined
 }
 
-export default function OrderForm({ className }: OrderFormProps) {
+export default function OrderForm({ className, variant }: OrderFormProps) {
     const form = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),
         defaultValues: {
@@ -78,7 +78,7 @@ export default function OrderForm({ className }: OrderFormProps) {
                         </>
                     )}
                 />
-                <Button variant={"outline"} type="submit" className="flex-1 shrink-0 w-fit text-base font-semibold border-primary-foreground border-2 text-primary-foreground">ОТПРАВИТЬ</Button>
+                <Button variant={variant || "outline"} type="submit" className="flex-1 shrink-0 w-fit text-base font-semibold border-primary-foreground border-2 text-primary-foreground">ОТПРАВИТЬ</Button>
             </form>
         </Form>
     )

@@ -11,7 +11,7 @@ import {
     DialogTitle,
     DialogTrigger,
 } from "@/components/ui/dialog"
-
+import { OrderForm } from '@/components/shared/form'
 
 function HeroFooter() {
     return (
@@ -35,9 +35,9 @@ function HeroFooter() {
                             Позвоните нам или оставьте заявку на обратный звонок для консультации со специалистом.
                         </DialogDescription>
                     </DialogHeader>
-                    <Button>
-                        оставить заявку
-                    </Button>
+                    <ContentForm>
+                        <OrderForm className='flex flex-col gap-5' variant='default' />
+                    </ContentForm>
                 </DialogContent>
             </Dialog>
 
@@ -58,6 +58,8 @@ const Content = styled.div`
     gap: 1rem;
 `;
 const ContentButton = styled(Button)`
+    --primary: 1 59% 57%;
+
     height: auto;
     min-height: 3.5rem;
     font-size: clamp(.875rem, 1.6vw, 1.125rem);
@@ -66,6 +68,12 @@ const ContentButton = styled(Button)`
     &:hover {
         transform: scale(110%);
     }
-`
+`;
+const ContentForm = styled.div`
+    --primary: 1 59% 57%;
+    &>form>* {
+        width: 100%;
+    }
+`;
 
 export default HeroFooter
