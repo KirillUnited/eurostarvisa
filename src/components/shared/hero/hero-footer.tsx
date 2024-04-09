@@ -54,6 +54,7 @@ function HeroFooter() {
 }
 
 const Content = styled.div`
+    --primary: 1 59% 57%;
     gap: 1rem;
 `;
 const ContentButton = styled(Button)`

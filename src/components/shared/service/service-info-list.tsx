@@ -52,6 +52,8 @@ function InfoList({ list }: Props) {
 }
 
 const List = styled.div`
+    --primary: 1 59% 57%;
+    
     grid-template-columns: repeat(auto-fill, minmax(min(360px, 100%), 1fr));
     gap: clamp(20px, 4vw, 40px);
 `;
