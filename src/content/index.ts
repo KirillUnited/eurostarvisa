@@ -1,3 +1,5 @@
+import { title } from "process";
+
 export const site = {
     home: {
         seo: {
@@ -343,6 +345,19 @@ export const site = {
                     description: 'Подача и получение паспорта из Консульства',
                     thumbnail: '/images/visa-service-4.svg'
                 },
+            ]
+        },
+        info: {
+            title: 'Полезная информация',
+            list: [
+                {
+                    thumbnail: '/images/service-info-item-1.png',
+                    title: 'Документы для визы в Канаду',
+                },                
+                {
+                    thumbnail: '/images/service-info-item-2.png',
+                    title: 'Биометрические данные',
+                }
             ]
         }
     }

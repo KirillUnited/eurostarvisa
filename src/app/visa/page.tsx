@@ -1,8 +1,8 @@
 import Hero, { HeroDescription, HeroTitle } from '@/components/shared/hero'
 import { site } from '@/content'
-import { DocsSection, InfoImportant, ServicesSection } from './sections'
-import DocsList from './sections/docs-list'
-import DocsInfo from './sections/docs-info'
+import { DocsSection, InfoImportant, ServiceSection, InfoList } from '@/components/shared/service'
+import DocsList from '@/components/shared/service/service-docs-list'
+import DocsInfo from '@/components/shared/service/service-docs-info'
 
 type Props = {
 	params: { slug: string }
@@ -64,7 +64,19 @@ export default function VisaPage() {
 			>
 				<DocsList list={site.visa.docs.additional.list} />
 			</DocsSection>
-			<ServicesSection {...site.visa.services} />
+			<ServiceSection {...site.visa.services} />
+			<section className='section'>
+				<div className="container">
+					<div className='section-inner'>
+						<div className="section-heading text-center">
+							<h2 className='heading-2'>{site.visa.info.title}</h2>
+						</div>
+						<div className="section-body">
+							<InfoList list={site.visa.info.list} />
+						</div>
+					</div>
+				</div>
+			</section>
 		</>
 	)
 }
