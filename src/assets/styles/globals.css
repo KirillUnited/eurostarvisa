@@ -74,7 +74,7 @@
         scroll-behavior: smooth;
     }
     body {
-        @apply font-sans bg-background text-foreground;
+        @apply font-sans bg-background text-foreground overflow-x-hidden;
     }
     .wrapper {
         @apply min-h-screen flex flex-col;

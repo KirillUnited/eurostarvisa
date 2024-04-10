@@ -13,16 +13,19 @@ import {
 } from "@/components/ui/dialog"
 import { OrderForm } from '@/components/shared/form'
 
-function HeroFooter() {
+interface Props extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> { }
+
+function HeroFooter({ className }: Props) {
     return (
         <Content className={cn(
-            'flex flex-wrap items-center flex-col lg:flex-row lg:mt-6'
+            'flex flex-wrap items-center flex-col lg:flex-row lg:mt-6',
+            className
         )}>
             <Dialog>
                 <DialogTrigger asChild>
                     <ContentButton
                         className={cn(
-                            'flex-1 shrink-0 w-full lg:w-fit transition-transform'
+                            'w-full lg:w-fit transition-transform'
                         )}
                     >
                         получить бесплатную консультацию
@@ -54,12 +57,9 @@ function HeroFooter() {
 }
 
 const Content = styled.div`
-    --primary: 1 59% 57%;
     gap: 1rem;
 `;
 const ContentButton = styled(Button)`
-    --primary: 1 59% 57%;
-
     height: auto;
     min-height: 3.5rem;
     font-size: clamp(.875rem, 1.6vw, 1.125rem);
@@ -70,7 +70,6 @@ const ContentButton = styled(Button)`
     }
 `;
 const ContentForm = styled.div`
-    --primary: 1 59% 57%;
     &>form>* {
         width: 100%;
     }
