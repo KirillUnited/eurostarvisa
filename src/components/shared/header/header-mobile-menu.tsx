@@ -21,6 +21,7 @@ import Logo from '../logo'
 import { cn } from '@/lib/utils'
 import { contacts } from '@/content'
 import Link from 'next/link'
+import { Socials } from '@/components/shared/socials'
 
 interface Props extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> {
 
@@ -62,6 +63,7 @@ const HeaderMobileMenu = ({ className }: Props) => {
                             })
                         }
                     </ul>
+                    <Socials />
                 </DialogContent>
             </Dialog>
         </div>
