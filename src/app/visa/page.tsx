@@ -1,9 +1,11 @@
-import Hero, { HeroDescription, HeroTitle } from '@/components/shared/hero'
+import './styles.css'
 import { site } from '@/content'
 import { DocsSection, InfoImportant, ServiceSection, InfoList } from '@/components/shared/service'
 import DocsList from '@/components/shared/service/service-docs-list'
 import DocsInfo from '@/components/shared/service/service-docs-info'
 import { OrderSection } from '@/components/shared/form'
+import VisaPageHero from './page-hero'
+import Head from 'next/head'
 
 type Props = {
 	params: { slug: string }
@@ -27,24 +29,7 @@ export async function generateMetadata({ params }: Props) {
 export default function VisaPage() {
 	return (
 		<>
-			<Hero
-				title={site.visa.hero.title}
-				image={site.visa.hero.image}
-				CTASection
-			>
-				<HeroTitle>
-					{site.visa.hero.title}
-				</HeroTitle>
-				<p
-					className='font-bold text-sm md:text-4xl'
-				>
-					{site.visa.hero.subtitle}
-				</p>
-				<HeroDescription
-					className='text-foreground/60'
-					dangerouslySetInnerHTML={{ __html: site.visa.hero.description }}
-				/>
-			</Hero>
+			<VisaPageHero />
 			<section>
 				<div className='container'>
 					<div className='py-2'>
