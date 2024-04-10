@@ -2,6 +2,7 @@ import React from 'react'
 import Logo from '@/components/shared/logo'
 import { contacts, services } from '@/content'
 import Link from 'next/link'
+import { Socials } from '@/components/shared/socials'
 
 const Footer = () => {
   return (
@@ -23,6 +24,7 @@ const Footer = () => {
                   })
                 }
               </ul>
+              <Socials className='self-start' />
               <p className='text-sm leading-relaxed'>
                 Время работы:
                 <br />

@@ -14,7 +14,7 @@ function InfoSection({ children }: React.HTMLAttributes<HTMLElement>) {
                     <div className="section-body grid lg:grid-cols-[auto,_1fr] gap-4">
                         {children}
                         <Image
-                        className='hidden lg:flex'
+                            className='hidden lg:flex'
                             width={478}
                             height={540}
                             src={site.home.info.image}
