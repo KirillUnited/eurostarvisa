@@ -17,19 +17,19 @@ import {
 import styles from './styles.module.css'
 import { cva } from 'class-variance-authority';
 
-const menuLinkStyle = cva(
-    "inline-flex items-center text-xl font-medium transition-colors duration-300 hover:text-foreground/70",
+export const menuLinkStyle = cva(
+    "inline-flex items-center text-xl font-medium transition-colors duration-300 focus:text-foreground hover:text-foreground/70",
     {
         variants: {
             variant: {
-                primary: "text-foreground focus:text-link lg:min-h-[80px] px-4 py-2 transition-colors hover:bg-muted rounded-none",
+                primary: "text-foreground lg:min-h-[80px] px-4 py-2 transition-colors hover:bg-muted rounded-none",
                 secondary: "text-foreground"
             }
         }
     }
 );
 
-type NavbarType = {
+export type NavbarType = {
     variant?: 'primary' | 'secondary',
     enableSubmenu?: boolean
 }
@@ -52,7 +52,7 @@ const Navbar = ({ variant, enableSubmenu }: NavbarType) => {
                                     "p-0 bg-transparent data-[state=open]:bg-muted h-auto focus:bg-transparent",
                                     menuLinkStyle({ variant }),
                                     {
-                                        "font-bold text-link": variant == 'primary' && isActive,
+                                        "font-bold text-link focus:text-link": variant == 'primary' && isActive,
                                     },
                                 )}>
                                     {link.label}
@@ -71,8 +71,16 @@ const Navbar = ({ variant, enableSubmenu }: NavbarType) => {
                                                 services.map((item) => {
                                                     return (
                                                         <li key={item.title}>
-                                                            <NavigationMenuLink asChild>
-                                                                <Link href={item.link} className='flex capitalize hover:font-medium hover:bg-accent py-2 px-6 transition'>
+                                                            <NavigationMenuLink asChild active={isActive}>
+                                                                <Link
+                                                                    href={item.link}
+                                                                    className={cn(
+                                                                        'flex capitalize hover:font-medium hover:bg-accent py-2 px-6 transition',
+                                                                        {
+                                                                            "font-medium bg-accent": isActive,
+                                                                        }
+                                                                    )}
+                                                                >
                                                                     {item.title}
                                                                 </Link>
                                                             </NavigationMenuLink>
@@ -93,7 +101,7 @@ const Navbar = ({ variant, enableSubmenu }: NavbarType) => {
                                     className={cn(
                                         menuLinkStyle({ variant }),
                                         {
-                                            "font-bold text-link": variant == 'primary' && isActive,
+                                            "font-bold text-link focus:text-link": variant == 'primary' && isActive,
                                         },
                                     )}
                                 >
