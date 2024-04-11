@@ -1,75 +1,33 @@
 'use client'
-import { navbar, services } from '@/content';
+import { navbar } from '@/content';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React from 'react'
-import { NavbarType, menuLinkStyle } from './navbar';
-import {
-    Collapsible,
-    CollapsibleContent,
-    CollapsibleTrigger,
-} from "@/components/ui/collapsible"
-import { ChevronDownIcon } from 'lucide-react';
+import { menuLinkStyle } from './navbar';
+import styled from 'styled-components';
+import NavbarMobileSubmenu from './navbar-mobile-submenu';
 
+const Nav = styled.nav`
+    overflow-y: auto;
+`;
 
-const NavbarMobile = ({ variant, enableSubmenu }: NavbarType) => {
+const NavbarMobile = ({ className, ...props }: React.HTMLAttributes<HTMLElement>) => {
     const pathname = usePathname();
 
     return (
-        <nav className='flex flex-col items-center flex-1 overflow-y-auto'>
+        <Nav
+            className={cn(
+                'flex flex-col items-center flex-1 overflow-y-auto',
+                className
+            )}
+            {...props}
+        >
             <ul className='flex flex-col items-center justify-center flex-1'>
                 {navbar.map((link) => {
                     const isActive = (pathname === link.route) || pathname.startsWith(link.route, 1);
 
-                    if (link.menu) {
-                        return (
-                            <li>
-                                <Collapsible>
-                                    <CollapsibleTrigger
-                                        className={cn(
-                                            menuLinkStyle({ variant: 'primary' }),
-                                            {
-                                                "font-bold text-link focus:text-link": isActive,
-                                            },
-                                            'w-full justify-between gap-2 [&[data-state=open]>svg]:rotate-180'
-                                        )}
-                                    >
-                                        {link.label}
-                                        <ChevronDownIcon className="h-4 w-4" />
-                                    </CollapsibleTrigger>
-                                    <CollapsibleContent>
-                                        <ul className='flex flex-col'>
-                                            <li>
-                                                <Link href={`${link.route}`} className='text-primary flex capitalize hover:font-medium hover:bg-accent py-2 px-6 transition'>
-                                                    Все категории
-                                                </Link>
-                                            </li>
-                                            {
-                                                services.map((item) => {
-                                                    return (
-                                                        <li key={item.title}>
-                                                            <Link
-                                                                href={item.link}
-                                                                className={cn(
-                                                                    'flex capitalize hover:font-medium hover:bg-accent py-2 px-6 transition',
-                                                                    {
-                                                                        "font-medium bg-accent": isActive,
-                                                                    }
-                                                                )}
-                                                            >
-                                                                {item.title}
-                                                            </Link>
-                                                        </li>
-                                                    )
-                                                })
-                                            }
-                                        </ul>
-                                    </CollapsibleContent>
-                                </Collapsible>
-                            </li>
-                        )
-                    }
+                    if (link.menu) return <NavbarMobileSubmenu link={link} state={isActive}/>
 
                     return (
                         <li key={link.label}>
@@ -87,7 +45,7 @@ const NavbarMobile = ({ variant, enableSubmenu }: NavbarType) => {
                     )
                 })}
             </ul>
-        </nav>
+        </Nav>
     )
 }
 
