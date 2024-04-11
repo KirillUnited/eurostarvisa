@@ -44,7 +44,7 @@ const HeaderMobileMenu = ({ className }: Props) => {
                         </DialogTitle>
                     </DialogHeader>
                     <div className='flex flex-col items-center flex-1 overflow-y-auto'>
-                        <Navbar variant='primary' />
+                        <Navbar variant='primary' enableSubmenu />
                     </div>
                     <ul className='text-center'>
                         {

@@ -72,13 +72,12 @@
     }
     html {
         scroll-behavior: smooth;
-        overflow-x: hidden;
     }
     body {
         @apply font-sans bg-background text-foreground overflow-x-hidden;
     }
     .wrapper {
-        @apply max-w-full min-h-screen flex flex-col overflow-x-hidden;
+        @apply max-w-full min-h-screen flex flex-col;
     }
     .section {
     }
