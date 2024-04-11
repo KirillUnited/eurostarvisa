@@ -1,12 +1,6 @@
 'use client'
 import React from 'react'
 import {
-    Sheet,
-    SheetContent,
-    SheetTitle,
-    SheetTrigger,
-} from "@/components/ui/sheet"
-import {
     Dialog,
     DialogContent,
     DialogDescription,
@@ -22,6 +16,7 @@ import { cn } from '@/lib/utils'
 import { contacts } from '@/content'
 import Link from 'next/link'
 import { Socials } from '@/components/shared/socials'
+import NavbarMobile from './navbar-mobile'
 
 interface Props extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> {
 
@@ -43,9 +38,7 @@ const HeaderMobileMenu = ({ className }: Props) => {
                             <Logo />
                         </DialogTitle>
                     </DialogHeader>
-                    <div className='flex flex-col items-center flex-1 overflow-y-auto'>
-                        <Navbar variant='primary' enableSubmenu />
-                    </div>
+                    <NavbarMobile />
                     <ul className='text-center'>
                         {
                             contacts.map(({ label, href, name }) => {
