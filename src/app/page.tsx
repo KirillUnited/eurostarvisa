@@ -16,13 +16,6 @@ type Props = {
   params: { slug: string }
 }
 
-export async function generateMetadata({ params }: Props) {
-  return {
-    title: site?.home?.seo?.title,
-    description: site?.home?.seo?.description,
-  }
-}
-
 export default function Home() {
   const title = site.home.hero.title
   const subtitle = site.home.hero.subtitle

@@ -1,5 +1,7 @@
 import { testimonials } from '@/content'
 import React from 'react'
+import { SectionHeading } from '../section'
+import TestimonialFeed from './testimonial-feed'
 
 function TestimonialSection({ children }: React.HTMLAttributes<HTMLElement>) {
     return (
@@ -13,6 +15,9 @@ function TestimonialSection({ children }: React.HTMLAttributes<HTMLElement>) {
                         {children}
                     </div>
                     <p className='font-medium text-xs md:text-base' dangerouslySetInnerHTML={{ __html: testimonials.description }} />
+                    <SectionHeading>
+                        <TestimonialFeed />
+                    </SectionHeading>
                 </div>
             </div>
         </section>

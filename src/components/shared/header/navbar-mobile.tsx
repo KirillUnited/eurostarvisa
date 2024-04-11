@@ -5,18 +5,13 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React from 'react'
 import { menuLinkStyle } from './navbar';
-import styled from 'styled-components';
 import NavbarMobileSubmenu from './navbar-mobile-submenu';
-
-const Nav = styled.nav`
-    overflow-y: auto;
-`;
 
 const NavbarMobile = ({ className, ...props }: React.HTMLAttributes<HTMLElement>) => {
     const pathname = usePathname();
 
     return (
-        <Nav
+        <nav
             className={cn(
                 'flex flex-col items-center flex-1 overflow-y-auto',
                 className
@@ -45,7 +40,7 @@ const NavbarMobile = ({ className, ...props }: React.HTMLAttributes<HTMLElement>
                     )
                 })}
             </ul>
-        </Nav>
+        </nav>
     )
 }
 
