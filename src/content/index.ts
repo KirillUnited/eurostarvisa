@@ -370,7 +370,7 @@ export const navbar = [
     },
     {
         label: 'Визы',
-        route: '/visa',
+        route: '/services',
         menu: 'services'
     },
     {
@@ -469,7 +469,7 @@ export const services = [
         title: 'Канада',
         description: 'Beatae reiciendis necessitatibus dolor saepe.',
         features: ['All limited links', 'Own analytics platform', 'Chat support', 'Optimize hashtags', 'Unlimited users'],
-        link: '/visa'
+        link: '/services'
     },
 ]
 

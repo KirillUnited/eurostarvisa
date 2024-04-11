@@ -39,7 +39,7 @@ function InfoList({ list }: Props) {
                             </CardHeader>
                             <CardContent>
                                 <Button asChild>
-                                    <Link href={`/visa`}>подробнее</Link>
+                                    <Link href={`/services`}>подробнее</Link>
                                 </Button>
                             </CardContent>
                         </Card>
