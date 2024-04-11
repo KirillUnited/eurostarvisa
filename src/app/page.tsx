@@ -6,6 +6,8 @@ import Hero, { HeroDescription, HeroLink, HeroTitle } from '@/components/shared/
 import { InfoList, InfoSection } from '@/components/shared/info'
 import { FeaturedProductSection } from '@/components/shared/product'
 import FeaturedProductList from '@/components/shared/product/featured-product-list'
+import { SectionBase, SectionHeading } from '@/components/shared/section'
+import { InstagramFeed } from '@/components/shared/socials'
 import { StepList, StepSection } from '@/components/shared/step'
 import { TestimonialCarousel, TestimonialSection } from '@/components/shared/testimonial'
 import { site } from '@/content'
@@ -74,6 +76,12 @@ export default function Home() {
       <InfoSection>
         <InfoList />
       </InfoSection>
+      <SectionBase>
+        <SectionHeading className='text-center'>
+          <h3 className='heading-5'>Мы в instagram</h3>
+        </SectionHeading>
+        <InstagramFeed />
+      </SectionBase>
       <TestimonialSection>
         <TestimonialCarousel />
       </TestimonialSection>

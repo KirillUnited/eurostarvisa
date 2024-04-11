@@ -33,7 +33,7 @@ export default function RootLayout({
     <html lang="ru">
       <body className={`${montserrat.variable} wrapper`}>
         <Header />
-        <main className='flex-1'>{children}</main>
+        <main className='flex-1 overflow-x-hidden'>{children}</main>
         <Footer />
       </body>
     </html>

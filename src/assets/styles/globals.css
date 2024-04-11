@@ -80,7 +80,6 @@
         @apply min-h-screen flex flex-col;
     }
     .section {
-        @apply bg-background;
     }
     .section-inner {
         @apply py-4 md:py-12;

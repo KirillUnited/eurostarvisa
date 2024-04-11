@@ -6,9 +6,9 @@ import Image from 'next/image'
 import React from 'react'
 import styled from 'styled-components'
 
-function VisaPageHero() {
+function ServicePageHero() {
     return (
-        <section id='service-hero'>
+        <section id='service-hero' className=''>
             <div className={`container`}>
                 <div className={`section-inner relative`}>
                     <div className='relative flex flex-col lg:min-h-[730px]'>
@@ -92,4 +92,4 @@ const MainImage = styled(Image)`
     height: var(--size);
 `
 
-export default VisaPageHero
+export default ServicePageHero

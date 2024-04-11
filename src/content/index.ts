@@ -353,7 +353,7 @@ export const site = {
                 {
                     thumbnail: '/images/service-info-item-1.png',
                     title: 'Документы для визы в Канаду',
-                },                
+                },
                 {
                     thumbnail: '/images/service-info-item-2.png',
                     title: 'Биометрические данные',
@@ -370,7 +370,7 @@ export const navbar = [
     },
     {
         label: 'Визы',
-        route: '/visa',
+        route: '/services',
         menu: 'services'
     },
     {
@@ -397,6 +397,45 @@ export const contacts = [
         label: '+927 6277 28525'
     },
 ];
+
+export const socials = {
+    instagram: {
+        title: '#vcs_ru в instagram',
+        link: 'https://www.instagram.com/',
+        feed: [
+            {
+                thumbnail: '/images/instagram-feed-1.png',
+                description: '@starvisa: Ещё одна страна присоединилась к списку «разрешённых для въезда». Ещё одна страна присоединилась к списку «разрешённых для въезда».',
+                link: 'https://www.instagram.com/'
+            },
+            {
+                thumbnail: '/images/instagram-feed-2.png',
+                description: '@starvisa: Ещё одна страна присоединилась к списку «разрешённых для въезда». Ещё одна страна присоединилась к списку «разрешённых для въезда».',
+                link: 'https://www.instagram.com/'
+            },
+            {
+                thumbnail: '/images/instagram-feed-1.png',
+                description: '@starvisa: Ещё одна страна присоединилась к списку «разрешённых для въезда». Ещё одна страна присоединилась к списку «разрешённых для въезда».',
+                link: 'https://www.instagram.com/'
+            },
+            {
+                thumbnail: '/images/instagram-feed-3.png',
+                description: '@starvisa: Ещё одна страна присоединилась к списку «разрешённых для въезда». Ещё одна страна присоединилась к списку «разрешённых для въезда».',
+                link: 'https://www.instagram.com/'
+            },
+            {
+                thumbnail: '/images/instagram-feed-1.png',
+                description: '@starvisa: Ещё одна страна присоединилась к списку «разрешённых для въезда». Ещё одна страна присоединилась к списку «разрешённых для въезда».',
+                link: 'https://www.instagram.com/'
+            },
+            {
+                thumbnail: '/images/instagram-feed-2.png',
+                description: '@starvisa: Ещё одна страна присоединилась к списку «разрешённых для въезда». Ещё одна страна присоединилась к списку «разрешённых для въезда».',
+                link: 'https://www.instagram.com/'
+            },
+        ]
+    }
+}
 
 export const projects = [
     {
@@ -469,7 +508,7 @@ export const services = [
         title: 'Канада',
         description: 'Beatae reiciendis necessitatibus dolor saepe.',
         features: ['All limited links', 'Own analytics platform', 'Chat support', 'Optimize hashtags', 'Unlimited users'],
-        link: '/visa'
+        link: '/services'
     },
 ]
 
