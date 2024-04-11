@@ -4,8 +4,7 @@ import { DocsSection, InfoImportant, ServiceSection, InfoList } from '@/componen
 import DocsList from '@/components/shared/service/service-docs-list'
 import DocsInfo from '@/components/shared/service/service-docs-info'
 import { OrderSection } from '@/components/shared/form'
-import VisaPageHero from './page-hero'
-import Head from 'next/head'
+import ServicePageHero from './page-hero'
 
 type Props = {
 	params: { slug: string }
@@ -29,7 +28,7 @@ export async function generateMetadata({ params }: Props) {
 export default function VisaPage() {
 	return (
 		<>
-			<VisaPageHero />
+			<ServicePageHero />
 			<section>
 				<div className='container'>
 					<div className='py-2'>
