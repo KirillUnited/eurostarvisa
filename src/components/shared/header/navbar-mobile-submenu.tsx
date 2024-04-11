@@ -11,11 +11,12 @@ import {
 } from "@/components/ui/collapsible"
 import { ChevronDownIcon } from 'lucide-react';
 
-const NavbarMobileSubmenu = ({link, state}:{link?:{label?:string, route?: string}, state?:boolean})=>{
+const NavbarMobileSubmenu = ({ link, state }: { link?: { label?: string, route?: string }, state?: boolean }) => {
     return (
         <li key={link?.label}>
             <Collapsible>
                 <CollapsibleTrigger
+                    tabIndex={0}
                     className={cn(
                         menuLinkStyle({ variant: 'primary' }),
                         {
