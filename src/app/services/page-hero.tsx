@@ -35,9 +35,9 @@ function ServicePageHero() {
                             {MOCK_DATA.links.length > 0 &&
                                 <HeroLinkList className="grid">
                                     {
-                                        MOCK_DATA.links.map((item) => {
+                                        MOCK_DATA.links.map((item, index) => {
                                             return (
-                                                <HeroLinkListItem key={item.name} {...item} />
+                                                <HeroLinkListItem key={index} {...item} />
                                             )
                                         })
                                     }
