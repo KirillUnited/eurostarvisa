@@ -8,7 +8,9 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 
 interface ItemProps {
-    thumbnail?: string, title?: string
+    slug: string,
+    thumbnail?: string, 
+    title?: string,
 }
 interface Props {
     list: ItemProps[]
@@ -18,10 +20,10 @@ function InfoList({ list }: Props) {
     return (
         <List className='grid'>
             {
-                list?.map(({ thumbnail, title }: ItemProps) => {
+                list?.map(({ slug, thumbnail, title }: ItemProps) => {
                     return (
                         <Card
-                            key={title}
+                            key={slug}
                             className={cn(
                                 'flex flex-col text-center',
                                 'shadow-none border-none'
@@ -39,7 +41,7 @@ function InfoList({ list }: Props) {
                             </CardHeader>
                             <CardContent>
                                 <Button asChild>
-                                    <Link href={`/services`}>подробнее</Link>
+                                    <Link href={`/services/posts/${slug}`}>подробнее</Link>
                                 </Button>
                             </CardContent>
                         </Card>
