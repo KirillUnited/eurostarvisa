@@ -37,7 +37,7 @@ export default function Home() {
           dangerouslySetInnerHTML={{ __html: subtitle }}
         />
         {links.length > 0 &&
-          <div className="flex flex-wrap gap-5 md:gap-8 md:max-w-[40%] lg:max-w-full">
+          <div className="flex flex-wrap gap-3 md:gap-8 md:max-w-[40%] lg:max-w-full">
             {
               links.map((item) => {
                 return (

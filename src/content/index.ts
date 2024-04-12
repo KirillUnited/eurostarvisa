@@ -295,6 +295,26 @@ export const site = {
                     name: '',
                     link: ''
                 },
+            ],
+            type_links: [
+                {
+                    type: 'tour',
+                    label: 'Туристическая виза',
+                    name: '',
+                    link: '#'
+                },
+                {
+                    type: 'business',
+                    label: 'Бизнес виза',
+                    name: '',
+                    link: '#'
+                },
+                {
+                    type: 'study',
+                    label: 'Учебная виза',
+                    name: '',
+                    link: '#'
+                },
             ]
         },
         info_important: {

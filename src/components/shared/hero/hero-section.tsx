@@ -21,7 +21,7 @@ const Hero = (
                 <div className={`section-inner ${styles.inner}`}>
                     <HeroContent className={cn(
                         'flex flex-col gap-4 md:gap-6',
-                        'max-w-[80%] md:max-w-full lg:basis-[45%]',
+                        'max-w-[85%] md:max-w-full lg:basis-[45%]',
                     )}>
                         {children}
                         {

@@ -1,6 +1,7 @@
 'use client'
 import { HeroDescription, HeroLink, HeroTitle } from '@/components/shared/hero'
 import HeroFooter from '@/components/shared/hero/hero-footer'
+import ServiceTypeLink from '@/components/shared/hero/service-type-link'
 import { site } from '@/content'
 import Image from 'next/image'
 import React from 'react'
@@ -31,13 +32,24 @@ function ServicePageHero() {
                                 />
                             }
                         </div>
-                        <div className='relative section-body flex flex-col gap-6 flex-1 max-w-56 lg:max-w-full self-center lg:self-stretch'>
+                        <div className='relative section-body flex flex-col gap-6 md:gap-12 flex-1 max-w-56 lg:max-w-full self-center lg:self-stretch'>
                             {MOCK_DATA.links.length > 0 &&
                                 <HeroLinkList className="grid">
                                     {
                                         MOCK_DATA.links.map((item, index) => {
                                             return (
                                                 <HeroLinkListItem key={index} {...item} />
+                                            )
+                                        })
+                                    }
+                                </HeroLinkList>
+                            }
+                            {MOCK_DATA.type_links.length > 0 &&
+                                <HeroLinkList className="grid">
+                                    {
+                                        MOCK_DATA.type_links.map((item, index) => {
+                                            return (
+                                                <ServiceTypeLink key={index} {...item} />
                                             )
                                         })
                                     }

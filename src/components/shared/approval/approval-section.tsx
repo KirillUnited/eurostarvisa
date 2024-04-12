@@ -6,7 +6,7 @@ function ApprovalSection({ children }: React.HTMLAttributes<HTMLElement>) {
         <section className="section">
             <div className="container">
                 <div className="section-inner">
-                    <div className="max-w-[80%] md:max-w-full mx-auto">
+                    <div className="max-w-[85%] md:max-w-full mx-auto">
                         <div className="section-heading">
                             <h2 className="heading-3">
                                 {site.home.approval.title}

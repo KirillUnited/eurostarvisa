@@ -4,17 +4,24 @@ import Link, { LinkProps } from 'next/link'
 import Image from 'next/image'
 import { cn } from '@/lib/utils'
 
-function HeroLink({ link, label, image, className }: HeroLinkProps) {
-    const Comp = link ? Link : 'div'
-    
+export const HeroLinkBase = ({ href: link, className, children }: LinkProps & React.HTMLAttributes<HTMLAnchorElement>) => {
+    const Comp = link ? Link : 'div';
+
     return (
         <Comp
             href={`${link}`}
             className={cn(
-                'flex flex-col items-center gap-2 max-w-12 md:max-w-full group scale-100',
+                'flex flex-col items-center gap-2 group scale-100',
                 className
             )}
         >
+            {children}
+        </Comp>
+    )
+}
+function HeroLink({ link, label, image }: HeroLinkProps) {
+    return (
+        <HeroLinkBase href={`${link}`}>
             {image &&
                 <Image
                     width={60}
@@ -24,8 +31,8 @@ function HeroLink({ link, label, image, className }: HeroLinkProps) {
                     className='transition-all group-hover:scale-125'
                 />
             }
-            <p className='text-xs text-center'>{label}</p>
-        </Comp>
+            <p className='paragraph text-center'>{label}</p>
+        </HeroLinkBase>
     )
 }
 
