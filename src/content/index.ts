@@ -16,25 +16,25 @@ export const site = {
                     image: '/images/canada_flag.png',
                     label: 'КАНАДА',
                     name: 'canada_flag',
-                    link: ''
+                    link: '/services'
                 },
                 {
                     image: '/images/usa_flag.png',
                     label: 'США',
                     name: 'usa_flag',
-                    link: ''
+                    link: '/services'
                 },
                 {
                     image: '/images/euro_flag.png',
                     label: 'ЕВРОПА',
                     name: 'euro_flag',
-                    link: ''
+                    link: '/services'
                 },
                 {
                     image: '/images/england_flag.png',
                     label: 'АНГЛИЯ',
                     name: 'england_flag',
-                    link: ''
+                    link: '/services'
                 }
             ]
         },
@@ -276,6 +276,26 @@ export const site = {
             subtitle: 'Просто. Быстро. Доступно.',
             description: 'Получение визы в Канаду, по мнению многих, процесс не быстрый и достаточно сложный. Но специалисты нашей компании готовы доказать Вам обратное.',
             image: '/images/visa-hero.png',
+            links: [
+                {
+                    image: '/images/visa-service-2.svg',
+                    label: 'Подготовим пакет документов и подадим без Вашего присутствия',
+                    name: '',
+                    link: ''
+                },
+                {
+                    image: '/images/visa-service-3.svg',
+                    label: 'Единая цена вне зависимости от срока действия визы',
+                    name: '',
+                    link: ''
+                },
+                {
+                    image: '/images/checklist.png',
+                    label: 'Максимальный срок визы, за минимальное время',
+                    name: '',
+                    link: ''
+                },
+            ]
         },
         info_important: {
             title: 'Важно знать:',
