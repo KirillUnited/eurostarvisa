@@ -5,12 +5,13 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import Image from 'next/image'
 import { site } from '@/content'
+import Link from 'next/link';
 
 function InfoList() {
     return (
         <List className='grid gap-5 md:gap-10 lg:gap-5'>
             {
-                site.home.info.list.map(({ thumbnail, title, description }) => {
+                site.home.info.list.map(({ thumbnail, title, description, slug }) => {
                     return (
                         <li
                             key={title}
@@ -33,7 +34,9 @@ function InfoList() {
                                     </CardHeader>
                                     <CardContent className='flex-1 prose text-sm' dangerouslySetInnerHTML={{ __html: description }} />
                                     <CardFooter>
-                                        <Button variant={'outline'} className='w-full'>Подробнее</Button>
+                                        <Button variant={'outline'} className='w-full' asChild>
+                                            <Link href={`/blog/${slug}`}>Подробнее</Link>
+                                        </Button>
                                     </CardFooter>
                                 </div>
                             </Card>
