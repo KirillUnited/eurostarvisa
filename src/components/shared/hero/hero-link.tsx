@@ -1,15 +1,18 @@
 import React from 'react'
 import { HeroLinkProps } from './hero.props'
-import Link from 'next/link'
+import Link, { LinkProps } from 'next/link'
 import Image from 'next/image'
 import { cn } from '@/lib/utils'
 
-function HeroLink({ link, label, image }: HeroLinkProps) {
+function HeroLink({ link, label, image, className }: HeroLinkProps) {
+    const Comp = link ? Link : 'div'
+    
     return (
-        <Link
+        <Comp
             href={`${link}`}
             className={cn(
-                'flex flex-col items-center gap-2 max-w-12 md:max-w-full group scale-100'
+                'flex flex-col items-center gap-2 max-w-12 md:max-w-full group scale-100',
+                className
             )}
         >
             {image &&
@@ -22,7 +25,7 @@ function HeroLink({ link, label, image }: HeroLinkProps) {
                 />
             }
             <p className='text-xs text-center'>{label}</p>
-        </Link>
+        </Comp>
     )
 }
 
