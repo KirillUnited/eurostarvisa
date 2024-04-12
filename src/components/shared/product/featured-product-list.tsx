@@ -35,6 +35,7 @@ function FeaturedProductList() {
                                 <Button asChild variant={'outline'}>
                                     <Link
                                         href={link}
+                                        target='_blank'
                                     >
                                         подробнее
                                     </Link>

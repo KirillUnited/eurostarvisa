@@ -1,9 +1,12 @@
 export type HeroLinkProps = {
-    label: string,
+    label?: string,
     image?: string,
     name?: string,
     link?: string,
-    className?: string
+}
+
+export interface ServiceTypeLinkProps {
+    type: 'tour' | 'business' | 'study' | string | undefined
 }
 export interface HeroProps extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> {
     title?: string,

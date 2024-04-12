@@ -69,7 +69,7 @@ export const site = {
                     description: 'От 5 рабочих дней',
                     price: 'от 16 500 ₽',
                     name: '',
-                    link: '/'
+                    link: '/services'
                 },
                 {
                     thumbnail: '/images/visa-germany.png',
@@ -77,7 +77,7 @@ export const site = {
                     description: 'От 5 рабочих дней',
                     price: 'от 16 500 ₽',
                     name: '',
-                    link: '/'
+                    link: '/services'
                 },
                 {
                     thumbnail: '/images/visa-usa.png',
@@ -85,7 +85,7 @@ export const site = {
                     description: 'От 5 рабочих дней',
                     price: 'от 16 500 ₽',
                     name: '',
-                    link: '/'
+                    link: '/services'
                 },
                 {
                     thumbnail: '/images/visa-france.png',
@@ -93,7 +93,7 @@ export const site = {
                     description: 'От 5 рабочих дней',
                     price: 'от 16 500 ₽',
                     name: '',
-                    link: '/'
+                    link: '/services'
                 }
             ]
         },
@@ -295,6 +295,26 @@ export const site = {
                     name: '',
                     link: ''
                 },
+            ],
+            type_links: [
+                {
+                    type: 'tour',
+                    label: 'Туристическая виза',
+                    name: '',
+                    link: '#'
+                },
+                {
+                    type: 'business',
+                    label: 'Бизнес виза',
+                    name: '',
+                    link: '#'
+                },
+                {
+                    type: 'study',
+                    label: 'Учебная виза',
+                    name: '',
+                    link: '#'
+                },
             ]
         },
         info_important: {
@@ -407,7 +427,7 @@ export const navbar = [
     },
     {
         label: 'Блог',
-        route: '/posts'
+        route: '/blog'
     },
 ];
 
@@ -567,3 +587,19 @@ export const testimonials = {
         }
     ]
 };
+
+export const blog = {
+    title: 'Наш блог',
+    description: 'просто о визах',
+    list: [
+        {
+            slug: 'blog-post-1',
+            title: 'За американской визой теперь только в Минск!',
+            description: 'Большинство белорусов обращается за американскими визами в Минск. А так ли там хорошо? Разбираемся, куда податься белорусу!',
+            thumbnail: '/images/blog-post-image-1.jpg',
+            date: '2023-08-29T10:36:16.845Z',
+            link: '/blog/',
+            content: '<h2>Начнем с того, что предположение "за американской визой только в Минск" - это достаточно распространенное заблуждение.</h2><p>Действительно, в начале 2018 года Посольство США в Минске наконец-то расширило список типов виз, которые белорусы могут получить у себя на Родине. Обратиться за визой теперь стало проще: не нужно ждать несколько месяцев, сбор оплачивается наличными в день интервью, беседовать с офицером можно на русском. На этом список преимуществ обращения в Посольство в Минске заканчивается. Но как быть, если в Америку очень надо, а через Минск обращаться нет желания?</p>'
+        },
+    ]
+}
