@@ -69,7 +69,7 @@ export const site = {
                     description: 'От 5 рабочих дней',
                     price: 'от 16 500 ₽',
                     name: '',
-                    link: '/'
+                    link: '/services'
                 },
                 {
                     thumbnail: '/images/visa-germany.png',
@@ -77,7 +77,7 @@ export const site = {
                     description: 'От 5 рабочих дней',
                     price: 'от 16 500 ₽',
                     name: '',
-                    link: '/'
+                    link: '/services'
                 },
                 {
                     thumbnail: '/images/visa-usa.png',
@@ -85,7 +85,7 @@ export const site = {
                     description: 'От 5 рабочих дней',
                     price: 'от 16 500 ₽',
                     name: '',
-                    link: '/'
+                    link: '/services'
                 },
                 {
                     thumbnail: '/images/visa-france.png',
@@ -93,7 +93,7 @@ export const site = {
                     description: 'От 5 рабочих дней',
                     price: 'от 16 500 ₽',
                     name: '',
-                    link: '/'
+                    link: '/services'
                 }
             ]
         },
