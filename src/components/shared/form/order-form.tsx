@@ -57,7 +57,7 @@ export default function OrderForm({ className, variant }: OrderFormProps) {
                         <FormItem>
                             <FormLabel>Имя</FormLabel>
                             <FormControl>
-                                <Input className="text-foreground" type="text" placeholder="Введите Ваше имя" {...field} />
+                                <Input className="text-foreground" type="text" {...field} />
                             </FormControl>
                             <FormMessage />
                         </FormItem>
@@ -71,7 +71,7 @@ export default function OrderForm({ className, variant }: OrderFormProps) {
                             <FormItem>
                                 <FormLabel>Телефон</FormLabel>
                                 <FormControl>
-                                    <Input className="text-foreground" type="tel" placeholder="Введите Ваш номер телефона" {...field} />
+                                    <Input className="text-foreground" type="tel" {...field} />
                                 </FormControl>
                                 <FormMessage />
                             </FormItem>
