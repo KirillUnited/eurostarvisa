@@ -138,7 +138,7 @@ export const site = {
             list: [
                 {
                     slug: 'blog-post-1',
-                    thumbnail: '/images/visa.png',
+                    thumbnail: '/images/info-visa.svg',
                     title: 'Изменения в визовом кодексе ЕС',
                     description: 'Время от времени Евросоюз пересматривает правила и условия выдачи шенгенских виз.',
                     name: '',
@@ -146,7 +146,7 @@ export const site = {
                 },
                 {
                     slug: 'blog-post-1',
-                    thumbnail: '/images/stamp.png',
+                    thumbnail: '/images/info-stamp.svg',
                     title: 'Правило первого въезда ЕС',
                     description: 'Время от времени Евросоюз пересматривает правила и условия выдачи шенгенских виз.',
                     name: '',
@@ -154,7 +154,7 @@ export const site = {
                 },
                 {
                     slug: 'blog-post-1',
-                    thumbnail: '/images/checklist.png',
+                    thumbnail: '/images/info-checklist.svg',
                     title: 'Как заполнить анкету DS-160',
                     description: 'Как корректно внести всю информацию в анкету',
                     name: '',
@@ -162,7 +162,7 @@ export const site = {
                 },
                 {
                     slug: 'blog-post-1',
-                    thumbnail: '/images/notes-doc.png',
+                    thumbnail: '/images/info-docs.svg',
                     title: 'Какие документы нужны на визу в США',
                     description: 'Время от времени Евросоюз пересматривает правила и условия выдачи шенгенских виз.',
                     name: '',
@@ -332,16 +332,19 @@ export const site = {
                 description: 'Консульский отдел Посольства Канады принимает все документы, которые могут показать вашу связь с Родиной и туристические намерения.',
                 list: [
                     {
-                        thumbnail: '/images/passport_3.png',
-                        title: 'общегражданский паспорт'
+                        thumbnail: '/images/docs-passport.svg',
+                        title: 'общегражданский паспорт',
+                        name: 'docs_passport'
                     },
                     {
-                        thumbnail: '/images/passport_travel_3.png',
-                        title: 'заграничные паспорта за последние 10 лет'
+                        thumbnail: '/images/docs-passport-travel.svg',
+                        title: 'заграничные паспорта за последние 10 лет',
+                        name: 'docs_passport_travel'
                     },
                     {
-                        thumbnail: '/images/database_3.png',
-                        title: 'финансовые справки'
+                        thumbnail: '/images/docs-finance.svg',
+                        title: 'финансовые справки',
+                        name: 'docs_finance'
                     },
                 ],
             },
@@ -350,16 +353,19 @@ export const site = {
                 description: '',
                 list: [
                     {
-                        thumbnail: '/images/passport_3.png',
-                        title: 'общегражданский паспорт'
+                        thumbnail: '/images/docs-assets.svg',
+                        title: 'движимое/недвижимое имущество',
+                        name: 'docs_assets'
                     },
                     {
-                        thumbnail: '/images/passport_travel_3.png',
-                        title: 'заграничные паспорта за последние 10 лет'
+                        thumbnail: '/images/docs-wedding.svg',
+                        title: 'свидетельство о регистрации брака и рождении детей',
+                        name: 'docs_wedding'
                     },
                     {
-                        thumbnail: '/images/database_3.png',
-                        title: 'финансовые справки'
+                        thumbnail: '/images/docs-file.svg',
+                        title: 'документы подтверждающие связь с родиной',
+                        name: 'docs_file'
                     },
                 ],
             },

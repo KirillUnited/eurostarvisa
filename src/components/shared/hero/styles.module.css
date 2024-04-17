@@ -2,5 +2,5 @@
     @apply relative flex flex-col md:flex-row gap-5 flex-wrap items-center;
 }
 .image {
-    @apply -order-1 md:absolute md:top-10 lg:top-0 right-0 md:w-[65%] max-h-full object-contain object-right;
+    @apply -order-1 md:absolute md:top-10 lg:top-0 right-0 md:w-[65%] lg:w-[60%] max-h-full object-contain object-right;
 }

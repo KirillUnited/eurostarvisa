@@ -1,3 +1,4 @@
+import PostDate from '@/components/shared/post/post-date'
 import { SectionBase, SectionBody, SectionHeading, SectionInner } from '@/components/shared/section'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
@@ -32,7 +33,7 @@ export default function BlogPage({ params }: Props) {
 				<SectionInner>
 					<SectionBody>
 						<div className="grid grid-flow-row grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-							{blog.list.map(({ slug, title, description, thumbnail }: any) => {
+							{blog.list.map(({ slug, title, description, thumbnail, date }: any) => {
 								return <Card
 									key={title}
 									className='flex flex-col shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden'
@@ -45,6 +46,7 @@ export default function BlogPage({ params }: Props) {
 										className='object-cover object-center aspect-video w-full mx-auto'
 									/>
 									<CardHeader>
+										<PostDate date={date} className='text-foreground/70 text-sm' />
 										<CardTitle className='text-sm lg:text-base line-clamp-2'>{title}</CardTitle>
 										<CardDescription className='text-xs lg:text-sm line-clamp-6'>{description}</CardDescription>
 									</CardHeader>
