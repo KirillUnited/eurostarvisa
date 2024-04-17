@@ -138,7 +138,7 @@ export const site = {
             list: [
                 {
                     slug: 'blog-post-1',
-                    thumbnail: '/images/visa.png',
+                    thumbnail: '/images/info-visa.svg',
                     title: 'Изменения в визовом кодексе ЕС',
                     description: 'Время от времени Евросоюз пересматривает правила и условия выдачи шенгенских виз.',
                     name: '',
@@ -146,7 +146,7 @@ export const site = {
                 },
                 {
                     slug: 'blog-post-1',
-                    thumbnail: '/images/stamp.png',
+                    thumbnail: '/images/info-stamp.svg',
                     title: 'Правило первого въезда ЕС',
                     description: 'Время от времени Евросоюз пересматривает правила и условия выдачи шенгенских виз.',
                     name: '',
@@ -154,7 +154,7 @@ export const site = {
                 },
                 {
                     slug: 'blog-post-1',
-                    thumbnail: '/images/checklist.png',
+                    thumbnail: '/images/info-checklist.svg',
                     title: 'Как заполнить анкету DS-160',
                     description: 'Как корректно внести всю информацию в анкету',
                     name: '',
@@ -162,7 +162,7 @@ export const site = {
                 },
                 {
                     slug: 'blog-post-1',
-                    thumbnail: '/images/notes-doc.png',
+                    thumbnail: '/images/info-docs.svg',
                     title: 'Какие документы нужны на визу в США',
                     description: 'Время от времени Евросоюз пересматривает правила и условия выдачи шенгенских виз.',
                     name: '',
