@@ -78,7 +78,7 @@ export default function OrderForm({ className, variant }: OrderFormProps) {
                         </>
                     )}
                 />
-                <Button variant={variant || "outline"} type="submit" className="flex-1 shrink-0 w-fit text-base font-semibold border-primary-foreground border-2 text-primary-foreground">ОТПРАВИТЬ</Button>
+                <Button variant={variant || "outline"} type="submit" className="w-full md:w-fit text-base font-semibold border-primary-foreground border-2 text-primary-foreground">ОТПРАВИТЬ</Button>
             </form>
         </Form>
     )
