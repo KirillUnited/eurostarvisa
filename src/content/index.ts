@@ -45,17 +45,20 @@ export const site = {
                 {
                     label: 'одобрений',
                     value: '93%',
-                    image: '/images/approval-1.png'
+                    image: '/images/approval-1.png',
+                    name: 'approvals'
                 },
                 {
                     label: 'отказов',
                     value: '7%',
-                    image: '/images/approval-2.png'
+                    image: '/images/approval-2.png',
+                    name: 'rejects'
                 },
                 {
                     label: 'одобрений после отказа',
                     value: '75%',
-                    image: '/images/approval-3.png'
+                    image: '/images/approval-3.png',
+                    name: 'rejects_approvals'
                 }
             ]
         },
