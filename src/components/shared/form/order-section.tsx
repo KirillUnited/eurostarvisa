@@ -3,7 +3,6 @@ import React from 'react'
 import OrderForm from './order-form'
 import { cn } from '@/lib/utils'
 import Image from 'next/image'
-import styled from 'styled-components'
 import { Body, Root } from './styles'
 
 export default async function OrderSection({ className }: React.HTMLAttributes<HTMLDivElement>) {

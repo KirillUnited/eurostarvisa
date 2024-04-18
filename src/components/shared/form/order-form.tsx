@@ -15,9 +15,7 @@ import { Input } from "@/components/ui/input"
 import validator from "validator";
 import { cn } from "@/lib/utils";
 import { useState } from 'react';
-import { PhoneInput } from 'react-international-phone';
 import 'react-international-phone/style.css';
-import styled from "styled-components"
 import { Phone } from "./styles"
 
 const formSchema = z.object({
