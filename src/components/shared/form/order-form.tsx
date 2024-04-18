@@ -1,9 +1,7 @@
 "use client"
-
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { z } from "zod"
-
 import { Button } from "@/components/ui/button"
 import {
     Form,
@@ -15,7 +13,12 @@ import {
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import validator from "validator";
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils";
+import { useState } from 'react';
+import { PhoneInput } from 'react-international-phone';
+import 'react-international-phone/style.css';
+import styled from "styled-components"
+import { Phone } from "./styles"
 
 const formSchema = z.object({
     username: z.string().min(2, {
@@ -31,6 +34,7 @@ interface OrderFormProps extends React.DetailedHTMLProps<React.HTMLAttributes<HT
 }
 
 export default function OrderForm({ className, variant }: OrderFormProps) {
+    const [phone, setPhone] = useState('');
     const form = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),
         defaultValues: {
@@ -63,7 +67,7 @@ export default function OrderForm({ className, variant }: OrderFormProps) {
                         </FormItem>
                     )}
                 />
-                <FormField
+                {/* <FormField
                     control={form.control}
                     name="userphone"
                     render={({ field }) => (
@@ -77,8 +81,20 @@ export default function OrderForm({ className, variant }: OrderFormProps) {
                             </FormItem>
                         </>
                     )}
-                />
-                <Button variant={variant || "outline"} type="submit" className="w-full md:w-fit text-base font-semibold border-primary-foreground border-2 text-primary-foreground">ОТПРАВИТЬ</Button>
+                /> */}
+                <FormItem>
+                    <FormLabel>Телефон</FormLabel>
+                    <FormControl>
+                        <Phone
+                            defaultCountry="by"
+                            value={phone}
+                            onChange={(phone) => setPhone(phone)}
+                            required
+                        />
+                    </FormControl>
+                    <FormMessage />
+                </FormItem>
+                <Button variant={variant || "outline"} type="submit" className="w-full md:w-fit text-base font-semibold border-primary-foreground border-2 text-primary-foreground self-end">ОТПРАВИТЬ</Button>
             </form>
         </Form>
     )

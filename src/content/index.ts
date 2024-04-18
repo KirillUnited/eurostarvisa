@@ -13,25 +13,25 @@ export const site = {
             image: '/images/hero.png',
             links: [
                 {
-                    image: '/images/canada_flag.png',
+                    image: '/images/canada_flag.svg',
                     label: 'КАНАДА',
                     name: 'canada_flag',
                     link: '/services'
                 },
                 {
-                    image: '/images/usa_flag.png',
+                    image: '/images/usa_flag.svg',
                     label: 'США',
                     name: 'usa_flag',
                     link: '/services'
                 },
                 {
-                    image: '/images/euro_flag.png',
+                    image: '/images/euro_flag.svg',
                     label: 'ЕВРОПА',
                     name: 'euro_flag',
                     link: '/services'
                 },
                 {
-                    image: '/images/england_flag.png',
+                    image: '/images/england_flag.svg',
                     label: 'АНГЛИЯ',
                     name: 'england_flag',
                     link: '/services'
@@ -45,17 +45,20 @@ export const site = {
                 {
                     label: 'одобрений',
                     value: '93%',
-                    image: '/images/approval-1.png'
+                    image: '/images/approval-1.png',
+                    name: 'approvals'
                 },
                 {
                     label: 'отказов',
                     value: '7%',
-                    image: '/images/approval-2.png'
+                    image: '/images/approval-2.png',
+                    name: 'rejects'
                 },
                 {
                     label: 'одобрений после отказа',
                     value: '75%',
-                    image: '/images/approval-3.png'
+                    image: '/images/approval-3.png',
+                    name: 'rejects_approvals'
                 }
             ]
         },

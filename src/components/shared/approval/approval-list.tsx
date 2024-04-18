@@ -3,22 +3,39 @@ import React from 'react'
 import Image from "next/image";
 import styled from "styled-components";
 import { site } from "@/content";
+import Icon1 from '@/assets/svg/approval-1.svg';
+import Icon2 from '@/assets/svg/approval-2.svg';
+import Icon3 from '@/assets/svg/approval-3.svg';
+
+const getIcon = (step: string) => {
+    switch (step) {
+        case 'approvals':
+            return <Icon1 />;
+        case 'rejects':
+            return <Icon2 />;
+        case 'rejects_approvals':
+            return <Icon3 />;
+        default:
+            return null;
+    }
+}
 
 function ApprovalList() {
     return (
         <CardList>
             {site.home.approval.list.map(
-                ({ label, value, image }) => {
+                ({ label, value, image, name }) => {
                     return (
                         <Card key={value}>
                             <CardImageWrap>
-                                <Image
+                                {/* <Image
                                     src={`${image}`}
                                     alt={label || "StarVisa"}
                                     width={120}
                                     height={120}
                                     className="w-full h-full object-contain object-center"
-                                />
+                                /> */}
+                                {getIcon(`${name}`)}
                                 <span className="relative">
                                     {value}
                                 </span>

@@ -4,6 +4,7 @@ import OrderForm from './order-form'
 import { cn } from '@/lib/utils'
 import Image from 'next/image'
 import styled from 'styled-components'
+import { Body, Root } from './styles'
 
 export default async function OrderSection({ className }: React.HTMLAttributes<HTMLDivElement>) {
     return (
@@ -39,7 +40,7 @@ export default async function OrderSection({ className }: React.HTMLAttributes<H
                             'section-body'
                         )}>
                             <OrderForm className={cn(
-                                'flex flex-wrap gap-5 items-end md:justify-center max-w-48 md:max-w-full'
+                                'flex flex-wrap gap-5 md:justify-center max-w-48 md:max-w-full'
                             )} />
                         </div>
                     </Body>
@@ -48,10 +49,3 @@ export default async function OrderSection({ className }: React.HTMLAttributes<H
         </Root>
     )
 }
-const Root = styled.section`
-    --primary: 1 59% 57%;
-    --destructive: var(---primary-foreground)
-`;
-const Body = styled.div`
-    width: min(710px ,100%);
-`
