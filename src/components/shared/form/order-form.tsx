@@ -18,6 +18,7 @@ import { useState } from 'react';
 import { PhoneInput } from 'react-international-phone';
 import 'react-international-phone/style.css';
 import styled from "styled-components"
+import { Phone } from "./styles"
 
 const formSchema = z.object({
     username: z.string().min(2, {
@@ -98,20 +99,3 @@ export default function OrderForm({ className, variant }: OrderFormProps) {
         </Form>
     )
 }
-
-const Phone = styled(PhoneInput)`
-    --react-international-phone-height: 2.5rem;
-    --react-international-phone-border-radius: 0.5rem;
-
-    display: grid;
-    grid-template-columns: auto 1fr;
-    border-radius: var(--react-international-phone-border-radius);
-
-    .react-international-phone-country-selector {
-        min-width: 44px;
-    }
-    .react-international-phone-input {
-        flex: 1;
-        overflow: hidden;
-    }
-`;
