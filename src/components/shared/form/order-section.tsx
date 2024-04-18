@@ -39,7 +39,7 @@ export default async function OrderSection({ className }: React.HTMLAttributes<H
                             'section-body'
                         )}>
                             <OrderForm className={cn(
-                                'flex flex-wrap gap-5 items-end md:justify-center max-w-48 md:max-w-full'
+                                'flex flex-wrap gap-5 md:justify-center max-w-48 md:max-w-full'
                             )} />
                         </div>
                     </Body>
