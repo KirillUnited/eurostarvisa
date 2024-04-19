@@ -36,9 +36,11 @@ export default function BlogPostPage({ params }: Props) {
 					src={post.thumbnail}
 					alt={post.title}
 					className='absolute object-cover object-center top-0 left-0 w-full h-full'
+					priority
 				/>
 				<SectionInner className='relative z-10 h-screen grid place-content-center'>
 					<SectionHeading className='pb-5 text-primary-foreground text-center'>
+						<p className="paragraph capitalize font-bold">статья от {post.author}</p>
 						<h1 className="heading-1">
 							{post.title}
 						</h1>
@@ -48,7 +50,10 @@ export default function BlogPostPage({ params }: Props) {
 			</SectionBase>
 			<SectionBase>
 				<SectionInner>
-					<PostDate date={post.date} className='text-foreground/70 text-sm' />
+					<div className='flex flex-wrap items-center gap-3 text-foreground/70 text-sm'>
+						<PostDate date={post.date} />
+						<span>{post.category}</span>
+					</div>
 					<SectionBody>
 						<article className='prose mx-auto' dangerouslySetInnerHTML={{ __html: post.content }} />
 					</SectionBody>

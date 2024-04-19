@@ -45,13 +45,13 @@ export default function BlogPage({ params }: Props) {
 										alt={`${title}` || ''}
 										className='object-cover object-center aspect-video w-full mx-auto'
 									/>
-									<CardHeader>
-										<PostDate date={date} className='text-foreground/70 text-sm' />
+									<CardHeader className='flex-1'>
+										<PostDate date={date} className='text-foreground/70 text-xs' />
 										<CardTitle className='text-sm lg:text-base line-clamp-2'>{title}</CardTitle>
-										<CardDescription className='text-xs lg:text-sm line-clamp-6'>{description}</CardDescription>
+										<CardDescription className='text-xs lg:text-sm line-clamp-4'>{description}</CardDescription>
 									</CardHeader>
 									<CardFooter>
-										<Button asChild variant={'link'} className='text-link gap-3'>
+										<Button asChild variant={'link'} className='text-link gap-3 px-0'>
 											<Link
 												href={`/blog/${slug}`}
 												target='_blank'

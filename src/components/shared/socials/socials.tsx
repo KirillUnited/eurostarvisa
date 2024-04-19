@@ -14,17 +14,17 @@ function Socials({ className }: React.HTMLAttributes<HTMLElement>) {
 		)}>
 			<List>
 				<ListItem>
-					<ListLink href={`facebook.com`} target='_blank'>
+					<ListLink href={`https://www.instagram.com/`} target='_blank'>
 						<FacebookIcon />
 					</ListLink>
 				</ListItem>
 				<ListItem>
-					<ListLink href={`vk.ru`} target='_blank'>
+					<ListLink href={`https://www.instagram.com/`} target='_blank'>
 						<VkontakteIcon />
 					</ListLink>
 				</ListItem>
 				<ListItem>
-					<ListLink href={`instagram.com`} target='_blank'>
+					<ListLink href={`https://www.instagram.com/`} target='_blank'>
 						<InstagramIcon />
 					</ListLink>
 				</ListItem>

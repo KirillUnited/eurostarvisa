@@ -3,6 +3,9 @@ const nextConfig = {
     compiler: {
         styledComponents: true,
     },
+    images: {
+        domains: ['unsplash.com', 'plus.unsplash.com', 'images.unsplash.com']
+    },
     webpack(config) {
         // Grab the existing rule that handles SVG imports
         const fileLoaderRule = config.module.rules.find((rule) =>

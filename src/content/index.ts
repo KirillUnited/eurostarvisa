@@ -606,13 +606,48 @@ export const blog = {
     description: 'просто о визах',
     list: [
         {
-            slug: 'blog-post-1',
+            slug: 'blog-post-1',            
+            category: 'США',
+            author: 'Dewayne',
             title: 'За американской визой теперь только в Минск!',
             description: 'Большинство белорусов обращается за американскими визами в Минск. А так ли там хорошо? Разбираемся, куда податься белорусу!',
             thumbnail: '/images/blog-post-image-1.jpg',
             date: '2023-08-29T10:36:16.845Z',
             link: '/blog/',
             content: '<h2>Начнем с того, что предположение "за американской визой только в Минск" - это достаточно распространенное заблуждение.</h2><p>Действительно, в начале 2018 года Посольство США в Минске наконец-то расширило список типов виз, которые белорусы могут получить у себя на Родине. Обратиться за визой теперь стало проще: не нужно ждать несколько месяцев, сбор оплачивается наличными в день интервью, беседовать с офицером можно на русском. На этом список преимуществ обращения в Посольство в Минске заканчивается. Но как быть, если в Америку очень надо, а через Минск обращаться нет желания?</p>'
+        },
+        {
+            slug: 'blog-post-2',            
+            category: 'КАНАДА',
+            author: 'Tanya',
+            title: 'Regional Division Strategist',
+            description: 'Blanditiis nostrum quidem corrupti necessitatibus enim et in aut. Repellat amet necessitatibus minima ad deleniti et sed. Quo at perferendis maxime et voluptatem expedita sunt. Dolorem deleniti quis cumque quibusdam.',
+            thumbnail: 'https://plus.unsplash.com/premium_photo-1673241100156-2e04fca1a4af?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+            date: 'Mon Dec 18 2023 22:12:09 GMT+0300 (Arabian Standard Time)',
+            link: '/blog/',
+            content: '<h2>Regional Division Strategist</h2><p>Nulla dolorem nobis. Dolorem quam dolores consequuntur omnis vel. Facere qui cupiditate non est voluptatibus omnis et totam. Quaerat mollitia inventore ut necessitatibus quos consequatur dolores dolor.</p><p>Occaecati quaerat consequatur alias perferendis aut ut. Est enim eaque fugit aut nemo iure ratione. Id officia rerum architecto quasi est eum vitae. Numquam deserunt cumque blanditiis cupiditate delectus quis sint deserunt.</p>'
+        },
+        {
+            slug: 'blog-post-3',            
+            category: 'ЕВРОПА',
+            author: 'Elisabeth',
+            title: 'Chief Integration Liaison',
+            description: 'Quo nisi deleniti et non. Officiis laborum at eum voluptatem blanditiis distinctio explicabo.',
+            thumbnail: 'https://images.unsplash.com/photo-1454372182658-c712e4c5a1db?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+            date: 'Mon Feb 12 2024 02:57:35 GMT+0300 (Arabian Standard Time)',
+            link: '/blog/',
+            content: '<h2>Chief Integration Liaison</h2><p>Voluptate impedit a quia aut. Delectus fuga provident mollitia aut iusto aut at. Similique repudiandae iste aut voluptates enim harum. Aut saepe perferendis voluptas. Labore beatae maiores dolorem in sapiente aut voluptatem aliquid.</p><p>Ut officiis explicabo omnis vero. Cumque adipisci nihil tenetur. Corrupti iure labore fugit omnis deserunt ea nulla voluptates modi. Atque ut illo veniam repellendus facere sunt. Quae ut neque soluta fugiat ut. Sit sit dolor est corrupti eius ducimus.</p><p>Est magni beatae omnis molestiae ullam dolor est libero quisquam. Et provident veritatis aperiam fuga et exercitationem nulla consequatur consectetur. Quia est officia deserunt sed neque. Nisi incidunt est consequatur sit. Neque eos illum.</p>'
+        },
+        {
+            slug: 'blog-post-4',            
+            category: 'АНГЛИЯ',
+            author: 'Stanford',
+            title: 'Lead Interactions Supervisor',
+            description: 'Quae et provident dolor libero aliquam. Laboriosam asperiores voluptatem. Voluptatum aliquid architecto velit nisi unde. Impedit sit voluptates vel.',
+            thumbnail: 'https://plus.unsplash.com/premium_photo-1673240845247-5d694500ddf8?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+            date: 'Sat Aug 05 2023 04:29:32 GMT+0300 (Arabian Standard Time)',
+            link: '/blog/',
+            content: '<h2>Chief Integration Liaison</h2><p>Minus eum neque repudiandae est quis omnis et. Error recusandae dicta illo et sequi delectus delectus nihil. Ad amet deleniti vitae aperiam dolor deleniti repellat omnis.</p>'
         },
     ]
 }
