@@ -21,9 +21,17 @@ export async function generateMetadata({ params }: Props) {
 export default function BlogPage({ params }: Props) {
 	return (
 		<>
-			<SectionBase className='bg-accent'>
-				<SectionInner>
-					<SectionHeading className='text-center'>
+			<SectionBase className='after:bg-foreground/40 after:absolute after:top-0 after:left-0 after:w-full after:h-full relative'>
+				<Image
+					width={1400}
+					height={900}
+					src={`https://images.unsplash.com/photo-1522199873717-bc67b1a5e32b?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D`}
+					alt={params.slug}
+					className='absolute object-cover object-center top-0 left-0 w-full h-full'
+					priority
+				/>
+				<SectionInner className='relative z-10'>
+					<SectionHeading className='text-primary-foreground text-center'>
 						<h3 className="heading-3">{blog.title}</h3>
 						<p className="paragraph">{blog.description}</p>
 					</SectionHeading>
