@@ -11,6 +11,7 @@ export const Body = styled.div`
 export const Phone = styled(PhoneInput)`
     --react-international-phone-height: 2.5rem;
     --react-international-phone-border-radius: 0.5rem;
+    --react-international-phone-border-color: hsl(var(--input));
 
     display: grid;
     grid-template-columns: auto 1fr;

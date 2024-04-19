@@ -1,3 +1,4 @@
+import { BackLink } from '@/components/shared/link';
 import PostDate from '@/components/shared/post/post-date';
 import { SectionHeading, SectionInner } from '@/components/shared/section';
 import { site } from '@/content'
@@ -30,16 +31,19 @@ export default function ServicePostPage({ params }: Props) {
 		<>
 			<section className='border-muted border'>
 				<div className="container">
-					<p className='text-center font-bold py-4'>Полезная информация</p>
+					<div className="flex items-center gap-4 py-4">
+						<BackLink />
+						<p className='flex-1 text-center font-bold'>Полезная информация</p>
+					</div>
 				</div>
 			</section>
 			<section>
 				<div className='container max-w-3xl'>
 					<SectionHeading className='pb-5'>
-						<p className='flex flex-wrap items-center gap-3 text-foreground/70 text-xs'>
+						<div className='flex flex-wrap items-center gap-3 text-foreground/70 text-xs'>
 							<PostDate date={post.date} />
 							<span>{post.category}</span>
-						</p>
+						</div>
 						<h3 className="heading-3">
 							{post.title}
 						</h3>

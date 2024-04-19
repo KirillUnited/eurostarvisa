@@ -15,10 +15,9 @@ import { Input } from "@/components/ui/input"
 import validator from "validator";
 import { cn } from "@/lib/utils";
 import { useState } from 'react';
-import { PhoneInput } from 'react-international-phone';
 import 'react-international-phone/style.css';
-import styled from "styled-components"
 import { Phone } from "./styles"
+import { OrderFormProps } from "./props"
 
 const formSchema = z.object({
     username: z.string().min(2, {
@@ -28,10 +27,6 @@ const formSchema = z.object({
         message: "Неверный номер телефона.",
     }),
 })
-
-interface OrderFormProps extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
-    variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link" | null | undefined
-}
 
 export default function OrderForm({ className, variant }: OrderFormProps) {
     const [phone, setPhone] = useState('');
