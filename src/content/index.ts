@@ -604,6 +604,7 @@ export const testimonials = {
 export const blog = {
     title: 'Наш блог',
     description: 'просто о визах',
+    image: 'https://images.unsplash.com/photo-1522199873717-bc67b1a5e32b?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     list: [
         {
             slug: 'blog-post-1',            
