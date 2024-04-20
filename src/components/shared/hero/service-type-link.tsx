@@ -4,6 +4,8 @@ import Image from 'next/image'
 import { MoveRightIcon } from 'lucide-react'
 import ServiceTourIcon from '@/assets/svg/service-type-tour-icon.svg'
 import { HeroLinkBase } from './hero-link'
+import InfoPopup from '../info/info-popup'
+import { Dialog, DialogTrigger } from '@/components/ui/dialog'
 
 const SERVICE_TYPE_1 = 'tour';
 const SERVICE_TYPE_2 = 'business';
@@ -33,12 +35,21 @@ const ServiceTypeLinkIcon = (type: string) => {
             return null;
     }
 }
-function ServiceTypeLink({ link, label, type }: HeroLinkProps & ServiceTypeLinkProps) {
+function ServiceTypeLink({ link, label, type, description }: HeroLinkProps & ServiceTypeLinkProps) {
     return (
         <HeroLinkBase href={`${link}`}>
             {ServiceTypeLinkIcon(`${type}`)}
             <p className='paragraph font-bold text-center'>{label}</p>
-            <span className='paragraph font-bold text-link flex items-center'>подробнее <MoveRightIcon /></span>
+            {description &&
+                <Dialog>
+                    <DialogTrigger asChild>
+                        <span className='paragraph font-bold text-link flex items-center cursor-pointer'>подробнее <MoveRightIcon /></span>
+                    </DialogTrigger>
+
+                    <InfoPopup title={label} description={description}>
+                    </InfoPopup>
+                </Dialog>
+            }
         </HeroLinkBase>
     )
 }
