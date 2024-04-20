@@ -6,7 +6,8 @@ export type HeroLinkProps = {
 }
 
 export interface ServiceTypeLinkProps {
-    type: 'tour' | 'business' | 'study' | string | undefined
+    type: 'tour' | 'business' | 'study' | string | undefined,
+    description: string | TrustedHTML
 }
 export interface HeroProps extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> {
     title?: string,
