@@ -4,7 +4,13 @@ const nextConfig = {
         styledComponents: true,
     },
     images: {
-        domains: ['unsplash.com', 'plus.unsplash.com', 'images.unsplash.com']
+        remotePatterns: [
+            {
+                protocol: 'https',
+                hostname: '**.unsplash.com',
+                port: '',
+            }
+        ]
     },
     webpack(config) {
         // Grab the existing rule that handles SVG imports
