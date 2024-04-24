@@ -439,7 +439,7 @@ export const navbar = [
     },
     {
         label: 'О нас',
-        route: '/about'
+        route: '#'
     },
     {
         label: 'Блог',
