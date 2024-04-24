@@ -26,7 +26,7 @@ export default function BlogPage({ params }: Props) {
 					width={1400}
 					height={900}
 					src={`${blog.image}`}
-					alt={params.slug}
+					alt={`StarVisa`}
 					className='absolute object-cover object-center top-0 left-0 w-full h-full'
 					priority
 				/>
