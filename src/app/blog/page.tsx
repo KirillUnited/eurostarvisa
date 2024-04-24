@@ -44,14 +44,14 @@ export default function BlogPage({ params }: Props) {
 							{blog.list.map(({ slug, title, description, thumbnail, date }: any) => {
 								return <Card
 									key={title}
-									className='flex flex-col shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden'
+									className='group flex flex-col shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden'
 								>
 									<Image
 										src={`${thumbnail}`}
 										width={234}
 										height={154}
 										alt={`${title}` || ''}
-										className='object-cover object-center aspect-video w-full mx-auto'
+										className='object-cover object-center aspect-video w-full mx-auto transition-all duration-300 group-hover:scale-110 max-h-40'
 									/>
 									<CardHeader className='flex-1'>
 										<PostDate date={date} className='text-foreground/70 text-xs' />
