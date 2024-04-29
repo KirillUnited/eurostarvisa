@@ -1,4 +1,4 @@
-import PostCard from '@/components/shared/post/post-card'
+import { PostCard } from '@/components/shared/post'
 import { SectionBase, SectionBody, SectionHeading, SectionInner } from '@/components/shared/section'
 import { blog } from '@/content'
 import Image from 'next/image'
