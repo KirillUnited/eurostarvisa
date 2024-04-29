@@ -1,4 +1,5 @@
-import PostCard from '@/components/shared/post/post-card'
+import { BreadcrumbBase } from '@/components/shared/breadcrumb'
+import { PostCard } from '@/components/shared/post'
 import { SectionBase, SectionBody, SectionHeading, SectionInner } from '@/components/shared/section'
 import { blog } from '@/content'
 import Image from 'next/image'
@@ -35,10 +36,11 @@ export default function BlogPage({ params }: Props) {
 			</SectionBase>
 			<SectionBase>
 				<SectionInner>
+					<BreadcrumbBase slug={`Блог`} />
 					<SectionBody>
 						<div className="grid grid-flow-row grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
 							{blog.list.map((item) => {
-								return <PostCard key={item.date} {...item}/>
+								return <PostCard key={item.date} {...item} />
 							})}
 						</div>
 					</SectionBody>

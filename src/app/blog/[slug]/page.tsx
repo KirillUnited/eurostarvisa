@@ -1,3 +1,4 @@
+import { BreadcrumbBase } from '@/components/shared/breadcrumb';
 import PostDate from '@/components/shared/post/post-date';
 import { SectionBase, SectionBody, SectionHeading, SectionInner } from '@/components/shared/section';
 import { blog } from '@/content'
@@ -49,6 +50,7 @@ export default function BlogPostPage({ params }: Props) {
 				</SectionInner>
 			</SectionBase>
 			<SectionBase>
+				<SectionHeading><BreadcrumbBase slug={`${post.slug}`} /></SectionHeading>
 				<SectionInner>
 					<div className='flex flex-wrap items-center gap-3 text-foreground/70 text-sm'>
 						<PostDate date={post.date} />
