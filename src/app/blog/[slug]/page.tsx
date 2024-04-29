@@ -50,7 +50,7 @@ export default function BlogPostPage({ params }: Props) {
 				</SectionInner>
 			</SectionBase>
 			<SectionBase>
-					<SectionHeading><BreadcrumbBase slug={`${post.slug}`} /></SectionHeading>
+				<SectionHeading><BreadcrumbBase slug={`${post.slug}`} /></SectionHeading>
 				<SectionInner>
 					<div className='flex flex-wrap items-center gap-3 text-foreground/70 text-sm'>
 						<PostDate date={post.date} />
