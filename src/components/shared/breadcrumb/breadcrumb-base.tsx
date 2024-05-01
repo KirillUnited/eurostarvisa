@@ -10,7 +10,7 @@ import {
     BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb"
 
-function BreadcrumbBase({ slug }: { slug: string }) {
+function BreadcrumbBase({ pageTitle }: { pageTitle: string }) {
     return (
         <Breadcrumb>
             <BreadcrumbList>
@@ -21,7 +21,7 @@ function BreadcrumbBase({ slug }: { slug: string }) {
                     <Slash />
                 </BreadcrumbSeparator>
                 <BreadcrumbItem>
-                    <BreadcrumbPage>{slug}</BreadcrumbPage>
+                    <BreadcrumbPage>{pageTitle}</BreadcrumbPage>
                 </BreadcrumbItem>
             </BreadcrumbList>
         </Breadcrumb>

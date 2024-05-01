@@ -9,9 +9,13 @@ type Props = {
 }
 
 export async function generateMetadata({ params }: Props) {
+	const post = blog.list.filter((item) => {
+		return item.slug === params.slug;
+	})[0];
+
 	return {
-		title: 'Blog Post page',
-		description: 'Simple Post page',
+		title: post.title,
+		description: post.description,
 	}
 }
 
@@ -50,7 +54,7 @@ export default function BlogPostPage({ params }: Props) {
 				</SectionInner>
 			</SectionBase>
 			<SectionBase>
-				<SectionHeading><BreadcrumbBase slug={`${post.slug}`} /></SectionHeading>
+				<SectionHeading><BreadcrumbBase pageTitle={`${post.title}`} /></SectionHeading>
 				<SectionInner>
 					<div className='flex flex-wrap items-center gap-3 text-foreground/70 text-sm'>
 						<PostDate date={post.date} />

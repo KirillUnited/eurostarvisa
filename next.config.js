@@ -9,7 +9,12 @@ const nextConfig = {
                 protocol: 'https',
                 hostname: '**.unsplash.com',
                 port: '',
-            }
+            },
+            {
+                protocol: 'https',
+                hostname: 'fakestoreapi.com',
+                port: '',
+            },
         ]
     },
     webpack(config) {
