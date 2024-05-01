@@ -35,7 +35,7 @@ function InfoList() {
                                     <CardContent className='flex-1 prose text-sm' dangerouslySetInnerHTML={{ __html: description }} />
                                     <CardFooter>
                                         <Button variant={'outline'} className='w-full' asChild>
-                                            <Link href={`/blog/${slug}`}>Подробнее</Link>
+                                            <Link href={`/services/posts/${slug}`}>Подробнее</Link>
                                         </Button>
                                     </CardFooter>
                                 </div>

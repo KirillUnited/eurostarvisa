@@ -140,34 +140,46 @@ export const site = {
             image: '/images/info-bg.png',
             list: [
                 {
-                    slug: 'blog-post-1',
+                    slug: 'dokumenty-1',
                     thumbnail: '/images/info-visa.svg',
                     title: 'Изменения в визовом кодексе ЕС',
                     description: 'Время от времени Евросоюз пересматривает правила и условия выдачи шенгенских виз.',
+                    date: '2023-08-29T10:36:16.845Z',
+                    category: 'Все категории',
+                    content: '<p>31 июля 2018 года посольство Канады ввело обязательную сдачу биометрических данных для получения визы. Сдать отпечатки пальцев можно только в Визовом Центре Канады по адресу: 115230, Москва, Каширское шоссе, дом 3, корпус 2, строение 4</p>',
                     name: '',
                     link: '/'
                 },
                 {
-                    slug: 'blog-post-1',
+                    slug: 'dokumenty-2',
                     thumbnail: '/images/info-stamp.svg',
                     title: 'Правило первого въезда ЕС',
                     description: 'Время от времени Евросоюз пересматривает правила и условия выдачи шенгенских виз.',
+                    date: '2023-08-29T10:36:16.845Z',
+                    category: 'Все категории',
+                    content: '<p>31 июля 2018 года посольство Канады ввело обязательную сдачу биометрических данных для получения визы. Сдать отпечатки пальцев можно только в Визовом Центре Канады по адресу: 115230, Москва, Каширское шоссе, дом 3, корпус 2, строение 4</p>',
                     name: '',
                     link: '/'
                 },
                 {
-                    slug: 'blog-post-1',
+                    slug: 'dokumenty-3',
                     thumbnail: '/images/info-checklist.svg',
                     title: 'Как заполнить анкету DS-160',
                     description: 'Как корректно внести всю информацию в анкету',
+                    date: '2023-08-29T10:36:16.845Z',
+                    category: 'Все категории',
+                    content: '<p>31 июля 2018 года посольство Канады ввело обязательную сдачу биометрических данных для получения визы. Сдать отпечатки пальцев можно только в Визовом Центре Канады по адресу: 115230, Москва, Каширское шоссе, дом 3, корпус 2, строение 4</p>',
                     name: '',
                     link: '/'
                 },
                 {
-                    slug: 'blog-post-1',
+                    slug: 'dokumenty-4',
                     thumbnail: '/images/info-docs.svg',
                     title: 'Какие документы нужны на визу в США',
                     description: 'Время от времени Евросоюз пересматривает правила и условия выдачи шенгенских виз.',
+                    date: '2023-08-29T10:36:16.845Z',
+                    category: 'Все категории',
+                    content: '<p>31 июля 2018 года посольство Канады ввело обязательную сдачу биометрических данных для получения визы. Сдать отпечатки пальцев можно только в Визовом Центре Канады по адресу: 115230, Москва, Каширское шоссе, дом 3, корпус 2, строение 4</p>',
                     name: '',
                     link: '/'
                 }
@@ -421,6 +433,50 @@ export const site = {
                     date: '2023-08-29T10:36:16.845Z',
                     category: 'КАНАДА',
                     content: '<p>31 июля 2018 года посольство Канады ввело обязательную сдачу биометрических данных для получения визы. Сдать отпечатки пальцев можно только в Визовом Центре Канады по адресу: 115230, Москва, Каширское шоссе, дом 3, корпус 2, строение 4</p> <p>31 июля 2018 года посольство Канады ввело обязательную сдачу биометрических данных для получения визы. Сдать отпечатки пальцев можно только в Визовом Центре Канады по адресу: 115230, Москва, Каширское шоссе, дом 3, корпус 2, строение 4</p>'
+                },
+                {
+                    slug: 'dokumenty-1',
+                    thumbnail: '/images/info-visa.svg',
+                    title: 'Изменения в визовом кодексе ЕС',
+                    description: 'Время от времени Евросоюз пересматривает правила и условия выдачи шенгенских виз.',
+                    date: '2023-08-29T10:36:16.845Z',
+                    category: 'Все категории',
+                    content: '<p>31 июля 2018 года посольство Канады ввело обязательную сдачу биометрических данных для получения визы. Сдать отпечатки пальцев можно только в Визовом Центре Канады по адресу: 115230, Москва, Каширское шоссе, дом 3, корпус 2, строение 4</p>',
+                    name: '',
+                    link: '/'
+                },
+                {
+                    slug: 'dokumenty-2',
+                    thumbnail: '/images/info-stamp.svg',
+                    title: 'Правило первого въезда ЕС',
+                    description: 'Время от времени Евросоюз пересматривает правила и условия выдачи шенгенских виз.',
+                    date: '2023-08-29T10:36:16.845Z',
+                    category: 'Все категории',
+                    content: '<p>31 июля 2018 года посольство Канады ввело обязательную сдачу биометрических данных для получения визы. Сдать отпечатки пальцев можно только в Визовом Центре Канады по адресу: 115230, Москва, Каширское шоссе, дом 3, корпус 2, строение 4</p>',
+                    name: '',
+                    link: '/'
+                },
+                {
+                    slug: 'dokumenty-3',
+                    thumbnail: '/images/info-checklist.svg',
+                    title: 'Как заполнить анкету DS-160',
+                    description: 'Как корректно внести всю информацию в анкету',
+                    date: '2023-08-29T10:36:16.845Z',
+                    category: 'Все категории',
+                    content: '<p>31 июля 2018 года посольство Канады ввело обязательную сдачу биометрических данных для получения визы. Сдать отпечатки пальцев можно только в Визовом Центре Канады по адресу: 115230, Москва, Каширское шоссе, дом 3, корпус 2, строение 4</p>',
+                    name: '',
+                    link: '/'
+                },
+                {
+                    slug: 'dokumenty-4',
+                    thumbnail: '/images/info-docs.svg',
+                    title: 'Какие документы нужны на визу в США',
+                    description: 'Время от времени Евросоюз пересматривает правила и условия выдачи шенгенских виз.',
+                    date: '2023-08-29T10:36:16.845Z',
+                    category: 'Все категории',
+                    content: '<p>31 июля 2018 года посольство Канады ввело обязательную сдачу биометрических данных для получения визы. Сдать отпечатки пальцев можно только в Визовом Центре Канады по адресу: 115230, Москва, Каширское шоссе, дом 3, корпус 2, строение 4</p>',
+                    name: '',
+                    link: '/'
                 }
             ]
         }
@@ -610,7 +666,7 @@ export const blog = {
     image: 'https://images.unsplash.com/photo-1522199873717-bc67b1a5e32b?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     list: [
         {
-            slug: 'blog-post-1',            
+            slug: 'blog-post-1',
             category: 'США',
             author: 'Dewayne',
             title: 'За американской визой теперь только в Минск!',
@@ -621,7 +677,7 @@ export const blog = {
             content: '<h2>Начнем с того, что предположение "за американской визой только в Минск" - это достаточно распространенное заблуждение.</h2><p>Действительно, в начале 2018 года Посольство США в Минске наконец-то расширило список типов виз, которые белорусы могут получить у себя на Родине. Обратиться за визой теперь стало проще: не нужно ждать несколько месяцев, сбор оплачивается наличными в день интервью, беседовать с офицером можно на русском. На этом список преимуществ обращения в Посольство в Минске заканчивается. Но как быть, если в Америку очень надо, а через Минск обращаться нет желания?</p>'
         },
         {
-            slug: 'blog-post-2',            
+            slug: 'blog-post-2',
             category: 'КАНАДА',
             author: 'Tanya',
             title: 'Regional Division Strategist',
@@ -632,7 +688,7 @@ export const blog = {
             content: '<h2>Regional Division Strategist</h2><p>Nulla dolorem nobis. Dolorem quam dolores consequuntur omnis vel. Facere qui cupiditate non est voluptatibus omnis et totam. Quaerat mollitia inventore ut necessitatibus quos consequatur dolores dolor.</p><p>Occaecati quaerat consequatur alias perferendis aut ut. Est enim eaque fugit aut nemo iure ratione. Id officia rerum architecto quasi est eum vitae. Numquam deserunt cumque blanditiis cupiditate delectus quis sint deserunt.</p>'
         },
         {
-            slug: 'blog-post-3',            
+            slug: 'blog-post-3',
             category: 'ЕВРОПА',
             author: 'Elisabeth',
             title: 'Chief Integration Liaison',
@@ -643,7 +699,7 @@ export const blog = {
             content: '<h2>Chief Integration Liaison</h2><p>Voluptate impedit a quia aut. Delectus fuga provident mollitia aut iusto aut at. Similique repudiandae iste aut voluptates enim harum. Aut saepe perferendis voluptas. Labore beatae maiores dolorem in sapiente aut voluptatem aliquid.</p><p>Ut officiis explicabo omnis vero. Cumque adipisci nihil tenetur. Corrupti iure labore fugit omnis deserunt ea nulla voluptates modi. Atque ut illo veniam repellendus facere sunt. Quae ut neque soluta fugiat ut. Sit sit dolor est corrupti eius ducimus.</p><p>Est magni beatae omnis molestiae ullam dolor est libero quisquam. Et provident veritatis aperiam fuga et exercitationem nulla consequatur consectetur. Quia est officia deserunt sed neque. Nisi incidunt est consequatur sit. Neque eos illum.</p>'
         },
         {
-            slug: 'blog-post-4',            
+            slug: 'blog-post-4',
             category: 'АНГЛИЯ',
             author: 'Stanford',
             title: 'Lead Interactions Supervisor',
