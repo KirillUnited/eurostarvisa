@@ -20,7 +20,7 @@ function PostCard({ slug, title, description, thumbnail, date, className }: Post
         <Card
             key={title}
             className={cn(
-                'group flex flex-col shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden',
+                'group flex flex-col h-full shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden',
                 className
             )}
         >

@@ -1,8 +1,12 @@
 import { BreadcrumbBase } from '@/components/shared/breadcrumb'
-import { PostCard } from '@/components/shared/post'
+import PostList from '@/components/shared/post/post-list'
 import { SectionBase, SectionBody, SectionHeading, SectionInner } from '@/components/shared/section'
 import { blog } from '@/content'
+import { LoaderIcon } from 'lucide-react'
 import Image from 'next/image'
+import { Suspense } from 'react'
+
+const FAKE_COLLECTION = 'products';
 
 type Props = {
 	params: { slug: string }
@@ -16,9 +20,6 @@ export async function generateMetadata({ params }: Props) {
 }
 
 export default async function BlogPage({ params }: Props) {
-	// let data:any;
-	// await fetch('https://fakestoreapi.com/products')
-	// 		.then(res => res.json())
 	return (
 		<>
 			<SectionBase className='after:bg-foreground/40 after:absolute after:top-0 after:left-0 after:w-full after:h-full relative'>
@@ -41,14 +42,21 @@ export default async function BlogPage({ params }: Props) {
 				<SectionInner>
 					<BreadcrumbBase pageTitle={`Блог`} />
 					<SectionBody>
-						<div className="grid grid-flow-row grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-							{blog.list.map((item) => {
-								return <PostCard key={item.date} {...item} />
-							})}
-						</div>
+						<Suspense fallback={<PostLoader />}>
+							<PostList />
+						</Suspense>
 					</SectionBody>
 				</SectionInner>
 			</SectionBase>
 		</>
+	)
+}
+
+function PostLoader() {
+	return (
+		<div className='flex items-center justify-center gap-3'>
+			<span>Минуточку ...</span>
+			<LoaderIcon className="h-5 w-5 animate-spin" />
+		</div>
 	)
 }
