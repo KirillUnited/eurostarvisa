@@ -1,54 +1,36 @@
-import matter from 'gray-matter'
-import path from 'path'
-import fs from 'fs/promises'
 import { cache } from 'react'
-import { HeroLinkProps } from '@/components/shared/hero/hero.props'
+import 'server-only'
 
-export type CollectionProps = {
-    service?: string[]
-    slug: string,
+const FAKE_API = 'https://fakestoreapi.com';
+
+export type CollectionItemProps = {
+    id: number,
     title: string,
-    description?: string,
-    date?: string,
-    thumbnail?: string,
-    hero_links?: Array<HeroLinkProps>
-    link?: string,
-    info?: object,
-    keywords?: string[]
-    features?: string[]
-    body: string
-    steps?: Array<{ description: string }>
+    price: string,
+    category: string,
+    description: string,
+    image: string
 }
+
+// export const preload = (name: string) => {
+//     void getCollection(name)
+// }
 // `cache` is a React 18 feature that allows you to cache a function for the lifetime of a request.
 // this means getPosts() will only be called once per page build, even though we may call it multiple times
 // when rendering the page.
 const getCollection = cache(async (name: string) => {
-    const PATH = `./src/content/_collections/${name}`;
-    const files = await fs.readdir(`${PATH}`);
+    const res = await fetch(`${FAKE_API}/${name}`)
+    await new Promise((resolve) => setTimeout(resolve, 3000));
 
-    return Promise.all(
-        files
-            .filter((file) => path.extname(file) === '.md')
-            .map(async (file) => {
-                const filePath = `${PATH}/${file}`
-                const fileContent = await fs.readFile(filePath, 'utf8')
-                const { data, content } = matter(fileContent)
-
-                if (data.published === false) {
-                    return null
-                }
-
-                return { ...data, body: content } as CollectionProps
-            })
-    )
+    return res.json();
 });
 
-async function getCollectionItem(slug: string, name: string) {
-    const items = await getCollection(name);
-    return items.find((item) => item?.slug === slug)
-}
+// async function getCollectionItem(slug: string, name: string) {
+//     const items = await getCollection(name);
+//     return items.find((item) => item?.slug === slug)
+// }
 
 export {
     getCollection,
-    getCollectionItem
+    // getCollectionItem
 }

@@ -8,10 +8,16 @@ type Props = {
 	params: { slug: string }
 }
 
-export async function generateMetadata({ params }: Props) {
+function getPost({ params }: Props) {
 	const post = blog.list.filter((item) => {
 		return item.slug === params.slug;
 	})[0];
+
+	return post;
+}
+
+export async function generateMetadata({ params }: Props) {
+	const post = getPost({ params })
 
 	return {
 		title: post.title,
@@ -28,9 +34,7 @@ export async function generateStaticParams() {
 }
 
 export default function BlogPostPage({ params }: Props) {
-	const post = blog.list.filter((item) => {
-		return item.slug === params.slug;
-	})[0]
+	const post = getPost({ params })
 
 	return (
 		<>
