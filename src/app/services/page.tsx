@@ -25,7 +25,11 @@ export async function generateMetadata({ params }: Props) {
 //   }))
 // }
 
-export default function VisaPage() {
+export default function VisaPage() {	
+	const posts = site?.visa?.info?.list.filter((item) => {
+		return item.category === 'КАНАДА'
+	});
+
 	return (
 		<>
 			<ServicePageHero />
@@ -58,7 +62,7 @@ export default function VisaPage() {
 							<h2 className='heading-2'>{site.visa.info.title}</h2>
 						</div>
 						<div className="section-body">
-							<InfoList list={site.visa.info.list} />
+							<InfoList list={posts} />
 						</div>
 					</div>
 				</div>

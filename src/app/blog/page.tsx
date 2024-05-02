@@ -15,7 +15,10 @@ export async function generateMetadata({ params }: Props) {
 	}
 }
 
-export default function BlogPage({ params }: Props) {
+export default async function BlogPage({ params }: Props) {
+	// let data:any;
+	// await fetch('https://fakestoreapi.com/products')
+	// 		.then(res => res.json())
 	return (
 		<>
 			<SectionBase className='after:bg-foreground/40 after:absolute after:top-0 after:left-0 after:w-full after:h-full relative'>
@@ -36,7 +39,7 @@ export default function BlogPage({ params }: Props) {
 			</SectionBase>
 			<SectionBase>
 				<SectionInner>
-					<BreadcrumbBase slug={`Блог`} />
+					<BreadcrumbBase pageTitle={`Блог`} />
 					<SectionBody>
 						<div className="grid grid-flow-row grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
 							{blog.list.map((item) => {

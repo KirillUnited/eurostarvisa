@@ -40,9 +40,9 @@ export default function ServicePostPage({ params }: Props) {
 			</section>
 			<section>
 				<div className='container max-w-3xl'>
-					<SectionHeading>
-						<BreadcrumbBase slug={`${post.title}`} />
-					</SectionHeading>
+					{/* <SectionHeading>
+						<BreadcrumbBase pageTitle={`${post.title}`} />
+					</SectionHeading> */}
 					<SectionHeading className='pb-5'>
 						<div className='flex flex-wrap items-center gap-3 text-foreground/70 text-xs'>
 							<PostDate date={post.date} />
