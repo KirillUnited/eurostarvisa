@@ -4,6 +4,7 @@ import { FAQSection } from '@/components/shared/faq'
 import FAQCarousel from '@/components/shared/faq/faq-carousel'
 import Hero, { HeroDescription, HeroLink, HeroTitle } from '@/components/shared/hero'
 import { InfoList, InfoSection } from '@/components/shared/info'
+import { PostCard } from '@/components/shared/post'
 import { FeaturedProductSection } from '@/components/shared/product'
 import FeaturedProductList from '@/components/shared/product/featured-product-list'
 import { SectionBase, SectionHeading } from '@/components/shared/section'
@@ -11,12 +12,14 @@ import { InstagramFeed } from '@/components/shared/socials'
 import { StepList, StepSection } from '@/components/shared/step'
 import { TestimonialCarousel, TestimonialSection } from '@/components/shared/testimonial'
 import { site } from '@/content'
+import { getPosts } from '@/lib/api/service'
 
 type Props = {
   params: { slug: string }
 }
 
-export default function Home() {
+export default async function Home() {
+  const posts = await getPosts(100);
   const title = site.home.hero.title
   const subtitle = site.home.hero.subtitle
   const description = site.home.hero.description
@@ -67,7 +70,7 @@ export default function Home() {
         <FAQCarousel />
       </FAQSection>
       <InfoSection>
-        <InfoList />
+        <InfoList posts={posts} />
       </InfoSection>
       <SectionBase>
         <SectionHeading className='text-center'>

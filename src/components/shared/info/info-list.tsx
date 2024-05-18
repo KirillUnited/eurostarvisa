@@ -4,38 +4,72 @@ import styled from 'styled-components';
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import Image from 'next/image'
-import { site } from '@/content'
+// import { site } from '@/content'
 import Link from 'next/link';
+import { cn } from '@/lib/utils';
 
-function InfoList() {
+const CATEGORY_NAME = "Полезная информация";
+interface InfoListItemProps {
+    thumbnail?: string,
+    title: string,
+    description: TrustedHTML,
+    slug: string
+}
+function InfoList({ posts }: any) {
+    // const filterItems = posts.map((post: any) => {
+    //     return post?.categories?.nodes.filter((item: any) => {
+    //         console.log(item)
+
+    //         if (item.name === CATEGORY_NAME) return item;
+    //     })
+    // });
+    // const filterItemsByCategory = filterItems.filter((post: any) => {
+    //     return post?.categories?.nodes.filter((item: any) => {
+    //         console.log(item)
+
+    //         if (item.name === CATEGORY_NAME) return item;
+    //     })
+    // });
     return (
-        <List className='grid gap-5 md:gap-10 lg:gap-5'>
+        <List
+            className={cn(
+                'grid gap-5 md:gap-10 lg:gap-5'
+            )}
+        >
             {
-                site.home.info.list.map(({ thumbnail, title, description, slug }) => {
+                posts?.map((post: any) => {
+                    const featuredImage = post?.featuredImage?.node?.sourceUrl;
+
                     return (
                         <li
-                            key={title}
+                            key={post.slug}
                         >
                             <Card
-                                className='sm:grid grid-cols-[168px,_1fr] shadow-md hover:shadow-2xl transition-all duration-300 h-full'
+                                className={cn(
+                                    'sm:grid grid-cols-[168px,_1fr] shadow-md hover:shadow-2xl transition-all duration-300 h-full'
+                                )}
                             >
                                 <CardHeader>
                                     <Image
-                                        src={`${thumbnail}`}
+                                        src={featuredImage ?? '/images/stamp.png'}
                                         width={120}
                                         height={120}
-                                        alt={`${title}` || ''}
-                                        className='aspect-square object-contain object-center mx-auto'
+                                        alt={`${post.title}` || ''}
+                                        className={cn(
+                                            'aspect-square object-contain object-center mx-auto'
+                                        )}
                                     />
                                 </CardHeader>
                                 <div className='flex flex-col'>
                                     <CardHeader>
-                                        <CardTitle className='text-base'>{title}</CardTitle>
+                                        <CardTitle className='text-base'>{post.title}</CardTitle>
                                     </CardHeader>
-                                    <CardContent className='flex-1 prose text-sm' dangerouslySetInnerHTML={{ __html: description }} />
+                                    <CardContent className='flex-1 prose text-sm'>
+                                        <div className="line-clamp-4" dangerouslySetInnerHTML={{ __html: post.excerpt }} />
+                                    </CardContent>
                                     <CardFooter>
                                         <Button variant={'outline'} className='w-full' asChild>
-                                            <Link href={`/services/posts/${slug}`}>Подробнее</Link>
+                                            <Link href={`/services/posts/${post.slug}`}>Подробнее</Link>
                                         </Button>
                                     </CardFooter>
                                 </div>

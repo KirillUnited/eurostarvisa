@@ -58,7 +58,9 @@ export default function BlogPostPage({ params }: Props) {
 				</SectionInner>
 			</SectionBase>
 			<SectionBase>
-				<SectionHeading><BreadcrumbBase pageTitle={`${post.title}`} /></SectionHeading>
+				<SectionHeading>
+					<BreadcrumbBase pageTitle={`${post.title}`} />
+				</SectionHeading>
 				<SectionInner>
 					<div className='flex flex-wrap items-center gap-3 text-foreground/70 text-sm'>
 						<PostDate date={post.date} />
