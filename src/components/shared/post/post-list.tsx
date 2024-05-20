@@ -2,6 +2,7 @@ import React from 'react'
 import { CollectionItemProps, getCollection } from '@/lib/api/collections'
 import PostCard from './post-card'
 import { blog } from '@/content'
+import { fetchAPI } from '@/lib/api/base'
 
 const blogList = blog.list
 const FAKE_COLLECTION = 'products';
@@ -10,26 +11,58 @@ interface PostListProps {
     postList: CollectionItemProps[]
 }
 
+const query = `query FetchPosts {
+        categories(where: {name: "Блог"}) {
+            nodes {
+                name
+                posts {
+                    nodes {
+                        featuredImage {
+                        node {
+                            sourceUrl
+                        }
+                        }
+                        slug
+                        title
+                        excerpt
+                        date
+                        content
+                    }
+                }
+        }
+        }
+    }
+`;
+
+async function getPosts(first = 10) {
+    const data = await fetchAPI(
+        query,
+        {
+            variables: {
+                first,
+            },
+        }
+    );
+
+    return data?.categories?.nodes;
+}
+
 async function PostList() {
-    const postList = await getCollection(FAKE_COLLECTION);
+    const postList = await getPosts(10);
+    const posts = postList[0]?.posts?.nodes;
 
     return (
         <ul className="grid grid-flow-row grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            {blogList.map((item) => {
-                return (
-                    <li key={item.date}>
-                        <PostCard {...item} />
-                    </li>
-                )
-            })}
-            {postList?.map((item: CollectionItemProps) => {
+            {posts.map((item: any) => {
                 return (
                     <li
-                        key={item.id}>
+                        key={item.slug}>
                         <PostCard
+                            slug={item.slug}
+                            date={item.date}
                             title={item.title}
-                            description={item.description}
-                            thumbnail={item.image}
+                            description={item.excerpt}
+                            thumbnail={item.featuredImage.node.sourceUrl}
                         />
                     </li>
                 )

@@ -10,7 +10,7 @@ import { cn } from '@/lib/utils';
 interface PostCardProps extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
     slug?: string,
     title?: string,
-    description?: string,
+    description?: TrustedHTML | string,
     thumbnail?: string,
     date?: string
 }
@@ -36,7 +36,7 @@ function PostCard({ slug, title, description, thumbnail, date, className }: Post
             <CardHeader className='flex-1'>
                 {date && <PostDate date={date} className='text-foreground/70 text-xs' />}
                 {title && <CardTitle className='text-sm lg:text-base line-clamp-2'>{title}</CardTitle>}
-                {description && <CardDescription className='text-xs lg:text-sm line-clamp-4'>{description}</CardDescription>}
+                {description && <div className='text-xs lg:text-sm line-clamp-4' dangerouslySetInnerHTML={{__html: description}}/>}
             </CardHeader>
             <CardFooter>
                 {slug &&
