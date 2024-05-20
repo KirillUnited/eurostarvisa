@@ -4,32 +4,12 @@ import styled from 'styled-components';
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import Image from 'next/image'
-// import { site } from '@/content'
 import Link from 'next/link';
 import { cn } from '@/lib/utils';
 
 const CATEGORY_NAME = "Полезная информация";
-interface InfoListItemProps {
-    thumbnail?: string,
-    title: string,
-    description: TrustedHTML,
-    slug: string
-}
+
 function InfoList({ posts }: any) {
-    // const filterItems = posts.map((post: any) => {
-    //     return post?.categories?.nodes.filter((item: any) => {
-    //         console.log(item)
-
-    //         if (item.name === CATEGORY_NAME) return item;
-    //     })
-    // });
-    // const filterItemsByCategory = filterItems.filter((post: any) => {
-    //     return post?.categories?.nodes.filter((item: any) => {
-    //         console.log(item)
-
-    //         if (item.name === CATEGORY_NAME) return item;
-    //     })
-    // });
     return (
         <List
             className={cn(
@@ -39,6 +19,11 @@ function InfoList({ posts }: any) {
             {
                 posts?.map((post: any) => {
                     const featuredImage = post?.featuredImage?.node?.sourceUrl;
+                    const category = post.categories.nodes.filter((item: any) => {
+                        if (item.name === CATEGORY_NAME) return item;
+                    })
+
+                    if (category.length < 1) return;
 
                     return (
                         <li
@@ -62,9 +47,9 @@ function InfoList({ posts }: any) {
                                 </CardHeader>
                                 <div className='flex flex-col'>
                                     <CardHeader>
-                                        <CardTitle className='text-base'>{post.title}</CardTitle>
+                                        <CardTitle className='text-base line-clamp-4'>{post.title}</CardTitle>
                                     </CardHeader>
-                                    <CardContent className='flex-1 prose text-sm'>
+                                    <CardContent className='flex-1  text-sm'>
                                         <div className="line-clamp-4" dangerouslySetInnerHTML={{ __html: post.excerpt }} />
                                     </CardContent>
                                     <CardFooter>

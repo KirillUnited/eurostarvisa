@@ -1,24 +1,21 @@
 import { fetchAPI } from "./base";
 
-const query = `query FetchPosts($first: Int = 10) {
-  posts(first: $first) {
+const query = `query FetchPosts {
+  posts {
     nodes {
+      content
+      date
       excerpt
-      featuredImage {
-        node {
-          sourceUrl
-        }
-      }
       slug
       title
       categories {
         nodes {
           name
-          parent {
-            node {
-              name
-            }
-          }
+        }
+      }
+      featuredImage {
+        node {
+          sourceUrl
         }
       }
     }
