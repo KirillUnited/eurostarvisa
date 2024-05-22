@@ -9,14 +9,14 @@ type Props = {
 	params: { slug: string }
 }
 
-// export async function generateMetadata({ params }: Props) {
-// 	const post = getPostBySlug(params?.slug as string)
+export async function generateMetadata({ params }: Props) {
+	const post = await getPostBySlug(params?.slug as string)
 
-// 	return {
-// 		title: post.title,
-// 		description: post.description,
-// 	}
-// }
+	return {
+		title: post?.seo?.title,
+		description: post?.seo?.metaDesc,
+	}
+}
 
 export async function generateStaticParams() {
 	const posts = await getPosts();
