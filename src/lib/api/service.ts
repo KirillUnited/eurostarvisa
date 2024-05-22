@@ -59,6 +59,21 @@ export async function getPostBySlug(slug: string) {
         }
         date
         excerpt
+        seo {
+          breadcrumbs {
+            text
+          }
+          metaDesc
+          metaKeywords
+          opengraphAuthor
+          opengraphDescription
+          opengraphImage {
+            id
+          }
+          opengraphSiteName
+          opengraphTitle
+          title
+        }
       }
     }`
   ,
