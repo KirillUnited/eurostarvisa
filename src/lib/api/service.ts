@@ -35,10 +35,47 @@ export async function getPosts(first = 10) {
   return data?.posts?.nodes;
 }
 
-export async function getPostsByCategory(category = '') {
+export async function getPostBySlug(slug: string) {
   const data = await fetchAPI(
-    `query getPosts {
-    categories(where: {name: $category}) {
+    `query GetPost($id: ID = "") {
+      post(id: $id, idType: SLUG) {
+        content
+        featuredImage {
+          node {
+            sourceUrl
+          }
+        }
+        slug
+        title
+        author {
+          node {
+            name
+          }
+        }
+        categories {
+          nodes {
+            name
+          }
+        }
+        date
+        excerpt
+      }
+    }`
+  ,
+    {
+      variables: {
+        id: slug,
+      },
+    }
+  );
+
+  return data?.post;
+}
+
+export async function getPostsByCategory(category: string) {
+  const data = await fetchAPI(
+    `query getPosts($name: NAME="") {
+    categories(where: {name: $name}) {
         nodes {
             name
             posts {
@@ -57,13 +94,13 @@ export async function getPostsByCategory(category = '') {
             }
     }
     }
+  },
+  {
+    variables: {
+      name: category,
+    },
   }
-  `,
-    {
-      variables: {
-        category,
-      },
-    }
+  `
   );
 
   return data?.categories?.nodes;

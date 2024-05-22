@@ -1,11 +1,7 @@
 import React from 'react'
 import { CollectionItemProps, getCollection } from '@/lib/api/collections'
 import PostCard from './post-card'
-import { blog } from '@/content'
 import { fetchAPI } from '@/lib/api/base'
-
-const blogList = blog.list
-const FAKE_COLLECTION = 'products';
 
 interface PostListProps {
     postList: CollectionItemProps[]
@@ -53,7 +49,7 @@ async function PostList() {
 
     return (
         <ul className="grid grid-flow-row grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            {posts.map((item: any) => {
+            {posts?.map((item: any) => {
                 return (
                     <li
                         key={item.slug}>
