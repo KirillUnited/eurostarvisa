@@ -45,11 +45,15 @@ async function getPosts(first = 10) {
 
 async function PostList() {
     const postList = await getPosts(10);
-    const posts = postList[0]?.posts?.nodes;
+    const posts = postList && postList[0]?.posts?.nodes;
+
+    if (!posts || posts.length === 0) {
+        return <p className='my-4 text-center'>Нет постов</p>
+    }
 
     return (
         <ul className="grid grid-flow-row grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            {posts?.map((item: any) => {
+            {posts.map((item: any) => {
                 return (
                     <li
                         key={item.slug}>
