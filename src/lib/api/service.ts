@@ -62,6 +62,7 @@ export async function getPostBySlug(slug: string) {
         seo {
           breadcrumbs {
             text
+            url
           }
           metaDesc
           metaKeywords
