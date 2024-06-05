@@ -48,7 +48,7 @@ async function PostList() {
     const posts = postList && postList[0]?.posts?.nodes;
 
     if (!posts || posts.length === 0) {
-        return <p className='my-4 text-center'>Нет постов</p>
+        return <h2 className='my-4 text-center'>Нет постов</h2>
     }
 
     return (
