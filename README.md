@@ -7,7 +7,6 @@
 - 🧩 Radix UI/ShadCN - Headless UI components for endless customization
 - 🛠️ TypeScript - Type safety
 - 📝 React Hook Form - Performant, flexible and extensible forms with easy-to-use validation.
-- ⚔️ Internationalized routing: `next-intl` provide unique pathnames per language and optionally localize pathnames for search engine optimization.
 - 💎 CVA - Create a consistent, reusable, and atomic design system
 - 💅 styled-components - Styling your way with speed, strong typing, and flexibility
 
