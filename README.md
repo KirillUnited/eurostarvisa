@@ -1,4 +1,15 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🚀 [Live preview](https://starvisa.netlify.app/)
+
+## ⚙️ Tech Stack
+
+- 🏎️ Next.js - Fast by default, with config optimized for performance (with App Directory)
+- 🎨 Tailwind CSS - A utility-first CSS framework for rapid UI development
+- 🧩 Radix UI/ShadCN - Headless UI components for endless customization
+- 🛠️ TypeScript - Type safety
+- 📝 React Hook Form - Performant, flexible and extensible forms with easy-to-use validation.
+- ⚔️ Internationalized routing: `next-intl` provide unique pathnames per language and optionally localize pathnames for search engine optimization.
+- 💎 CVA - Create a consistent, reusable, and atomic design system
+- 💅 styled-components - Styling your way with speed, strong typing, and flexibility
 
 ## Getting Started
 
