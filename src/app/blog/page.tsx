@@ -1,8 +1,8 @@
 import { BreadcrumbBase } from '@/components/shared/breadcrumb'
+import PostLoader from '@/components/shared/post/PostLoader'
 import PostList from '@/components/shared/post/post-list'
 import { SectionBase, SectionBody, SectionHeading, SectionInner } from '@/components/shared/section'
 import { blog } from '@/content'
-import { LoaderIcon } from 'lucide-react'
 import Image from 'next/image'
 import { Suspense } from 'react'
 
@@ -42,21 +42,12 @@ export default async function BlogPage({ params }: Props) {
 				<SectionInner>
 					<BreadcrumbBase pageTitle={`Блог`} />
 					<SectionBody>
-						<Suspense fallback={<PostLoader />}>
+						<Suspense fallback={<PostLoader text='Минуточку ...' />}>
 							<PostList />
 						</Suspense>
 					</SectionBody>
 				</SectionInner>
 			</SectionBase>
 		</>
-	)
-}
-
-function PostLoader() {
-	return (
-		<div className='flex items-center justify-center gap-3'>
-			<span>Минуточку ...</span>
-			<LoaderIcon className="h-5 w-5 animate-spin" />
-		</div>
 	)
 }
