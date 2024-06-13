@@ -2,13 +2,15 @@
 
 ## ⚙️ Tech Stack
 
-- 🏎️ Next.js - Fast by default, with config optimized for performance (with App Directory)
+- ⚡ Next.js - Fast by default, with config optimized for performance (with App Directory)
 - 🎨 Tailwind CSS - A utility-first CSS framework for rapid UI development
 - 🧩 Radix UI/ShadCN - Headless UI components for endless customization
 - 🛠️ TypeScript - Type safety
 - 📝 React Hook Form - Performant, flexible and extensible forms with easy-to-use validation.
 - 💎 CVA - Create a consistent, reusable, and atomic design system
 - 💅 styled-components - Styling your way with speed, strong typing, and flexibility
+- 🔗 GraphQL - A query language for your API
+- 💾 Headless WordPress - Gives you the freedom to create posts and pages using the familiar interface
 
 ## Getting Started
 
