@@ -1,10 +1,10 @@
-import Hero from "./hero-section";
+import HeroSection from "./HeroSection";
 import { HeroTitle } from "./hero-title";
 import { HeroDescription } from "./hero-description";
 import HeroLink from "./hero-link";
 
 export {
-    Hero as default,
+    HeroSection as default,
     HeroTitle,
     HeroDescription,
     HeroLink

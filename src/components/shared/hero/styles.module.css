@@ -4,3 +4,16 @@
 .image {
     @apply -order-1 md:absolute md:top-10 lg:top-0 right-0 md:w-[65%] lg:w-[60%] max-h-full object-contain object-right;
 }
+.content {
+    @apply flex flex-col self-center gap-4 max-w-[85%] z-10;
+}
+@media screen(lg) {
+    .content {
+        @apply basis-[45%];
+    }
+}
+@media screen(md) {
+    .content {
+        @apply gap-6 max-w-full;
+    }
+}
