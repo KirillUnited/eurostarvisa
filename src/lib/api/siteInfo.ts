@@ -9,7 +9,7 @@ import { fetchAPI } from "./base";
 // `
 const query = `
   query GetSiteInfo {
-    page(id: "2", idType: DATABASE_ID) {
+    page(id: "53", idType: DATABASE_ID) {
       siteInfo {
         email
         phone
