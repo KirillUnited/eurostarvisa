@@ -1,0 +1,29 @@
+.root {
+    --primary: 1 59% 57%;
+}
+.BgLeft {
+    --size: clamp(150px, 60vw, 600px);
+
+    @apply bg-primary -z-10 bottom-[-190px] left-[-60px];
+    position: absolute;
+    width: var(--size);
+    height: var(--size);
+    border-radius: clamp(10px, 3vw, 30px);
+    transform: rotate(45deg) translate(-100%, 0%);
+}
+.BgRight {
+    --size: clamp(200px, 70vw, 700px);
+
+    @apply grid place-items-center -z-10 top-[20px] right-[-170px];
+    position: absolute;
+    width: var(--size);
+    height: var(--size);
+}
+@media screen(md) {
+    .BgLeft {
+        @apply bottom-[-650px] left-[-300px];
+    }
+    .BgRight {
+        @apply top-[-50px] right-[-350px];
+    }
+}
