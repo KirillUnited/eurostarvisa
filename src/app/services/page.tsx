@@ -1,4 +1,4 @@
-import './styles.css'
+import './styles.module.css'
 import { site } from '@/content'
 import { DocsSection, InfoImportant, ServiceSection, InfoList } from '@/components/shared/service'
 import DocsList from '@/components/shared/service/service-docs-list'

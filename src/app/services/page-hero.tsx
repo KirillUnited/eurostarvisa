@@ -3,19 +3,25 @@ import { HeroDescription, HeroLink, HeroTitle } from '@/components/shared/hero'
 import HeroFooter from '@/components/shared/hero/hero-footer'
 import ServiceTypeLink from '@/components/shared/service/ServiceTypeLink'
 import { site } from '@/content'
+import { cn } from '@/lib/utils'
 import Image from 'next/image'
 import React from 'react'
 import styled from 'styled-components'
+import styles from './styles.module.css';
 
 const MOCK_DATA = site.visa.hero;
 
 function ServicePageHero() {
     return (
-        <section id='service-hero' className='section'>
+        <section id='service-hero' className={cn(
+            'section'
+        )}>
             <div className={`container`}>
                 <div className={`section-inner relative`}>
                     <div className='relative flex flex-col lg:min-h-[730px]'>
-                        <BgLeft className='bg-primary -z-10 bottom-[-190px] md:bottom-[-650px] left-[-60px] md:left-[-300px]' />
+                        <div className={cn(
+                            styles.BgLeft
+                        )} />
                         <div className='section-heading max-w-60 md:max-w-96 lg:max-w-xl'>
                             <HeroTitle>
                                 {MOCK_DATA.title}
@@ -58,7 +64,9 @@ function ServicePageHero() {
                             <HeroFooter className='mt-auto lg:mt-auto' />
                         </div>
                     </div>
-                    <BgRight className='grid place-items-center -z-10 top-[20px] md:top-[-50px] right-[-170px] md:right-[-350px]'>
+                    <div className={cn(
+                        styles.BgRight
+                    )}>
                         {MOCK_DATA.image &&
                             <MainImage
                                 src={MOCK_DATA.image}
@@ -70,29 +78,12 @@ function ServicePageHero() {
                         }
                         <BgRightTop className='bg-secondary z-10' />
                         <BgRightBottom className='bg-primary z-0' />
-                    </BgRight>
+                    </div>
                 </div>
             </div>
         </section>
     )
 }
-
-const BgLeft = styled.div`
-    --size: clamp(150px, 60vw, 600px);
-
-    position: absolute;
-    width: var(--size);
-    height: var(--size);
-    border-radius: clamp(10px, 3vw, 30px);
-    transform: rotate(45deg) translate(-100%, 0%);
-`
-const BgRight = styled.div`
-    --size: clamp(200px, 70vw, 700px);
-
-    position: absolute;
-    width: var(--size);
-    height: var(--size);
-`
 const BgRightTop = styled.div`
     position: absolute;
     top: 0px;
