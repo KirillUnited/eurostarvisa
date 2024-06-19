@@ -1,7 +1,7 @@
 'use client'
 import { HeroDescription, HeroLink, HeroTitle } from '@/components/shared/hero'
 import HeroFooter from '@/components/shared/hero/hero-footer'
-import ServiceTypeLink from '@/components/shared/hero/service-type-link'
+import ServiceTypeLink from '@/components/shared/service/ServiceTypeLink'
 import { site } from '@/content'
 import Image from 'next/image'
 import React from 'react'
