@@ -12,6 +12,7 @@
 - 🔗 *GraphQL - A query language for your API
 - 💾 *Headless WordPress - Gives you the freedom to create posts and pages using the familiar interface
 
+
 * `feature/data-fetching` branch
 
 ## Getting Started
