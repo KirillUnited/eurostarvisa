@@ -9,8 +9,10 @@
 - 📝 React Hook Form - Performant, flexible and extensible forms with easy-to-use validation.
 - 💎 CVA - Create a consistent, reusable, and atomic design system
 - 💅 styled-components - Styling your way with speed, strong typing, and flexibility
-- 🔗 GraphQL - A query language for your API
-- 💾 Headless WordPress - Gives you the freedom to create posts and pages using the familiar interface
+- 🔗 *GraphQL - A query language for your API
+- 💾 *Headless WordPress - Gives you the freedom to create posts and pages using the familiar interface
+
+* `feature/data-fetching` branch
 
 ## Getting Started
 
