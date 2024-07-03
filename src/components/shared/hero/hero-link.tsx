@@ -19,9 +19,9 @@ export const HeroLinkBase = ({ href: link, className, children }: LinkProps & Re
         </Comp>
     )
 }
-function HeroLink({ link, label, image }: HeroLinkProps) {
+function HeroLink({ link, label, image, className }: HeroLinkProps & React.HTMLAttributes<HTMLElement>) {
     return (
-        <HeroLinkBase href={`${link}`}>
+        <HeroLinkBase href={`${link}`} className={className}>
             {image &&
                 <Image
                     width={60}
