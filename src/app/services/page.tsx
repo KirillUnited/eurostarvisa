@@ -4,7 +4,7 @@ import { DocsSection, InfoImportant, ServiceSection, InfoList } from '@/componen
 import DocsList from '@/components/shared/service/service-docs-list'
 import DocsInfo from '@/components/shared/service/service-docs-info'
 import { OrderSection } from '@/components/shared/form'
-import ServicePageHero from './page-hero'
+import { ServicePageHero } from '@/components/shared/service/'
 
 type Props = {
 	params: { slug: string }
@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: Props) {
 //   }))
 // }
 
-export default function VisaPage() {	
+export default function VisaPage() {
 	const posts = site?.visa?.info?.list.filter((item) => {
 		return item.category === 'КАНАДА'
 	});
