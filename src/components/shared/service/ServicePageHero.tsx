@@ -6,10 +6,43 @@ import { cn } from '@/lib/utils'
 import Image from 'next/image'
 import React from 'react'
 import styles from './styles.module.css';
+import { fetchAPI } from '@/lib/api/base'
 
 const MOCK_DATA = site.visa.hero;
+const query = `query GetVisaPostHeros {
+    visaPostTypes {
+      nodes {
+        slug
+        title
+        visaHeroFields {
+          description
+          subtitle
+          title
+        }
+        featuredImage {
+          node {
+            altText
+            sourceUrl
+          }
+        }
+      }
+    }
+  }`;
 
-function ServicePageHero() {
+async function getFields() {
+    const data = await fetchAPI(
+        query
+    );
+
+    return data?.visaPostTypes?.nodes;
+}
+async function ServicePageHero() {
+    const data = await getFields();
+    const title = data[0]?.visaHeroFields?.title;
+    const subtitle = data[0]?.visaHeroFields?.subtitle;
+    const description = data[0]?.visaHeroFields?.description;
+    const featuredImage = data[0]?.featuredImage?.node.sourceUrl;
+
     return (
         <section id='service-hero' className={cn(
             'section'
@@ -21,19 +54,19 @@ function ServicePageHero() {
                             'absolute',
                             styles.BgLeft
                         )} />
-                        <SectionHeading />
+                        <SectionHeading title={title} subtitle={subtitle} description={description} />
                         <SectionBody />
                     </div>
                     <div className={cn(
                         'absolute',
                         styles.BgRight
                     )}>
-                        {MOCK_DATA.image &&
+                        {featuredImage &&
                             <Image
-                                src={MOCK_DATA.image}
+                                src={featuredImage}
                                 width={300}
                                 height={300}
-                                alt={MOCK_DATA.title}
+                                alt={title}
                                 className={cn(
                                     'relative z-20',
                                     styles.MainImage
@@ -57,21 +90,25 @@ function ServicePageHero() {
     )
 }
 
-const SectionHeading = () => {
+const SectionHeading = (props: {
+    title: string,
+    subtitle?: string,
+    description?: string
+}) => {
     return (
         <div className='section-heading max-w-60 md:max-w-96 lg:max-w-xl'>
             <HeroTitle>
-                {MOCK_DATA.title}
+                {props.title}
             </HeroTitle>
-            {MOCK_DATA.subtitle &&
+            {props.subtitle &&
                 <p className='font-bold text-sm md:text-2xl lg:text-4xl mt-0'>
-                    {MOCK_DATA.subtitle}
+                    {props.subtitle}
                 </p>
             }
-            {MOCK_DATA.description &&
+            {props.description &&
                 <HeroDescription
                     className='text-foreground/60 lg:text-2xl'
-                    dangerouslySetInnerHTML={{ __html: MOCK_DATA.description }}
+                    dangerouslySetInnerHTML={{ __html: props.description }}
                 />
             }
         </div>
