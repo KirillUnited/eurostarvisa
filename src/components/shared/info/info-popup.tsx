@@ -32,7 +32,7 @@ const InfoPopup = ({ title, description, className }: Props) => {
                     </div>
                 }
             </DialogHeader>
-            <Form variant={'default'} className='flex flex-col gap-5' />
+            <Form buttonVariant={'default'} buttonSize={'lg'} className='flex flex-col gap-5' />
         </DialogContent>
     )
 }

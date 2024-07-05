@@ -35,7 +35,7 @@ const Footer = async () => {
               </p>
             </li>
             <li className='min-w-[25%] space-y-3'>
-              <p className='text-base font-medium text-foreground/50 uppercase'>Получить визу</p>
+              <p className='text-base font-semibold text-foreground/70 uppercase'>Получить визу</p>
               <ul>{
                 services.map(({ title, link }) => {
                   return (
