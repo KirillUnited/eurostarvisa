@@ -1,4 +1,4 @@
-import OrderForm from "./order-form";
+import OrderForm from "./OrderForm";
 import OrderSection from "./order-section";
 
 export {

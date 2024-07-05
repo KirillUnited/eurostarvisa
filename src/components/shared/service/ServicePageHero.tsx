@@ -9,6 +9,54 @@ import styles from './styles.module.css';
 
 const MOCK_DATA = site.visa.hero;
 
+function ServicePageHero() {
+    return (
+        <section id='service-hero' className={cn(
+            'section'
+        )}>
+            <div className={`container`}>
+                <div className={`section-inner relative`}>
+                    <div className='relative flex flex-col lg:min-h-[730px]'>
+                        <div className={cn(
+                            'absolute',
+                            styles.BgLeft
+                        )} />
+                        <SectionHeading />
+                        <SectionBody />
+                    </div>
+                    <div className={cn(
+                        'absolute',
+                        styles.BgRight
+                    )}>
+                        {MOCK_DATA.image &&
+                            <Image
+                                src={MOCK_DATA.image}
+                                width={300}
+                                height={300}
+                                alt={MOCK_DATA.title}
+                                className={cn(
+                                    'relative z-20',
+                                    styles.MainImage
+                                )}
+                            />
+                        }
+                        <div className={cn(
+                            'bg-secondary z-10',
+                            styles['bg-figure'],
+                            styles.BgRightTop
+                        )} />
+                        <div className={cn(
+                            'bg-primary z-0',
+                            styles['bg-figure'],
+                            styles.BgRightBottom
+                        )} />
+                    </div>
+                </div>
+            </div>
+        </section>
+    )
+}
+
 const SectionHeading = () => {
     return (
         <div className='section-heading max-w-60 md:max-w-96 lg:max-w-xl'>
@@ -65,51 +113,4 @@ const SectionBody = () => {
     )
 }
 
-function ServicePageHero() {
-    return (
-        <section id='service-hero' className={cn(
-            'section'
-        )}>
-            <div className={`container`}>
-                <div className={`section-inner relative`}>
-                    <div className='relative flex flex-col lg:min-h-[730px]'>
-                        <div className={cn(
-                            'absolute',
-                            styles.BgLeft
-                        )} />
-                        <SectionHeading />
-                        <SectionBody />
-                    </div>
-                    <div className={cn(
-                        'absolute',
-                        styles.BgRight
-                    )}>
-                        {MOCK_DATA.image &&
-                            <Image
-                                src={MOCK_DATA.image}
-                                width={300}
-                                height={300}
-                                alt={MOCK_DATA.title}
-                                className={cn(
-                                    'relative z-20',
-                                    styles.MainImage
-                                )}
-                            />
-                        }
-                        <div className={cn(
-                            'bg-secondary z-10',
-                            styles['bg-figure'],
-                            styles.BgRightTop
-                        )} />
-                        <div className={cn(
-                            'bg-primary z-0',
-                            styles['bg-figure'],
-                            styles.BgRightBottom
-                        )} />
-                    </div>
-                </div>
-            </div>
-        </section>
-    )
-}
-export default ServicePageHero
+export default ServicePageHero;

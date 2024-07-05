@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import OrderForm from './order-form'
+import OrderForm from './OrderForm'
 import { cn } from '@/lib/utils'
 import Image from 'next/image'
 import { Body, Root } from './styles'
