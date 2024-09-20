@@ -6,8 +6,6 @@ import { blog } from '@/content'
 import Image from 'next/image'
 import { Suspense } from 'react'
 
-const FAKE_COLLECTION = 'products';
-
 type Props = {
 	params: { slug: string }
 }

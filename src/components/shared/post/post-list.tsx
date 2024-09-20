@@ -1,11 +1,6 @@
 import React from 'react'
-import { CollectionItemProps, getCollection } from '@/lib/api/collections'
 import PostCard from './post-card'
 import { fetchAPI } from '@/lib/api/base'
-
-interface PostListProps {
-    postList: CollectionItemProps[]
-}
 
 const query = `query FetchPosts {
         categories(where: {name: "Блог"}) {
@@ -62,7 +57,7 @@ async function PostList() {
                             date={item.date}
                             title={item.title}
                             description={item.excerpt}
-                            thumbnail={item.featuredImage.node.sourceUrl}
+                            thumbnail={item.featuredImage?.node?.sourceUrl || ''}
                         />
                     </li>
                 )

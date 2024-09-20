@@ -21,9 +21,9 @@ const Header = async () => {
                         </div>
                     </div>
                     <div className="flex items-center gap-4 lg:gap-8 justify-end">
-                        <PhoneCall phone={siteInfo.phone} label={siteInfo.phone} />
+                        {siteInfo?.phone && <PhoneCall phone={siteInfo.phone} label={siteInfo.phone}/>}
                         <HeaderMobileMenu className='lg:hidden' />
-                    </div>  
+                    </div>
                 </div>
             </div>
         </header>
