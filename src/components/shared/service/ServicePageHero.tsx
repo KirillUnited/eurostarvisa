@@ -38,10 +38,10 @@ async function getFields() {
 }
 async function ServicePageHero() {
     const data = await getFields();
-    const title = data[0]?.visaHeroFields?.title;
-    const subtitle = data[0]?.visaHeroFields?.subtitle;
-    const description = data[0]?.visaHeroFields?.description;
-    const featuredImage = data[0]?.featuredImage?.node.sourceUrl;
+    const title = data && data[0]?.visaHeroFields?.title;
+    const subtitle = data && data[0]?.visaHeroFields?.subtitle;
+    const description = data && data[0]?.visaHeroFields?.description;
+    const featuredImage = data && data[0]?.featuredImage?.node.sourceUrl;
 
     return (
         <section id='service-hero' className={cn(
