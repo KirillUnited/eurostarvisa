@@ -1,9 +1,10 @@
+'use client'
 import React from 'react'
-import { HeroLinkProps, ServiceTypeLinkProps } from './hero.props'
+import { HeroLinkProps, ServiceTypeLinkProps } from '../hero/hero.props'
 import Image from 'next/image'
 import { MoveRightIcon } from 'lucide-react'
 import ServiceTourIcon from '@/assets/svg/service-type-tour-icon.svg'
-import { HeroLinkBase } from './hero-link'
+import { HeroLinkBase } from '../hero/hero-link'
 import InfoPopup from '../info/info-popup'
 import { Dialog, DialogTrigger } from '@/components/ui/dialog'
 

@@ -4,13 +4,15 @@ import Link from 'next/link'
 import React from 'react'
 
 type PhoneCallProps = {
-    phone?: string,
+    phone: string,
     label?: string
 }
 
-export default function PhoneCall({ phone, label }: PhoneCallProps): React.JSX.Element {
+export default function PhoneCall({ phone, label }: PhoneCallProps) {
+    if (!phone) return;
+
     return (
-        <Link href={`${phone || 'tel:'}`} className={cn('group inline-flex gap-4 items-center')}>
+        <Link href={`tel:${phone}`} className={cn('group inline-flex gap-4 items-center')}>
             <PhoneCallIcon className='text-primary group-hover:text-primary/70 transition-colors' />
             {label && <span className='font-bold hidden lg:inline'>{label}</span>}
         </Link>

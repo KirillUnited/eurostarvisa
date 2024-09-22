@@ -3,8 +3,11 @@ import Logo from '@/components/shared/logo'
 import { contacts, services } from '@/content'
 import Link from 'next/link'
 import { Socials } from '@/components/shared/socials'
+import { getSiteInfo } from '@/lib/api/siteInfo'
 
-const Footer = () => {
+const Footer = async () => {  
+  const siteInfo = await getSiteInfo();
+
   return (
     <footer className='py-8'>
       <div className="container">
@@ -28,11 +31,11 @@ const Footer = () => {
               <p className='text-sm leading-relaxed'>
                 Время работы:
                 <br />
-                пн-пт 10.00-20.00
+                {siteInfo?.timeline}
               </p>
             </li>
             <li className='min-w-[25%] space-y-3'>
-              <p className='text-base font-medium text-foreground/50 uppercase'>Получить визу</p>
+              <p className='text-base font-semibold text-foreground/70 uppercase'>Получить визу</p>
               <ul>{
                 services.map(({ title, link }) => {
                   return (

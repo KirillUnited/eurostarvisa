@@ -17,8 +17,8 @@ interface Props extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement
 
 function HeroFooter({ className }: Props) {
     return (
-        <Content className={cn(
-            'flex flex-wrap items-center flex-col lg:flex-row lg:mt-6',
+        <div className={cn(
+            'flex flex-wrap items-center flex-col lg:flex-row gap-4 lg:mt-6',
             className
         )}>
             <Dialog>
@@ -39,7 +39,7 @@ function HeroFooter({ className }: Props) {
                         </DialogDescription>
                     </DialogHeader>
                     <ContentForm>
-                        <OrderForm className='flex flex-col gap-5' variant='default' />
+                        <OrderForm className='flex flex-col gap-5' buttonVariant='default' buttonSize={'lg'}/>
                     </ContentForm>
                 </DialogContent>
             </Dialog>
@@ -52,13 +52,10 @@ function HeroFooter({ className }: Props) {
             >
                 заполнить анкету
             </ContentButton>
-        </Content>
+        </div>
     )
 }
 
-const Content = styled.div`
-    gap: 1rem;
-`;
 const ContentButton = styled(Button)`
     height: auto;
     min-height: 3.5rem;

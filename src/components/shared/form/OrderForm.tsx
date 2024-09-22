@@ -28,7 +28,7 @@ const formSchema = z.object({
     }),
 })
 
-export default function OrderForm({ className, variant }: OrderFormProps) {
+export default function OrderForm({ className, buttonVariant, buttonSize }: OrderFormProps) {
     const [phone, setPhone] = useState('');
     const form = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),
@@ -89,7 +89,7 @@ export default function OrderForm({ className, variant }: OrderFormProps) {
                     </FormControl>
                     <FormMessage />
                 </FormItem>
-                <Button variant={variant || "outline"} type="submit" className="w-full md:w-fit text-base font-semibold border-primary-foreground border-2 text-primary-foreground self-end">ОТПРАВИТЬ</Button>
+                <Button variant={buttonVariant || "outline"} size={buttonSize || "default"} type="submit" className="w-full md:w-fit text-base font-semibold border-primary-foreground border-2 text-primary-foreground self-end">ОТПРАВИТЬ</Button>
             </form>
         </Form>
     )
