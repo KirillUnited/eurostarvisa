@@ -15,7 +15,7 @@ export async function fetchAPI(
                 variables,
             }),
         });
-
+        
         if (!res.ok) {
             throw new Error("Failed to fetch API: " + res.status);
         }
