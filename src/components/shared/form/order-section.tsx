@@ -5,7 +5,7 @@ import { cn } from '@/lib/utils'
 import Image from 'next/image'
 import { Body, Root } from './styles'
 
-export default async function OrderSection({ className }: React.HTMLAttributes<HTMLDivElement>) {
+export default function OrderSection({ className }: React.HTMLAttributes<HTMLDivElement>) {
     return (
         <Root
             id="order_section"
