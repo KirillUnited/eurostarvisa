@@ -9,22 +9,22 @@ type Props = {
 	params: { slug: string }
 }
 
-// export async function generateMetadata({ params }: Props) {
-// 	const post = await getPostBySlug(params?.slug as string)
+export async function generateMetadata({ params }: Props) {
+	const post = await getPostBySlug(params?.slug as string)
 
-// 	return {
-// 		title: post?.seo?.title,
-// 		description: post?.seo?.metaDesc,
-// 	}
-// }
+	return {
+		title: post?.seo?.title,
+		description: post?.seo?.metaDesc,
+	}
+}
 
-// export async function generateStaticParams() {
-// 	const posts = await getPosts();
+export async function generateStaticParams() {
+	const posts = await getPosts();
 
-// 	return posts?.map((post: any) => ({
-// 		slug: post?.slug,
-// 	}))
-// }
+	return posts?.map((post: any) => ({
+		slug: post?.slug,
+	}))
+}
 
 export default async function BlogPostPage({ params }: Props) {
 	const post = await getPostBySlug(params?.slug as string);
